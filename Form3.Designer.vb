@@ -30,7 +30,7 @@ Partial Class Form3
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(684, 461)
         Name = "Form3"
-        Text = "Form3"
+        Text = "Doctor interface"
         ResumeLayout(False)
     End Sub
 End Class
