@@ -22,41 +22,34 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        btnPatient = New Button()
-        btnAdmin = New Button()
+        btnNext = New Button()
         SuspendLayout()
         ' 
-        ' btnPatient
+        ' btnNext
         ' 
-        btnPatient.Location = New Point(186, 235)
-        btnPatient.Name = "btnPatient"
-        btnPatient.Size = New Size(122, 52)
-        btnPatient.TabIndex = 0
-        btnPatient.Text = "Patient"
-        btnPatient.UseVisualStyleBackColor = True
-        ' 
-        ' btnAdmin
-        ' 
-        btnAdmin.Location = New Point(373, 235)
-        btnAdmin.Name = "btnAdmin"
-        btnAdmin.Size = New Size(122, 52)
-        btnAdmin.TabIndex = 1
-        btnAdmin.Text = "Doctor"
-        btnAdmin.UseVisualStyleBackColor = True
+        btnNext.Location = New Point(392, 364)
+        btnNext.Name = "btnNext"
+        btnNext.Size = New Size(107, 35)
+        btnNext.TabIndex = 1
+        btnNext.Text = "Next"
+        btnNext.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(684, 461)
-        Controls.Add(btnAdmin)
-        Controls.Add(btnPatient)
+        ClientSize = New Size(884, 561)
+        Controls.Add(btnNext)
         Name = "Form1"
         Text = "NOMG "
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents btnPatient As Button
-    Friend WithEvents btnAdmin As Button
+    Friend WithEvents btnSignIn As Button
+    Friend WithEvents btnNext As Button
+    Friend WithEvents txtPass As TextBox
+    Friend WithEvents txtUser As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 
 End Class

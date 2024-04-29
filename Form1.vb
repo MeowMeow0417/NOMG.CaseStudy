@@ -1,12 +1,12 @@
-﻿Public Class Form1
-    Private Sub btnPatient_Click(sender As Object, e As EventArgs) Handles btnPatient.Click
+﻿Imports System.Web
+
+Public Class Form1
+
+
+
+
+    Private Sub btnNext_Click(sender As Object, e As EventArgs)
         Form2.Show()
-        Me.Hide()
-
-    End Sub
-
-    Private Sub btnAdmin_Click(sender As Object, e As EventArgs) Handles btnAdmin.Click
-        Form3.Show()
         Me.Hide()
 
     End Sub
