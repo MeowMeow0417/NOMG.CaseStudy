@@ -82,8 +82,6 @@ Public Class Form2
 
     End Class
 
-
-
     Dim admin1 As New Admin("Admin", "Admin") 'Admin user and Password'
 
     Private Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
@@ -95,8 +93,6 @@ Public Class Form2
 
 
         Else 'add an elif function here 
-
-
             For Each Patient In listPatient
                 If txtUser.Text = Patient.getPatient And txtPass.Text = Patient.getPatientPass Then
                     MsgBox("LogIn success as Patient", vbOKOnly, "NOMG Clinic") '#
@@ -106,8 +102,6 @@ Public Class Form2
 
                 End If
             Next
-
-
         End If
     End Sub
 

@@ -23,22 +23,31 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         btnNext = New Button()
+        ProgressBar1 = New ProgressBar()
         SuspendLayout()
         ' 
         ' btnNext
         ' 
-        btnNext.Location = New Point(765, 514)
+        btnNext.Location = New Point(765, 493)
         btnNext.Name = "btnNext"
         btnNext.Size = New Size(107, 35)
         btnNext.TabIndex = 1
         btnNext.Text = "Next"
         btnNext.UseVisualStyleBackColor = True
         ' 
+        ' ProgressBar1
+        ' 
+        ProgressBar1.Location = New Point(12, 534)
+        ProgressBar1.Name = "ProgressBar1"
+        ProgressBar1.Size = New Size(860, 15)
+        ProgressBar1.TabIndex = 2
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(884, 561)
+        Controls.Add(ProgressBar1)
         Controls.Add(btnNext)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
@@ -55,5 +64,6 @@ Partial Class Form1
     Friend WithEvents txtUser As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents ProgressBar1 As ProgressBar
 
 End Class
