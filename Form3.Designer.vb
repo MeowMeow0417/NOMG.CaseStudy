@@ -131,8 +131,12 @@ Partial Class Form3
         Controls.Add(btnSignUp)
         Controls.Add(btnCancel)
         Controls.Add(Label1)
+        MaximizeBox = False
+        MdiChildrenMinimizedAnchorBottom = False
+        MinimizeBox = False
         Name = "Form3"
-        Text = "Form3"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "SIGN IN PAGE"
         ResumeLayout(False)
         PerformLayout()
     End Sub

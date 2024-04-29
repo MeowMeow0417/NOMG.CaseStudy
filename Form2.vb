@@ -3,12 +3,12 @@ Imports NOMG.CaseStudy.Form1
 
 Public Class Form2
 
-    'FOR ADMIN Login
-    Class Admin
+
+    Class Admin 'FOR ADMIN Login
         Private strAdmin As String
         Private strAdminPass As String
 
-        'for setting new admins in the future
+        'for setting new admins
         Public Sub New(ByVal strTempAdmin As String, ByVal strTempAdminPass As String)
             strAdmin = strTempAdmin
             strAdminPass = strTempAdminPass
@@ -37,13 +37,21 @@ Public Class Form2
     'list for Patient creds
     Public listPatient As New List(Of Patient)
 
-    'FOR Patient Login
-    Class Patient
+    'storing data for the Patient/s
+    Public Sub New()
+        InitializeComponent()
+        Dim Patient1 As New Patient("Juana", "1234")
+        listPatient.Add(Patient1)
+
+    End Sub
+
+
+    Class Patient 'FOR PATIENT LogIn
         Private strPatient As String
         Private strPass As String
         Private strEmail As String
 
-
+        'for setting new patients
         Public Sub New(ByVal strTempPatient As String, ByVal strPPass As String)
             strPatient = strTempPatient
             strPass = strPPass
@@ -57,7 +65,6 @@ Public Class Form2
             strPatient = strTempPatient
             strPass = strPPass
         End Sub
-
         Public Sub setPatientEmail(ByVal strPaEmail As String)
             strEmail = strPaEmail
         End Sub
@@ -75,18 +82,13 @@ Public Class Form2
 
     End Class
 
-    Public Sub New()
-        InitializeComponent()
-        Dim Patient1 As New Patient("Juana", "1234")
-        listPatient.Add(Patient1)
 
-    End Sub
 
-    Dim admin1 As New Admin("Admin", "Admin")
+    Dim admin1 As New Admin("Admin", "Admin") 'Admin user and Password'
 
     Private Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
         If txtUser.Text = admin1.getAdminUser And txtPass.Text = admin1.getAdminPass Then
-            MsgBox("LogIn success as admin", vbOKOnly, "NOMG Clinic")
+            MsgBox("LogIn success as admin", vbOKOnly, "NOMG Clinic") '#
 
             Form4.Show()
             Me.Hide()
@@ -97,8 +99,9 @@ Public Class Form2
 
             For Each Patient In listPatient
                 If txtUser.Text = Patient.getPatient And txtPass.Text = Patient.getPatientPass Then
-                    MsgBox("LogIn success as Patient", vbOKOnly, "NOMG Clinic")
+                    MsgBox("LogIn success as Patient", vbOKOnly, "NOMG Clinic") '#
 
+                    Form5.Show()
                     Me.Hide()
 
                 End If
@@ -108,7 +111,8 @@ Public Class Form2
         End If
     End Sub
 
-    Private Sub btnSignUp_Click(sender As Object, e As EventArgs)
+    'btn for sign-up
+    Private Sub btnSignUp_Click(sender As Object, e As EventArgs) Handles btnSignUp.Click
         Form3.Show()
         Me.Hide()
 

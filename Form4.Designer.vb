@@ -29,8 +29,12 @@ Partial Class Form4
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(884, 561)
+        MaximizeBox = False
+        MdiChildrenMinimizedAnchorBottom = False
+        MinimizeBox = False
         Name = "Form4"
-        Text = "Form4"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "ADMINS DASHBOARD"
         ResumeLayout(False)
     End Sub
 End Class

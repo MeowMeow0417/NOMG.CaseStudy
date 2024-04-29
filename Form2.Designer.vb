@@ -91,8 +91,12 @@ Partial Class Form2
         Controls.Add(txtPass)
         Controls.Add(btnSignUp)
         Controls.Add(btnSignIn)
+        MaximizeBox = False
+        MdiChildrenMinimizedAnchorBottom = False
+        MinimizeBox = False
         Name = "Form2"
-        Text = "Form2"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Start Screen"
         ResumeLayout(False)
         PerformLayout()
     End Sub

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class Form5
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,40 +20,34 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        btnNext = New Button()
+        Label1 = New Label()
         SuspendLayout()
         ' 
-        ' btnNext
+        ' Label1
         ' 
-        btnNext.Location = New Point(765, 514)
-        btnNext.Name = "btnNext"
-        btnNext.Size = New Size(107, 35)
-        btnNext.TabIndex = 1
-        btnNext.Text = "Next"
-        btnNext.UseVisualStyleBackColor = True
+        Label1.AutoSize = True
+        Label1.Location = New Point(12, 9)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(0, 15)
+        Label1.TabIndex = 0
         ' 
-        ' Form1
+        ' Form5
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(884, 561)
-        Controls.Add(btnNext)
+        Controls.Add(Label1)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False
-        Name = "Form1"
+        Name = "Form5"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "NOMG CLINIC"
+        Text = "PATIENTS DASHBOARD"
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
-    Friend WithEvents btnSignIn As Button
-    Friend WithEvents btnNext As Button
-    Friend WithEvents txtPass As TextBox
-    Friend WithEvents txtUser As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-
 End Class
