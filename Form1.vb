@@ -2,10 +2,8 @@
 
 Public Class Form1
 
-
-
-
-    Private Sub btnNext_Click(sender As Object, e As EventArgs)
+    'write the code for the splash/loading screen
+    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
         Form2.Show()
         Me.Hide()
 

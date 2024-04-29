@@ -1,4 +1,5 @@
-﻿Imports NOMG.CaseStudy.Form1
+﻿Imports System.Net.Security
+Imports NOMG.CaseStudy.Form1
 
 Public Class Form2
 
@@ -40,6 +41,8 @@ Public Class Form2
     Class Patient
         Private strPatient As String
         Private strPass As String
+        Private strEmail As String
+
 
         Public Sub New(ByVal strTempPatient As String, ByVal strPPass As String)
             strPatient = strTempPatient
@@ -49,20 +52,26 @@ Public Class Form2
 
         End Sub
 
-        'method for getting admins creds
+        'method for getting patients creds
         Public Sub setPatientCred(ByVal strTempPatient As String, ByVal strPPass As String)
             strPatient = strTempPatient
             strPass = strPPass
         End Sub
 
-        'for returning the admins username and pass
+        Public Sub setPatientEmail(ByVal strPaEmail As String)
+            strEmail = strPaEmail
+        End Sub
+
+        'for returning the admins username, pass and email
         Public Function getPatient() As String
             Return strPatient
         End Function
         Public Function getPatientPass() As String
             Return strPass
         End Function
-
+        Public Function getPatientEmail() As String
+            Return strEmail
+        End Function
 
     End Class
 
@@ -79,17 +88,27 @@ Public Class Form2
         If txtUser.Text = admin1.getAdminUser And txtPass.Text = admin1.getAdminPass Then
             MsgBox("LogIn success as admin", vbOKOnly, "NOMG Clinic")
 
+            Form4.Show()
+            Me.Hide()
 
-        Else
+
+        Else 'add an elif function here 
+
+
             For Each Patient In listPatient
                 If txtUser.Text = Patient.getPatient And txtPass.Text = Patient.getPatientPass Then
                     MsgBox("LogIn success as Patient", vbOKOnly, "NOMG Clinic")
+
+                    Me.Hide()
+
                 End If
             Next
+
+
         End If
     End Sub
 
-    Private Sub btnNext_Click(sender As Object, e As EventArgs)
+    Private Sub btnSignUp_Click(sender As Object, e As EventArgs)
         Form3.Show()
         Me.Hide()
 

@@ -27,7 +27,7 @@ Partial Class Form1
         ' 
         ' btnNext
         ' 
-        btnNext.Location = New Point(392, 364)
+        btnNext.Location = New Point(765, 514)
         btnNext.Name = "btnNext"
         btnNext.Size = New Size(107, 35)
         btnNext.TabIndex = 1
