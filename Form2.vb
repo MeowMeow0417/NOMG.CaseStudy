@@ -85,23 +85,33 @@ Public Class Form2
     Dim admin1 As New Admin("Admin", "Admin") 'Admin user and Password'
 
     Private Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
-        If txtUser.Text = admin1.getAdminUser And txtPass.Text = admin1.getAdminPass Then
-            MsgBox("LogIn success as admin", vbOKOnly, "NOMG Clinic") '#
+        Dim isAdminLoggedIn As Boolean = False
+        Dim isPatientLoggedIn As Boolean = False
 
+        ' Check if admin is logging in
+        If txtUser.Text = admin1.getAdminUser AndAlso txtPass.Text = admin1.getAdminPass Then
+            isAdminLoggedIn = True
+        End If
+
+        ' Check if patient is logging in
+        For Each patient As Patient In listPatient
+            If txtUser.Text = patient.getPatient AndAlso txtPass.Text = patient.getPatientPass Then
+                isPatientLoggedIn = True
+                Exit For ' Exit the loop once a match is found
+            End If
+        Next
+
+        ' Check login status and show appropriate message and form
+        If isAdminLoggedIn Then
+            MsgBox("Login success as admin", vbOKOnly, "NOMG Clinic")
             Form4.Show()
             Me.Hide()
-
-
-        Else 'add an elif function here 
-            For Each Patient In listPatient
-                If txtUser.Text = Patient.getPatient And txtPass.Text = Patient.getPatientPass Then
-                    MsgBox("LogIn success as Patient", vbOKOnly, "NOMG Clinic") '#
-
-                    Form5.Show()
-                    Me.Hide()
-
-                End If
-            Next
+        ElseIf isPatientLoggedIn Then
+            MsgBox("Login success as patient", vbOKOnly, "NOMG Clinic")
+            Form5.Show()
+            Me.Hide()
+        Else
+            MsgBox("Invalid username or password", vbOKOnly, "NOMG Clinic")
         End If
     End Sub
 

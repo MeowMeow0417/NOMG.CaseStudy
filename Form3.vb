@@ -12,13 +12,9 @@
             MsgBox("You're now signed up to NOMG Clinic, press 'OK' to proceed", vbOKOnly, "NOMG CLINIC")
             Me.Close()
             Form2.Show()
-
         Else
             MsgBox("Please, do enter all the required details", vbOKOnly, "NOMG CLINIC")
         End If
-
-
-
     End Sub
 
     'btn for cancel
@@ -26,6 +22,4 @@
         Me.Close()
         Form2.Show()
     End Sub
-
-
 End Class
