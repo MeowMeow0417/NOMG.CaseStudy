@@ -3,7 +3,8 @@ Imports NOMG.CaseStudy.Form1
 
 Public Class Form2
 
-
+    'for the data to be usable in other forms
+    Public strAdminCurrent As Admin
     Class Admin 'FOR ADMIN Login
         Private strAdmin As String
         Private strAdminPass As String
@@ -30,21 +31,19 @@ Public Class Form2
         Public Function getAdminPass() As String
             Return strAdminPass
         End Function
-
     End Class
 
+    'for the data to be usable in other forms
+    Public strCurrentPatient As Patient
 
     'list for Patient creds
     Public listPatient As New List(Of Patient)
 
-    'storing data for the Patient/s
-    Public Sub New()
+    Public Sub New() 'storing data for the Patient/s
         InitializeComponent()
         Dim Patient1 As New Patient("Juana", "1234")
         listPatient.Add(Patient1)
-
     End Sub
-
 
     Class Patient 'FOR PATIENT LogIn
         Private strPatient As String
@@ -79,7 +78,6 @@ Public Class Form2
         Public Function getPatientEmail() As String
             Return strEmail
         End Function
-
     End Class
 
     Dim admin1 As New Admin("Admin", "Admin") 'Admin user and Password'
@@ -94,11 +92,16 @@ Public Class Form2
         End If
 
         ' Check if patient is logging in
+        Dim intCount = 0
+
         For Each patient As Patient In listPatient
             If txtUser.Text = patient.getPatient AndAlso txtPass.Text = patient.getPatientPass Then
                 isPatientLoggedIn = True
+
+                strCurrentPatient = listPatient(intCount)
                 Exit For ' Exit the loop once a match is found
             End If
+            intCount += 1
         Next
 
         ' Check login status and show appropriate message and form
