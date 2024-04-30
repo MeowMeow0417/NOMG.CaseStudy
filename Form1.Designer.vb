@@ -31,8 +31,8 @@ Partial Class Form1
         ' 
         ' ProgressBar1
         ' 
-        ProgressBar1.BackColor = SystemColors.ControlDarkDark
-        ProgressBar1.ForeColor = Color.HotPink
+        ProgressBar1.BackColor = Color.Black
+        ProgressBar1.ForeColor = Color.Salmon
         ProgressBar1.Location = New Point(12, 534)
         ProgressBar1.Name = "ProgressBar1"
         ProgressBar1.Size = New Size(860, 15)
