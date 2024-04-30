@@ -5,6 +5,8 @@
         'checks if the user has inputted all the required details. if, not then shows the Msgbox on "else".
         If txtUser.Text <> "" AndAlso TxtPass.Text <> "" AndAlso txtEmail.Text <> "" Then
             Dim newPatient As New Form2.Patient
+
+            'Adds the credentials and email of the new patient
             newPatient.setPatientCred(txtUser.Text, TxtPass.Text)
             newPatient.setPatientEmail(txtEmail.Text)
             Form2.listPatient.Add(newPatient)

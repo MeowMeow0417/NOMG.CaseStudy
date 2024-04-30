@@ -22,33 +22,49 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        btnNext = New Button()
+        components = New ComponentModel.Container()
         ProgressBar1 = New ProgressBar()
+        Timer1 = New Timer(components)
+        Timer2 = New Timer(components)
+        lblPercent = New Label()
         SuspendLayout()
-        ' 
-        ' btnNext
-        ' 
-        btnNext.Location = New Point(765, 493)
-        btnNext.Name = "btnNext"
-        btnNext.Size = New Size(107, 35)
-        btnNext.TabIndex = 1
-        btnNext.Text = "Next"
-        btnNext.UseVisualStyleBackColor = True
         ' 
         ' ProgressBar1
         ' 
+        ProgressBar1.BackColor = SystemColors.ControlDarkDark
+        ProgressBar1.ForeColor = Color.HotPink
         ProgressBar1.Location = New Point(12, 534)
         ProgressBar1.Name = "ProgressBar1"
         ProgressBar1.Size = New Size(860, 15)
+        ProgressBar1.Step = 1
+        ProgressBar1.Style = ProgressBarStyle.Continuous
         ProgressBar1.TabIndex = 2
+        ' 
+        ' Timer1
+        ' 
+        Timer1.Enabled = True
+        ' 
+        ' Timer2
+        ' 
+        Timer2.Enabled = True
+        ' 
+        ' lblPercent
+        ' 
+        lblPercent.AutoSize = True
+        lblPercent.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblPercent.Location = New Point(846, 516)
+        lblPercent.Name = "lblPercent"
+        lblPercent.Size = New Size(17, 15)
+        lblPercent.TabIndex = 3
+        lblPercent.Text = "%"
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(884, 561)
+        Controls.Add(lblPercent)
         Controls.Add(ProgressBar1)
-        Controls.Add(btnNext)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False
@@ -56,14 +72,17 @@ Partial Class Form1
         StartPosition = FormStartPosition.CenterScreen
         Text = "NOMG CLINIC"
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents btnSignIn As Button
-    Friend WithEvents btnNext As Button
     Friend WithEvents txtPass As TextBox
     Friend WithEvents txtUser As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Timer2 As Timer
+    Friend WithEvents lblPercent As Label
 
 End Class

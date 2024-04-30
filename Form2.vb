@@ -103,11 +103,10 @@ Public Class Form2
 
         ' Check login status and show appropriate message and form
         If isAdminLoggedIn Then
-            MsgBox("Login success as admin", vbOKOnly, "NOMG Clinic")
+            MsgBox("Successfully Log-In as the Admin", vbOKOnly, "NOMG Clinic")
             Form4.Show()
             Me.Hide()
         ElseIf isPatientLoggedIn Then
-            MsgBox("Login success as patient", vbOKOnly, "NOMG Clinic")
             Form5.Show()
             Me.Hide()
         Else
