@@ -22,13 +22,24 @@ Partial Class Form4
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        btnLogOut = New Button()
         SuspendLayout()
+        ' 
+        ' btnLogOut
+        ' 
+        btnLogOut.Location = New Point(12, 522)
+        btnLogOut.Name = "btnLogOut"
+        btnLogOut.Size = New Size(113, 27)
+        btnLogOut.TabIndex = 11
+        btnLogOut.Text = "Log Out"
+        btnLogOut.UseVisualStyleBackColor = True
         ' 
         ' Form4
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(884, 561)
+        Controls.Add(btnLogOut)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False
@@ -37,4 +48,6 @@ Partial Class Form4
         Text = "ADMINS DASHBOARD"
         ResumeLayout(False)
     End Sub
+
+    Friend WithEvents btnLogOut As Button
 End Class

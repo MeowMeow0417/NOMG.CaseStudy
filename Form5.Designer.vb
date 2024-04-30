@@ -32,6 +32,7 @@ Partial Class Form5
         pnSched = New Panel()
         pnRem = New Panel()
         pnPayment = New Panel()
+        btnLogOut = New Button()
         pnSched.SuspendLayout()
         pnRem.SuspendLayout()
         SuspendLayout()
@@ -56,7 +57,7 @@ Partial Class Form5
         ' btnSched
         ' 
         btnSched.BackColor = Color.White
-        btnSched.Location = New Point(25, 101)
+        btnSched.Location = New Point(12, 103)
         btnSched.Name = "btnSched"
         btnSched.Size = New Size(113, 35)
         btnSched.TabIndex = 3
@@ -84,7 +85,7 @@ Partial Class Form5
         ' 
         ' btnRem
         ' 
-        btnRem.Location = New Point(25, 161)
+        btnRem.Location = New Point(12, 163)
         btnRem.Name = "btnRem"
         btnRem.Size = New Size(113, 35)
         btnRem.TabIndex = 6
@@ -93,7 +94,7 @@ Partial Class Form5
         ' 
         ' btnPay
         ' 
-        btnPay.Location = New Point(25, 223)
+        btnPay.Location = New Point(12, 225)
         btnPay.Name = "btnPay"
         btnPay.Size = New Size(113, 35)
         btnPay.TabIndex = 7
@@ -128,11 +129,21 @@ Partial Class Form5
         pnPayment.TabIndex = 10
         pnPayment.Visible = False
         ' 
+        ' btnLogOut
+        ' 
+        btnLogOut.Location = New Point(12, 522)
+        btnLogOut.Name = "btnLogOut"
+        btnLogOut.Size = New Size(113, 27)
+        btnLogOut.TabIndex = 10
+        btnLogOut.Text = "Log Out"
+        btnLogOut.UseVisualStyleBackColor = True
+        ' 
         ' Form5
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(884, 561)
+        Controls.Add(btnLogOut)
         Controls.Add(pnRem)
         Controls.Add(pnSched)
         Controls.Add(btnPay)
@@ -163,4 +174,5 @@ Partial Class Form5
     Friend WithEvents pnSched As Panel
     Friend WithEvents pnRem As Panel
     Friend WithEvents pnPayment As Panel
+    Friend WithEvents btnLogOut As Button
 End Class

@@ -82,6 +82,7 @@ Public Class Form2
 
     Dim admin1 As New Admin("Admin", "Admin") 'Admin user and Password'
 
+    Dim form5Instance As New Form5
     Private Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
         Dim isAdminLoggedIn As Boolean = False
         Dim isPatientLoggedIn As Boolean = False
@@ -93,11 +94,9 @@ Public Class Form2
 
         ' Check if patient is logging in
         Dim intCount = 0
-
         For Each patient As Patient In listPatient
             If txtUser.Text = patient.getPatient AndAlso txtPass.Text = patient.getPatientPass Then
                 isPatientLoggedIn = True
-
                 strCurrentPatient = listPatient(intCount)
                 Exit For ' Exit the loop once a match is found
             End If
@@ -110,7 +109,9 @@ Public Class Form2
             Form4.Show()
             Me.Hide()
         ElseIf isPatientLoggedIn Then
+
             Form5.Show()
+            form5Instance.lblUserName.Text = txtUser.Text 'fix this, it's for showing who is the user
             Me.Hide()
         Else
             MsgBox("Invalid username or password", vbOKOnly, "NOMG Clinic")
@@ -121,6 +122,5 @@ Public Class Form2
     Private Sub btnSignUp_Click(sender As Object, e As EventArgs) Handles btnSignUp.Click
         Form3.Show()
         Me.Hide()
-
     End Sub
 End Class

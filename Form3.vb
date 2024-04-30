@@ -1,5 +1,4 @@
 ﻿Public Class Form3
-
     Private Sub btnSignUp_Click(sender As Object, e As EventArgs) Handles btnSignUp.Click
         Dim newPatient As New Form2.Patient
         'checks if the user has inputted all the required details. if, not then shows the Msgbox on "else".
