@@ -1,7 +1,7 @@
 ﻿Public Class Form7
     Private Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
         Form2.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub btnSignUp_Click(sender As Object, e As EventArgs) Handles btnSignUp.Click
@@ -10,7 +10,9 @@
     End Sub
 
     Private Sub btnContact_Click(sender As Object, e As EventArgs) Handles btnContact.Click
-
+        Form8.Show()
         Me.Hide()
     End Sub
+
+
 End Class
