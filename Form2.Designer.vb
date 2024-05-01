@@ -26,7 +26,7 @@ Partial Class Form2
         Label1 = New Label()
         txtUser = New TextBox()
         txtPass = New TextBox()
-        btnSignUp = New Button()
+        btnCancel = New Button()
         btnSignIn = New Button()
         SuspendLayout()
         ' 
@@ -62,14 +62,14 @@ Partial Class Form2
         txtPass.Size = New Size(158, 23)
         txtPass.TabIndex = 8
         ' 
-        ' btnSignUp
+        ' btnCancel
         ' 
-        btnSignUp.Location = New Point(387, 335)
-        btnSignUp.Name = "btnSignUp"
-        btnSignUp.Size = New Size(107, 35)
-        btnSignUp.TabIndex = 7
-        btnSignUp.Text = "Sign up"
-        btnSignUp.UseVisualStyleBackColor = True
+        btnCancel.Location = New Point(387, 335)
+        btnCancel.Name = "btnCancel"
+        btnCancel.Size = New Size(107, 35)
+        btnCancel.TabIndex = 7
+        btnCancel.Text = "Cancel"
+        btnCancel.UseVisualStyleBackColor = True
         ' 
         ' btnSignIn
         ' 
@@ -89,7 +89,7 @@ Partial Class Form2
         Controls.Add(Label1)
         Controls.Add(txtUser)
         Controls.Add(txtPass)
-        Controls.Add(btnSignUp)
+        Controls.Add(btnCancel)
         Controls.Add(btnSignIn)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
@@ -105,6 +105,6 @@ Partial Class Form2
     Friend WithEvents Label1 As Label
     Friend WithEvents txtUser As TextBox
     Friend WithEvents txtPass As TextBox
-    Friend WithEvents btnSignUp As Button
+    Friend WithEvents btnCancel As Button
     Friend WithEvents btnSignIn As Button
 End Class

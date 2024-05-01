@@ -9,7 +9,7 @@ Public Class Form1
             Timer1.Stop()
             Timer2.Start()
 
-            Form2.Show()
+            Form7.Show()
             Me.Hide()
         End If
     End Sub
@@ -22,4 +22,6 @@ Public Class Form1
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         Timer2.Stop()
     End Sub
+
+
 End Class

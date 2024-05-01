@@ -20,6 +20,6 @@
     'btn for cancel
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
-        Form2.Show()
+        Form7.Show()
     End Sub
 End Class

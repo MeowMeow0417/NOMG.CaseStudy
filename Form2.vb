@@ -119,8 +119,8 @@ Public Class Form2
     End Sub
 
     'btn for sign-up
-    Private Sub btnSignUp_Click(sender As Object, e As EventArgs) Handles btnSignUp.Click
-        Form3.Show()
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Form7.Show()
         Me.Hide()
     End Sub
 End Class
