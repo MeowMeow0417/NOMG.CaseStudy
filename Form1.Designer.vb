@@ -70,7 +70,7 @@ Partial Class Form1
         MinimizeBox = False
         Name = "Form1"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "NOMG CLINIC"
+        Text = "NOMG CLINIC (Splash  Screen)"
         ResumeLayout(False)
         PerformLayout()
     End Sub

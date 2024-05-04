@@ -75,7 +75,7 @@ Partial Class Form7
         Controls.Add(btnSignIn)
         Name = "Form7"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "HomePage"
+        Text = "NOMG CLINIC (HOME PAGE)"
         ResumeLayout(False)
         PerformLayout()
     End Sub

@@ -112,7 +112,7 @@ Partial Class Form5
         MinimizeBox = False
         Name = "Form5"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "PATIENTS DASHBOARD"
+        Text = "NOMG CLINIC (PATIENTS)"
         ResumeLayout(False)
         PerformLayout()
     End Sub

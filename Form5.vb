@@ -2,19 +2,18 @@
 
 
     Private Sub btnSched_Click(sender As Object, e As EventArgs) Handles btnSched.Click
-
-        lblUserName.Text = Form2.strCurrentPatient.getPatient
-
+        Form9.Show()
+        Me.Close()
     End Sub
 
     Private Sub btnRem_Click(sender As Object, e As EventArgs) Handles btnRem.Click
-
-
-
+        Form10.Show()
+        Me.Close()
     End Sub
 
     Private Sub btnPay_Click(sender As Object, e As EventArgs) Handles btnPay.Click
-
+        Form11.Show()
+        Me.Close()
     End Sub
 
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
@@ -22,10 +21,10 @@
         result = MsgBox("Are you sure, you want to Log-Out?", vbOKCancel, "NOMG CLINIC")
         If result = MsgBoxResult.Ok Then
             MessageBox.Show("Logging-Out")
-            Form1.Close()
-            Form2.Close()
+            Form2.Show()
+            Me.Close()
         ElseIf result = MsgBoxResult.Cancel Then
-            'No function
+            'simply returns the user back to dashboard
         End If
     End Sub
 

@@ -3,11 +3,9 @@ Imports NOMG.CaseStudy.Form1
 
 Public Class Form2
 
-    'for the data to be usable in other forms
-    Public strAdminCurrent As Admin
     Class Admin 'FOR ADMIN Login
-        Private strAdmin As String
-        Private strAdminPass As String
+        Private strAdmin, strAdminPass As String
+
 
         'for setting new admins
         Public Sub New(ByVal strTempAdmin As String, ByVal strTempAdminPass As String)
@@ -18,7 +16,7 @@ Public Class Form2
 
         End Sub
 
-        'method for getting admins creds
+        'method for setting admins creds
         Public Sub setAdminCred(ByVal strTempName As String, ByVal strTempPass As String)
             strAdmin = strTempName
             strAdminPass = strTempPass
@@ -39,16 +37,16 @@ Public Class Form2
     'list for Patient creds
     Public listPatient As New List(Of Patient)
 
-    Public Sub New() 'storing data for the Patient/s
+
+
+    Public Sub New() 'storing data for the Patien/s name and password
         InitializeComponent()
         Dim Patient1 As New Patient("Juana", "1234")
         listPatient.Add(Patient1)
     End Sub
 
     Class Patient 'FOR PATIENT LogIn
-        Private strPatient As String
-        Private strPass As String
-        Private strEmail As String
+        Private strPatient, strPass, strEmail As String
 
         'for setting new patients
         Public Sub New(ByVal strTempPatient As String, ByVal strPPass As String)
@@ -59,12 +57,10 @@ Public Class Form2
 
         End Sub
 
-        'method for getting patients creds
-        Public Sub setPatientCred(ByVal strTempPatient As String, ByVal strPPass As String)
+        'method for setting patients creds
+        Public Sub setPatientCred(ByVal strTempPatient As String, ByVal strPPass As String, ByVal strPaEmail As String)
             strPatient = strTempPatient
             strPass = strPPass
-        End Sub
-        Public Sub setPatientEmail(ByVal strPaEmail As String)
             strEmail = strPaEmail
         End Sub
 
@@ -79,6 +75,7 @@ Public Class Form2
             Return strEmail
         End Function
     End Class
+
 
     Dim admin1 As New Admin("Admin", "Admin") 'Admin user and Password'
 
@@ -106,16 +103,20 @@ Public Class Form2
         ' Check login status and show appropriate message and form
         If isAdminLoggedIn Then
             MsgBox("Successfully Log-In as the Admin", vbOKOnly, "NOMG Clinic")
+            txtUser.Clear()
+            txtPass.Clear()
             Form4.Show()
             Me.Hide()
         ElseIf isPatientLoggedIn Then
-
+            txtUser.Clear()
+            txtPass.Clear()
             Form5.Show()
             form5Instance.lblUserName.Text = txtUser.Text 'fix this, it's for showing who is the user
             Me.Hide()
         Else
             MsgBox("Invalid username or password", vbOKOnly, "NOMG Clinic")
         End If
+
     End Sub
 
     'btn for sign-up
@@ -123,4 +124,49 @@ Public Class Form2
         Form7.Show()
         Me.Hide()
     End Sub
+
+    'list for Patient details
+    Public listDetails As New List(Of PatientDetails)
+
+    Class PatientDetails
+
+        Private Name, MI, LastName, Age, Baby, Address, Gender, CivilStat, LMC As String
+
+        'for setting new data
+        Public Sub New(ByVal tempName As String, ByVal tempMI As String, ByVal tempLast As String, ByVal tempAdd As String, ByVal tempAge As String, ByVal tempBaby As String, ByVal tempGender As String, ByVal tempCivil As String, ByVal tempLMC As String)
+            Name = tempName
+            MI = tempMI
+            LastName = tempLast
+            Age = tempAge
+            Baby = tempBaby
+            Gender = tempGender
+            Address = tempAdd
+            CivilStat = tempCivil
+            LMC = tempLMC
+        End Sub
+        Public Sub New()
+
+        End Sub
+
+        'for setting details
+        Public Sub setDetails1(ByVal tempName As String, ByVal tempMI As String, ByVal tempLast As String, ByVal tempAge As String)
+            Name = tempName
+            MI = tempMI
+            LastName = tempLast
+            Age = tempAge
+
+        End Sub
+
+        Public Sub setDetails2(ByVal tempBaby As String, ByVal tempGender As String, ByVal tempAdd As String, ByVal tempCivil As String, ByVal tempLMC As String)
+            Baby = tempBaby
+            Gender = tempGender
+            CivilStat = tempCivil
+            Address = tempAdd
+            LMC = tempLMC
+        End Sub
+
+
+        'for setting new data
+
+    End Class
 End Class

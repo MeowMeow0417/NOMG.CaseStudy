@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form4
+Partial Class Form9
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,32 +22,41 @@ Partial Class Form4
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        btnLogOut = New Button()
+        btnBack = New Button()
+        btnGetSched = New Button()
         SuspendLayout()
         ' 
-        ' btnLogOut
+        ' btnBack
         ' 
-        btnLogOut.Location = New Point(12, 522)
-        btnLogOut.Name = "btnLogOut"
-        btnLogOut.Size = New Size(113, 27)
-        btnLogOut.TabIndex = 11
-        btnLogOut.Text = "Log Out"
-        btnLogOut.UseVisualStyleBackColor = True
+        btnBack.Location = New Point(658, 526)
+        btnBack.Name = "btnBack"
+        btnBack.Size = New Size(75, 23)
+        btnBack.TabIndex = 0
+        btnBack.Text = "Back"
+        btnBack.UseVisualStyleBackColor = True
         ' 
-        ' Form4
+        ' btnGetSched
+        ' 
+        btnGetSched.Location = New Point(739, 526)
+        btnGetSched.Name = "btnGetSched"
+        btnGetSched.Size = New Size(133, 23)
+        btnGetSched.TabIndex = 1
+        btnGetSched.Text = "Get Schedule"
+        btnGetSched.UseVisualStyleBackColor = True
+        ' 
+        ' Form9
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(884, 561)
-        Controls.Add(btnLogOut)
-        MaximizeBox = False
-        MdiChildrenMinimizedAnchorBottom = False
-        MinimizeBox = False
-        Name = "Form4"
+        Controls.Add(btnGetSched)
+        Controls.Add(btnBack)
+        Name = "Form9"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "NOMG CLINIC (ADMIN)"
+        Text = "NOMG CLINIC (Schedule)"
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents btnLogOut As Button
+    Friend WithEvents btnBack As Button
+    Friend WithEvents btnGetSched As Button
 End Class

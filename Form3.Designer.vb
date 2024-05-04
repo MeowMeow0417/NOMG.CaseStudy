@@ -32,12 +32,14 @@ Partial Class Form3
         Label4 = New Label()
         TxtPass = New TextBox()
         Label5 = New Label()
+        CheckBox1 = New CheckBox()
+        LinkLabel1 = New LinkLabel()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(374, 222)
+        Label1.Location = New Point(348, 196)
         Label1.Name = "Label1"
         Label1.Size = New Size(0, 15)
         Label1.TabIndex = 0
@@ -45,7 +47,7 @@ Partial Class Form3
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(374, 237)
+        Label2.Location = New Point(348, 211)
         Label2.Name = "Label2"
         Label2.Size = New Size(36, 15)
         Label2.TabIndex = 17
@@ -54,7 +56,7 @@ Partial Class Form3
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(374, 185)
+        Label3.Location = New Point(348, 159)
         Label3.Name = "Label3"
         Label3.Size = New Size(60, 15)
         Label3.TabIndex = 16
@@ -62,21 +64,21 @@ Partial Class Form3
         ' 
         ' txtUser
         ' 
-        txtUser.Location = New Point(374, 203)
+        txtUser.Location = New Point(348, 177)
         txtUser.Name = "txtUser"
-        txtUser.Size = New Size(158, 23)
+        txtUser.Size = New Size(229, 23)
         txtUser.TabIndex = 15
         ' 
         ' txtEmail
         ' 
-        txtEmail.Location = New Point(374, 255)
+        txtEmail.Location = New Point(348, 229)
         txtEmail.Name = "txtEmail"
-        txtEmail.Size = New Size(158, 23)
+        txtEmail.Size = New Size(229, 23)
         txtEmail.TabIndex = 14
         ' 
         ' btnSignUp
         ' 
-        btnSignUp.Location = New Point(390, 344)
+        btnSignUp.Location = New Point(470, 364)
         btnSignUp.Name = "btnSignUp"
         btnSignUp.Size = New Size(107, 35)
         btnSignUp.TabIndex = 13
@@ -85,7 +87,7 @@ Partial Class Form3
         ' 
         ' btnCancel
         ' 
-        btnCancel.Location = New Point(390, 385)
+        btnCancel.Location = New Point(348, 364)
         btnCancel.Name = "btnCancel"
         btnCancel.Size = New Size(107, 35)
         btnCancel.TabIndex = 12
@@ -95,7 +97,7 @@ Partial Class Form3
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(374, 286)
+        Label4.Location = New Point(348, 260)
         Label4.Name = "Label4"
         Label4.Size = New Size(57, 15)
         Label4.TabIndex = 20
@@ -103,24 +105,46 @@ Partial Class Form3
         ' 
         ' TxtPass
         ' 
-        TxtPass.Location = New Point(374, 304)
+        TxtPass.Location = New Point(348, 278)
         TxtPass.Name = "TxtPass"
-        TxtPass.Size = New Size(158, 23)
+        TxtPass.Size = New Size(229, 23)
         TxtPass.TabIndex = 19
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(374, 261)
+        Label5.Location = New Point(348, 235)
         Label5.Name = "Label5"
         Label5.Size = New Size(0, 15)
         Label5.TabIndex = 18
+        ' 
+        ' CheckBox1
+        ' 
+        CheckBox1.AutoSize = True
+        CheckBox1.Location = New Point(348, 319)
+        CheckBox1.Name = "CheckBox1"
+        CheckBox1.Size = New Size(115, 19)
+        CheckBox1.TabIndex = 21
+        CheckBox1.Text = "Yes I agree to the"
+        CheckBox1.UseVisualStyleBackColor = True
+        ' 
+        ' LinkLabel1
+        ' 
+        LinkLabel1.AutoSize = True
+        LinkLabel1.Location = New Point(460, 320)
+        LinkLabel1.Name = "LinkLabel1"
+        LinkLabel1.Size = New Size(117, 15)
+        LinkLabel1.TabIndex = 22
+        LinkLabel1.TabStop = True
+        LinkLabel1.Text = "Terms and Condition"
         ' 
         ' Form3
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(884, 561)
+        Controls.Add(LinkLabel1)
+        Controls.Add(CheckBox1)
         Controls.Add(Label4)
         Controls.Add(TxtPass)
         Controls.Add(Label5)
@@ -136,7 +160,7 @@ Partial Class Form3
         MinimizeBox = False
         Name = "Form3"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "SIGN IN PAGE"
+        Text = "NOMG CLINIC (Sign - up)"
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -151,4 +175,6 @@ Partial Class Form3
     Friend WithEvents Label4 As Label
     Friend WithEvents TxtPass As TextBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class

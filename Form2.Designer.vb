@@ -96,7 +96,7 @@ Partial Class Form2
         MinimizeBox = False
         Name = "Form2"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Start Screen"
+        Text = "NOMG CLINIC (Sign -In)"
         ResumeLayout(False)
         PerformLayout()
     End Sub
