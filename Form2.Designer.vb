@@ -33,7 +33,7 @@ Partial Class Form2
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(409, 235)
+        Label2.Location = New Point(338, 246)
         Label2.Name = "Label2"
         Label2.Size = New Size(57, 15)
         Label2.TabIndex = 11
@@ -42,7 +42,7 @@ Partial Class Form2
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(407, 178)
+        Label1.Location = New Point(335, 189)
         Label1.Name = "Label1"
         Label1.Size = New Size(60, 15)
         Label1.TabIndex = 10
@@ -50,21 +50,21 @@ Partial Class Form2
         ' 
         ' txtUser
         ' 
-        txtUser.Location = New Point(358, 196)
+        txtUser.Location = New Point(335, 207)
         txtUser.Name = "txtUser"
-        txtUser.Size = New Size(158, 23)
+        txtUser.Size = New Size(236, 23)
         txtUser.TabIndex = 9
         ' 
         ' txtPass
         ' 
-        txtPass.Location = New Point(358, 253)
+        txtPass.Location = New Point(335, 264)
         txtPass.Name = "txtPass"
-        txtPass.Size = New Size(158, 23)
+        txtPass.Size = New Size(236, 23)
         txtPass.TabIndex = 8
         ' 
         ' btnCancel
         ' 
-        btnCancel.Location = New Point(387, 335)
+        btnCancel.Location = New Point(464, 305)
         btnCancel.Name = "btnCancel"
         btnCancel.Size = New Size(107, 35)
         btnCancel.TabIndex = 7
@@ -73,7 +73,7 @@ Partial Class Form2
         ' 
         ' btnSignIn
         ' 
-        btnSignIn.Location = New Point(387, 294)
+        btnSignIn.Location = New Point(335, 305)
         btnSignIn.Name = "btnSignIn"
         btnSignIn.Size = New Size(107, 35)
         btnSignIn.TabIndex = 6

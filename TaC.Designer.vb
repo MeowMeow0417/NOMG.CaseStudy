@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form10
+Partial Class TaC
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,14 +24,14 @@ Partial Class Form10
     Private Sub InitializeComponent()
         SuspendLayout()
         ' 
-        ' Form10
+        ' TaC
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(884, 561)
-        Name = "Form10"
+        Name = "TaC"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "NOMG CLINIC (Billing)"
+        Text = "NOMG Clinic (Terms and Conditions)"
         ResumeLayout(False)
     End Sub
 End Class

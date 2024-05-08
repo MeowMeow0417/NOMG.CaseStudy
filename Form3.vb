@@ -15,7 +15,7 @@
                 Form6.Show()
 
             Else
-                MsgBox("Please, do enter all the required details", vbOKOnly, "NOMG CLINIC")
+                MsgBox("Please enter all the required details", vbOKOnly, "NOMG CLINIC")
             End If
         Else
             ' Display a prompt to check the checkbox

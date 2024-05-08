@@ -26,7 +26,6 @@ Partial Class Form5
         lblUserName = New Label()
         btnSched = New Button()
         Label2 = New Label()
-        btnRem = New Button()
         btnPay = New Button()
         btnLogOut = New Button()
         SuspendLayout()
@@ -51,7 +50,7 @@ Partial Class Form5
         ' btnSched
         ' 
         btnSched.BackColor = Color.White
-        btnSched.Location = New Point(146, 449)
+        btnSched.Location = New Point(214, 449)
         btnSched.Name = "btnSched"
         btnSched.Size = New Size(113, 35)
         btnSched.TabIndex = 3
@@ -68,18 +67,9 @@ Partial Class Form5
         Label2.TabIndex = 4
         Label2.Text = "NOMG LOGO"
         ' 
-        ' btnRem
-        ' 
-        btnRem.Location = New Point(394, 449)
-        btnRem.Name = "btnRem"
-        btnRem.Size = New Size(113, 35)
-        btnRem.TabIndex = 6
-        btnRem.Text = "Reminders"
-        btnRem.UseVisualStyleBackColor = True
-        ' 
         ' btnPay
         ' 
-        btnPay.Location = New Point(646, 449)
+        btnPay.Location = New Point(552, 449)
         btnPay.Name = "btnPay"
         btnPay.Size = New Size(113, 35)
         btnPay.TabIndex = 7
@@ -102,7 +92,6 @@ Partial Class Form5
         ClientSize = New Size(884, 561)
         Controls.Add(btnLogOut)
         Controls.Add(btnPay)
-        Controls.Add(btnRem)
         Controls.Add(Label2)
         Controls.Add(btnSched)
         Controls.Add(lblUserName)
@@ -121,7 +110,6 @@ Partial Class Form5
     Friend WithEvents lblUserName As Label
     Friend WithEvents btnSched As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents btnRem As Button
     Friend WithEvents btnPay As Button
     Friend WithEvents btnLogOut As Button
 End Class
