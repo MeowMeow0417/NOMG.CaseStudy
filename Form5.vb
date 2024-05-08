@@ -28,5 +28,7 @@
         End If
     End Sub
 
-
+    Private Sub lblUserName_Click(sender As Object, e As EventArgs) Handles lblUserName.Click
+        lblUserName.Text = Form2.txtUser.Text
+    End Sub
 End Class
