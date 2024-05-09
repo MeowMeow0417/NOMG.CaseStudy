@@ -41,9 +41,6 @@ Public Class Form11
         Else
             MsgBox("Please enter all the required details", vbOKOnly, "NOMG CLINIC")
         End If
-
-
-
     End Sub
 
     Class CredCard
