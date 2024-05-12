@@ -36,7 +36,7 @@ Partial Class Form7
         btnSignIn.BackColor = Color.HotPink
         btnSignIn.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSignIn.ForeColor = Color.Black
-        btnSignIn.Location = New Point(12, 695)
+        btnSignIn.Location = New Point(63, 572)
         btnSignIn.Margin = New Padding(3, 4, 3, 4)
         btnSignIn.Name = "btnSignIn"
         btnSignIn.Size = New Size(86, 40)
@@ -80,9 +80,9 @@ Partial Class Form7
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(-2, 66)
+        PictureBox1.Location = New Point(-165, 12)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(1280, 613)
+        PictureBox1.Size = New Size(1366, 768)
         PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
         PictureBox1.TabIndex = 4
         PictureBox1.TabStop = False
@@ -93,11 +93,11 @@ Partial Class Form7
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1010, 748)
-        Controls.Add(PictureBox1)
         Controls.Add(Label1)
         Controls.Add(btnSignUp)
         Controls.Add(btnContact)
         Controls.Add(btnSignIn)
+        Controls.Add(PictureBox1)
         Margin = New Padding(3, 4, 3, 4)
         Name = "Form7"
         StartPosition = FormStartPosition.CenterScreen

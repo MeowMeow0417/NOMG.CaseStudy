@@ -30,10 +30,8 @@ Partial Class Form5
         btnLogOut = New Button()
         PictureBox1 = New PictureBox()
         PictureBox2 = New PictureBox()
-        PictureBox3 = New PictureBox()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label1
@@ -59,7 +57,7 @@ Partial Class Form5
         btnSched.BackColor = Color.HotPink
         btnSched.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSched.ForeColor = Color.Transparent
-        btnSched.Location = New Point(245, 599)
+        btnSched.Location = New Point(235, 520)
         btnSched.Margin = New Padding(3, 4, 3, 4)
         btnSched.Name = "btnSched"
         btnSched.Size = New Size(129, 47)
@@ -72,7 +70,7 @@ Partial Class Form5
         btnPay.BackColor = Color.HotPink
         btnPay.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnPay.ForeColor = Color.White
-        btnPay.Location = New Point(631, 599)
+        btnPay.Location = New Point(666, 520)
         btnPay.Margin = New Padding(3, 4, 3, 4)
         btnPay.Name = "btnPay"
         btnPay.Size = New Size(129, 47)
@@ -105,22 +103,12 @@ Partial Class Form5
         ' PictureBox2
         ' 
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(135, 230)
+        PictureBox2.Location = New Point(-163, 56)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(344, 344)
+        PictureBox2.Size = New Size(1366, 768)
         PictureBox2.SizeMode = PictureBoxSizeMode.AutoSize
         PictureBox2.TabIndex = 12
         PictureBox2.TabStop = False
-        ' 
-        ' PictureBox3
-        ' 
-        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(529, 240)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(337, 323)
-        PictureBox3.SizeMode = PictureBoxSizeMode.AutoSize
-        PictureBox3.TabIndex = 13
-        PictureBox3.TabStop = False
         ' 
         ' Form5
         ' 
@@ -128,14 +116,13 @@ Partial Class Form5
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(1010, 748)
-        Controls.Add(PictureBox3)
-        Controls.Add(PictureBox2)
         Controls.Add(PictureBox1)
         Controls.Add(btnLogOut)
         Controls.Add(btnPay)
         Controls.Add(btnSched)
         Controls.Add(lblUserName)
         Controls.Add(Label1)
+        Controls.Add(PictureBox2)
         Margin = New Padding(3, 4, 3, 4)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
@@ -145,7 +132,6 @@ Partial Class Form5
         Text = "NOMG CLINIC (PATIENTS)"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -157,5 +143,4 @@ Partial Class Form5
     Friend WithEvents btnLogOut As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
 End Class

@@ -78,7 +78,7 @@ Partial Class Form8
         ' PictureBox2
         ' 
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(-179, 12)
+        PictureBox2.Location = New Point(-159, 59)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(1366, 768)
         PictureBox2.SizeMode = PictureBoxSizeMode.AutoSize
