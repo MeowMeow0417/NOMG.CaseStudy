@@ -22,86 +22,130 @@ Partial Class Form5
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form5))
         Label1 = New Label()
         lblUserName = New Label()
         btnSched = New Button()
-        Label2 = New Label()
         btnPay = New Button()
         btnLogOut = New Button()
+        PictureBox1 = New PictureBox()
+        PictureBox2 = New PictureBox()
+        PictureBox3 = New PictureBox()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(12, 9)
+        Label1.Location = New Point(14, 12)
         Label1.Name = "Label1"
-        Label1.Size = New Size(0, 15)
+        Label1.Size = New Size(0, 20)
         Label1.TabIndex = 0
         ' 
         ' lblUserName
         ' 
         lblUserName.AutoSize = True
-        lblUserName.Location = New Point(12, 9)
+        lblUserName.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblUserName.Location = New Point(14, 12)
         lblUserName.Name = "lblUserName"
-        lblUserName.Size = New Size(59, 15)
+        lblUserName.Size = New Size(95, 25)
         lblUserName.TabIndex = 2
         lblUserName.Text = "username"
         ' 
         ' btnSched
         ' 
-        btnSched.BackColor = Color.White
-        btnSched.Location = New Point(214, 449)
+        btnSched.BackColor = Color.HotPink
+        btnSched.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSched.ForeColor = Color.Transparent
+        btnSched.Location = New Point(245, 599)
+        btnSched.Margin = New Padding(3, 4, 3, 4)
         btnSched.Name = "btnSched"
-        btnSched.Size = New Size(113, 35)
+        btnSched.Size = New Size(129, 47)
         btnSched.TabIndex = 3
         btnSched.Text = "Schedule"
         btnSched.UseVisualStyleBackColor = False
         ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(742, 9)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(130, 25)
-        Label2.TabIndex = 4
-        Label2.Text = "NOMG LOGO"
-        ' 
         ' btnPay
         ' 
-        btnPay.Location = New Point(552, 449)
+        btnPay.BackColor = Color.HotPink
+        btnPay.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnPay.ForeColor = Color.White
+        btnPay.Location = New Point(631, 599)
+        btnPay.Margin = New Padding(3, 4, 3, 4)
         btnPay.Name = "btnPay"
-        btnPay.Size = New Size(113, 35)
+        btnPay.Size = New Size(129, 47)
         btnPay.TabIndex = 7
         btnPay.Text = "Payment"
-        btnPay.UseVisualStyleBackColor = True
+        btnPay.UseVisualStyleBackColor = False
         ' 
         ' btnLogOut
         ' 
-        btnLogOut.Location = New Point(12, 522)
+        btnLogOut.BackColor = Color.HotPink
+        btnLogOut.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnLogOut.Location = New Point(14, 696)
+        btnLogOut.Margin = New Padding(3, 4, 3, 4)
         btnLogOut.Name = "btnLogOut"
-        btnLogOut.Size = New Size(113, 27)
+        btnLogOut.Size = New Size(129, 36)
         btnLogOut.TabIndex = 10
         btnLogOut.Text = "Log Out"
-        btnLogOut.UseVisualStyleBackColor = True
+        btnLogOut.UseVisualStyleBackColor = False
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(909, 0)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(102, 102)
+        PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox1.TabIndex = 11
+        PictureBox1.TabStop = False
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
+        PictureBox2.Location = New Point(135, 230)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(344, 344)
+        PictureBox2.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox2.TabIndex = 12
+        PictureBox2.TabStop = False
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
+        PictureBox3.Location = New Point(529, 240)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(337, 323)
+        PictureBox3.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox3.TabIndex = 13
+        PictureBox3.TabStop = False
         ' 
         ' Form5
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(884, 561)
+        BackColor = SystemColors.ButtonHighlight
+        ClientSize = New Size(1010, 748)
+        Controls.Add(PictureBox3)
+        Controls.Add(PictureBox2)
+        Controls.Add(PictureBox1)
         Controls.Add(btnLogOut)
         Controls.Add(btnPay)
-        Controls.Add(Label2)
         Controls.Add(btnSched)
         Controls.Add(lblUserName)
         Controls.Add(Label1)
+        Margin = New Padding(3, 4, 3, 4)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False
         Name = "Form5"
         StartPosition = FormStartPosition.CenterScreen
         Text = "NOMG CLINIC (PATIENTS)"
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -109,7 +153,9 @@ Partial Class Form5
     Friend WithEvents Label1 As Label
     Friend WithEvents lblUserName As Label
     Friend WithEvents btnSched As Button
-    Friend WithEvents Label2 As Label
     Friend WithEvents btnPay As Button
     Friend WithEvents btnLogOut As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
 End Class

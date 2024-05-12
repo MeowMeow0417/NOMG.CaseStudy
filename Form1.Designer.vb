@@ -23,19 +23,23 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         ProgressBar1 = New ProgressBar()
         Timer1 = New Timer(components)
         Timer2 = New Timer(components)
         lblPercent = New Label()
+        PictureBox1 = New PictureBox()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' ProgressBar1
         ' 
         ProgressBar1.BackColor = Color.Black
         ProgressBar1.ForeColor = Color.Salmon
-        ProgressBar1.Location = New Point(12, 534)
+        ProgressBar1.Location = New Point(14, 712)
+        ProgressBar1.Margin = New Padding(3, 4, 3, 4)
         ProgressBar1.Name = "ProgressBar1"
-        ProgressBar1.Size = New Size(860, 15)
+        ProgressBar1.Size = New Size(983, 20)
         ProgressBar1.Step = 1
         ProgressBar1.Style = ProgressBarStyle.Continuous
         ProgressBar1.TabIndex = 2
@@ -52,25 +56,38 @@ Partial Class Form1
         ' 
         lblPercent.AutoSize = True
         lblPercent.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblPercent.Location = New Point(846, 516)
+        lblPercent.Location = New Point(967, 688)
         lblPercent.Name = "lblPercent"
-        lblPercent.Size = New Size(17, 15)
+        lblPercent.Size = New Size(22, 20)
         lblPercent.TabIndex = 3
         lblPercent.Text = "%"
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(-217, -47)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(1366, 768)
+        PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox1.TabIndex = 4
+        PictureBox1.TabStop = False
+        ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(884, 561)
+        ClientSize = New Size(1010, 748)
+        Controls.Add(PictureBox1)
         Controls.Add(lblPercent)
         Controls.Add(ProgressBar1)
+        Margin = New Padding(3, 4, 3, 4)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False
         Name = "Form1"
         StartPosition = FormStartPosition.CenterScreen
         Text = "NOMG CLINIC (Splash  Screen)"
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -84,5 +101,6 @@ Partial Class Form1
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
     Friend WithEvents lblPercent As Label
+    Friend WithEvents PictureBox1 As PictureBox
 
 End Class

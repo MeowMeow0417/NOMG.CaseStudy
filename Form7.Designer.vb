@@ -22,35 +22,46 @@ Partial Class Form7
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form7))
         btnSignIn = New Button()
         btnContact = New Button()
         btnSignUp = New Button()
         Label1 = New Label()
+        PictureBox1 = New PictureBox()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnSignIn
         ' 
-        btnSignIn.Location = New Point(72, 484)
+        btnSignIn.BackColor = Color.HotPink
+        btnSignIn.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSignIn.ForeColor = Color.Black
+        btnSignIn.Location = New Point(12, 695)
+        btnSignIn.Margin = New Padding(3, 4, 3, 4)
         btnSignIn.Name = "btnSignIn"
-        btnSignIn.Size = New Size(75, 23)
+        btnSignIn.Size = New Size(86, 40)
         btnSignIn.TabIndex = 0
         btnSignIn.Text = "Sign-In"
-        btnSignIn.UseVisualStyleBackColor = True
+        btnSignIn.UseVisualStyleBackColor = False
         ' 
         ' btnContact
         ' 
-        btnContact.Location = New Point(107, 21)
+        btnContact.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnContact.Location = New Point(122, 28)
+        btnContact.Margin = New Padding(3, 4, 3, 4)
         btnContact.Name = "btnContact"
-        btnContact.Size = New Size(75, 23)
+        btnContact.Size = New Size(86, 31)
         btnContact.TabIndex = 1
         btnContact.Text = "Contact"
         btnContact.UseVisualStyleBackColor = True
         ' 
         ' btnSignUp
         ' 
-        btnSignUp.Location = New Point(211, 21)
+        btnSignUp.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSignUp.Location = New Point(241, 28)
+        btnSignUp.Margin = New Padding(3, 4, 3, 4)
         btnSignUp.Name = "btnSignUp"
-        btnSignUp.Size = New Size(75, 23)
+        btnSignUp.Size = New Size(86, 31)
         btnSignUp.TabIndex = 2
         btnSignUp.Text = "Sign Up"
         btnSignUp.UseVisualStyleBackColor = True
@@ -58,24 +69,40 @@ Partial Class Form7
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(30, 29)
+        Label1.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.ForeColor = Color.HotPink
+        Label1.Location = New Point(31, 34)
         Label1.Name = "Label1"
-        Label1.Size = New Size(42, 15)
+        Label1.Size = New Size(67, 25)
         Label1.TabIndex = 3
         Label1.Text = "HOME"
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(-2, 66)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(1280, 613)
+        PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox1.TabIndex = 4
+        PictureBox1.TabStop = False
+        ' 
         ' Form7
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(884, 561)
+        BackColor = Color.White
+        ClientSize = New Size(1010, 748)
+        Controls.Add(PictureBox1)
         Controls.Add(Label1)
         Controls.Add(btnSignUp)
         Controls.Add(btnContact)
         Controls.Add(btnSignIn)
+        Margin = New Padding(3, 4, 3, 4)
         Name = "Form7"
         StartPosition = FormStartPosition.CenterScreen
         Text = "NOMG CLINIC (HOME PAGE)"
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -84,4 +111,5 @@ Partial Class Form7
     Friend WithEvents btnContact As Button
     Friend WithEvents btnSignUp As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

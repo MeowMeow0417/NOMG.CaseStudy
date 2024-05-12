@@ -22,49 +22,86 @@ Partial Class Form8
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form8))
         Label1 = New Label()
         btnSignUp = New Button()
         btnHome = New Button()
+        PictureBox1 = New PictureBox()
+        PictureBox2 = New PictureBox()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(125, 24)
+        Label1.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.ForeColor = Color.HotPink
+        Label1.Location = New Point(135, 27)
         Label1.Name = "Label1"
-        Label1.Size = New Size(60, 15)
+        Label1.Size = New Size(96, 25)
         Label1.TabIndex = 6
         Label1.Text = "CONTACT"
         ' 
         ' btnSignUp
         ' 
-        btnSignUp.Location = New Point(216, 16)
+        btnSignUp.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSignUp.Location = New Point(247, 21)
+        btnSignUp.Margin = New Padding(3, 4, 3, 4)
         btnSignUp.Name = "btnSignUp"
-        btnSignUp.Size = New Size(75, 23)
+        btnSignUp.Size = New Size(86, 31)
         btnSignUp.TabIndex = 5
         btnSignUp.Text = "Sign Up"
         btnSignUp.UseVisualStyleBackColor = True
         ' 
         ' btnHome
         ' 
-        btnHome.Location = New Point(29, 16)
+        btnHome.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnHome.Location = New Point(33, 21)
+        btnHome.Margin = New Padding(3, 4, 3, 4)
         btnHome.Name = "btnHome"
-        btnHome.Size = New Size(75, 23)
+        btnHome.Size = New Size(86, 31)
         btnHome.TabIndex = 4
         btnHome.Text = "Home"
         btnHome.UseVisualStyleBackColor = True
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(908, 0)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(102, 102)
+        PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox1.TabIndex = 7
+        PictureBox1.TabStop = False
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
+        PictureBox2.Location = New Point(-179, 12)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(1366, 768)
+        PictureBox2.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox2.TabIndex = 8
+        PictureBox2.TabStop = False
+        ' 
         ' Form8
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(884, 561)
+        BackColor = Color.White
+        ClientSize = New Size(1010, 748)
+        Controls.Add(PictureBox1)
         Controls.Add(Label1)
         Controls.Add(btnSignUp)
         Controls.Add(btnHome)
+        Controls.Add(PictureBox2)
+        Margin = New Padding(3, 4, 3, 4)
         Name = "Form8"
         StartPosition = FormStartPosition.CenterScreen
         Text = "NOMG CLINIC (CONTACTS)"
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -72,4 +109,6 @@ Partial Class Form8
     Friend WithEvents Label1 As Label
     Friend WithEvents btnSignUp As Button
     Friend WithEvents btnHome As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class
