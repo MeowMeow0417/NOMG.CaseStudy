@@ -22,32 +22,66 @@ Partial Class Form4
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form4))
         btnLogOut = New Button()
+        PictureBox1 = New PictureBox()
+        PictureBox2 = New PictureBox()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnLogOut
         ' 
-        btnLogOut.Location = New Point(12, 522)
+        btnLogOut.Location = New Point(14, 696)
+        btnLogOut.Margin = New Padding(3, 4, 3, 4)
         btnLogOut.Name = "btnLogOut"
-        btnLogOut.Size = New Size(113, 27)
+        btnLogOut.Size = New Size(129, 36)
         btnLogOut.TabIndex = 11
         btnLogOut.Text = "Log Out"
         btnLogOut.UseVisualStyleBackColor = True
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(66, 197)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(884, 212)
+        PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox1.TabIndex = 12
+        PictureBox1.TabStop = False
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
+        PictureBox2.Location = New Point(909, 0)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(102, 102)
+        PictureBox2.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox2.TabIndex = 13
+        PictureBox2.TabStop = False
+        ' 
         ' Form4
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(884, 561)
+        ClientSize = New Size(1010, 748)
+        Controls.Add(PictureBox2)
+        Controls.Add(PictureBox1)
         Controls.Add(btnLogOut)
+        Margin = New Padding(3, 4, 3, 4)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False
         Name = "Form4"
         StartPosition = FormStartPosition.CenterScreen
         Text = "NOMG CLINIC (ADMIN)"
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents btnLogOut As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

@@ -35,4 +35,12 @@
         Me.Close()
 
     End Sub
+
+    Private Sub TextBox5_TextChanged(sender As Object, e As EventArgs) Handles txtGender.TextChanged
+
+    End Sub
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

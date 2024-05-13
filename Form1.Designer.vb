@@ -64,10 +64,11 @@ Partial Class Form1
         ' 
         ' PictureBox1
         ' 
+        PictureBox1.BackColor = SystemColors.ControlLightLight
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(-217, -47)
+        PictureBox1.Location = New Point(118, 70)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(1366, 768)
+        PictureBox1.Size = New Size(734, 397)
         PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
         PictureBox1.TabIndex = 4
         PictureBox1.TabStop = False

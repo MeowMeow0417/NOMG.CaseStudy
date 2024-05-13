@@ -46,18 +46,19 @@ Partial Class Form5
         ' 
         lblUserName.AutoSize = True
         lblUserName.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblUserName.ForeColor = SystemColors.ActiveCaptionText
         lblUserName.Location = New Point(14, 12)
         lblUserName.Name = "lblUserName"
-        lblUserName.Size = New Size(95, 25)
+        lblUserName.Size = New Size(97, 25)
         lblUserName.TabIndex = 2
-        lblUserName.Text = "username"
+        lblUserName.Text = "Username"
         ' 
         ' btnSched
         ' 
         btnSched.BackColor = Color.HotPink
         btnSched.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnSched.ForeColor = Color.Transparent
-        btnSched.Location = New Point(235, 520)
+        btnSched.ForeColor = Color.Black
+        btnSched.Location = New Point(237, 437)
         btnSched.Margin = New Padding(3, 4, 3, 4)
         btnSched.Name = "btnSched"
         btnSched.Size = New Size(129, 47)
@@ -69,8 +70,8 @@ Partial Class Form5
         ' 
         btnPay.BackColor = Color.HotPink
         btnPay.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnPay.ForeColor = Color.White
-        btnPay.Location = New Point(666, 520)
+        btnPay.ForeColor = Color.Black
+        btnPay.Location = New Point(635, 437)
         btnPay.Margin = New Padding(3, 4, 3, 4)
         btnPay.Name = "btnPay"
         btnPay.Size = New Size(129, 47)
@@ -103,10 +104,9 @@ Partial Class Form5
         ' PictureBox2
         ' 
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(-163, 56)
+        PictureBox2.Location = New Point(144, 165)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(1366, 768)
-        PictureBox2.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox2.Size = New Size(749, 265)
         PictureBox2.TabIndex = 12
         PictureBox2.TabStop = False
         ' 
@@ -116,13 +116,13 @@ Partial Class Form5
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(1010, 748)
+        Controls.Add(PictureBox2)
         Controls.Add(PictureBox1)
         Controls.Add(btnLogOut)
         Controls.Add(btnPay)
         Controls.Add(btnSched)
         Controls.Add(lblUserName)
         Controls.Add(Label1)
-        Controls.Add(PictureBox2)
         Margin = New Padding(3, 4, 3, 4)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
