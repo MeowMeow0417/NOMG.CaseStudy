@@ -54,7 +54,7 @@ Partial Class Form1
         ' lblPercent
         ' 
         lblPercent.AutoSize = True
-        lblPercent.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblPercent.Font = New Font("Segoe UI Semibold", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblPercent.Location = New Point(846, 516)
         lblPercent.Name = "lblPercent"
         lblPercent.Size = New Size(17, 15)
@@ -63,18 +63,18 @@ Partial Class Form1
         ' 
         ' PictureBox1
         ' 
+        PictureBox1.BackColor = SystemColors.ControlLightLight
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(-190, -35)
-        PictureBox1.Margin = New Padding(3, 2, 3, 2)
+        PictureBox1.Location = New Point(118, 70)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(1366, 768)
+        PictureBox1.Size = New Size(734, 397)
         PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
         PictureBox1.TabIndex = 4
         PictureBox1.TabStop = False
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(884, 561)
         Controls.Add(lblPercent)

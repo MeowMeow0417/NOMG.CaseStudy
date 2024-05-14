@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form4
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,46 +20,68 @@ Partial Class Form4
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form4))
         btnLogOut = New Button()
-        btnBill = New Button()
+        PictureBox1 = New PictureBox()
+        PictureBox2 = New PictureBox()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnLogOut
         ' 
-        btnLogOut.Location = New Point(12, 522)
+        btnLogOut.Location = New Point(14, 696)
+        btnLogOut.Margin = New Padding(3, 4, 3, 4)
         btnLogOut.Name = "btnLogOut"
-        btnLogOut.Size = New Size(113, 27)
+        btnLogOut.Size = New Size(129, 36)
         btnLogOut.TabIndex = 11
         btnLogOut.Text = "Log Out"
         btnLogOut.UseVisualStyleBackColor = True
         ' 
-        ' btnBill
+        ' PictureBox1
         ' 
-        btnBill.Location = New Point(602, 464)
-        btnBill.Name = "btnBill"
-        btnBill.Size = New Size(105, 35)
-        btnBill.TabIndex = 12
-        btnBill.Text = "Billing"
-        btnBill.UseVisualStyleBackColor = True
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(66, 197)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(884, 212)
+        PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox1.TabIndex = 12
+        PictureBox1.TabStop = False
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
+        PictureBox2.Location = New Point(909, 0)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(102, 102)
+        PictureBox2.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox2.TabIndex = 13
+        PictureBox2.TabStop = False
         ' 
         ' Form4
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(884, 561)
-        Controls.Add(btnBill)
+        ClientSize = New Size(1010, 748)
+        Controls.Add(PictureBox2)
+        Controls.Add(PictureBox1)
         Controls.Add(btnLogOut)
+        Margin = New Padding(3, 4, 3, 4)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False
         Name = "Form4"
         StartPosition = FormStartPosition.CenterScreen
         Text = "NOMG CLINIC (ADMIN)"
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents btnLogOut As Button
-    Friend WithEvents btnBill As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class
