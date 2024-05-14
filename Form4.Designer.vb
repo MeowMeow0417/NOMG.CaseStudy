@@ -23,6 +23,7 @@ Partial Class Form4
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         btnLogOut = New Button()
+        btnBill = New Button()
         SuspendLayout()
         ' 
         ' btnLogOut
@@ -34,11 +35,21 @@ Partial Class Form4
         btnLogOut.Text = "Log Out"
         btnLogOut.UseVisualStyleBackColor = True
         ' 
+        ' btnBill
+        ' 
+        btnBill.Location = New Point(602, 464)
+        btnBill.Name = "btnBill"
+        btnBill.Size = New Size(105, 35)
+        btnBill.TabIndex = 12
+        btnBill.Text = "Billing"
+        btnBill.UseVisualStyleBackColor = True
+        ' 
         ' Form4
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(884, 561)
+        Controls.Add(btnBill)
         Controls.Add(btnLogOut)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
@@ -50,4 +61,5 @@ Partial Class Form4
     End Sub
 
     Friend WithEvents btnLogOut As Button
+    Friend WithEvents btnBill As Button
 End Class

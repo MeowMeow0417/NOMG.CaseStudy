@@ -25,8 +25,7 @@
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked 'decide if going to use a panel or not.
-        MsgBox("TERMS AND CONDITIONS." & vbCrLf & "Line 2" & vbCrLf & "Line 3", vbOKOnly, "NOMG CLINIC")
-
+        TaC.Show()
     End Sub
 
     'btn for cancel

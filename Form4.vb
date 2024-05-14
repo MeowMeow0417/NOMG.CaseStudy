@@ -11,5 +11,9 @@
         End If
     End Sub
 
+    Private Sub btnBill_Click(sender As Object, e As EventArgs) Handles btnBill.Click
+        Form13.Show()
+        Me.Close()
 
+    End Sub
 End Class

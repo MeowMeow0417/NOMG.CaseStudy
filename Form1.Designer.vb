@@ -36,10 +36,9 @@ Partial Class Form1
         ' 
         ProgressBar1.BackColor = Color.Black
         ProgressBar1.ForeColor = Color.Salmon
-        ProgressBar1.Location = New Point(14, 712)
-        ProgressBar1.Margin = New Padding(3, 4, 3, 4)
+        ProgressBar1.Location = New Point(12, 534)
         ProgressBar1.Name = "ProgressBar1"
-        ProgressBar1.Size = New Size(983, 20)
+        ProgressBar1.Size = New Size(860, 15)
         ProgressBar1.Step = 1
         ProgressBar1.Style = ProgressBarStyle.Continuous
         ProgressBar1.TabIndex = 2
@@ -56,16 +55,17 @@ Partial Class Form1
         ' 
         lblPercent.AutoSize = True
         lblPercent.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblPercent.Location = New Point(967, 688)
+        lblPercent.Location = New Point(846, 516)
         lblPercent.Name = "lblPercent"
-        lblPercent.Size = New Size(22, 20)
+        lblPercent.Size = New Size(17, 15)
         lblPercent.TabIndex = 3
         lblPercent.Text = "%"
         ' 
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(-217, -47)
+        PictureBox1.Location = New Point(-190, -35)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(1366, 768)
         PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
@@ -74,13 +74,12 @@ Partial Class Form1
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1010, 748)
-        Controls.Add(PictureBox1)
+        ClientSize = New Size(884, 561)
         Controls.Add(lblPercent)
         Controls.Add(ProgressBar1)
-        Margin = New Padding(3, 4, 3, 4)
+        Controls.Add(PictureBox1)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False

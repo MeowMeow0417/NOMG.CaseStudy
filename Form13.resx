@@ -117,19 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>These terms govern your use of services at New OB Master GYN Clinic (NOMG), covering medical consultations, examinations, treatments, and procedures. By accessing or using our services, you agree to comply with these terms. Please review them carefully before proceeding with any services at our clinic.</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Patients at NOMG are required to furnish accurate and thorough medical history, including current medications, allergies, and past treatments. Open dialogue with healthcare providers is essential, and adherence to their treatment plans and follow-up care instructions is imperative.</value>
-  </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>We ensure the protection of your personal health data, adhering to laws and regulations. Your medical records remain confidential and won't be shared with third parties without your consent, except as required by law or for purposes related to treatment, payment, or healthcare operations</value>
-  </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>We highly value your feedback and are committed to ongoing service improvement. Feel free to share any concerns, complaints, or suggestions with us. We'll promptly address them and strive to ensure your satisfaction.</value>
-  </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>By using the services of New OB Master GYN Clinic (NOMG), you acknowledge that you have read, understood, and agree to abide by these Terms and Conditions. If you do not agree with any part of these terms, please refrain from using our services. If you have any questions or concerns, please contact us for clarification.</value>
-  </data>
 </root>

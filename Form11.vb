@@ -92,4 +92,8 @@ Public Class Form11
         listCard.Add(Cred4)
         listCard.Add(Cred5)
     End Sub
+
+    Private Sub txtEmail_TextChanged(sender As Object, e As EventArgs) Handles txtEmail.TextChanged
+
+    End Sub
 End Class
