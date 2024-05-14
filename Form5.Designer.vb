@@ -37,9 +37,9 @@ Partial Class Form5
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(14, 12)
+        Label1.Location = New Point(12, 9)
         Label1.Name = "Label1"
-        Label1.Size = New Size(0, 20)
+        Label1.Size = New Size(0, 15)
         Label1.TabIndex = 0
         ' 
         ' lblUserName
@@ -47,9 +47,9 @@ Partial Class Form5
         lblUserName.AutoSize = True
         lblUserName.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblUserName.ForeColor = SystemColors.ActiveCaptionText
-        lblUserName.Location = New Point(14, 12)
+        lblUserName.Location = New Point(12, 9)
         lblUserName.Name = "lblUserName"
-        lblUserName.Size = New Size(97, 25)
+        lblUserName.Size = New Size(80, 20)
         lblUserName.TabIndex = 2
         lblUserName.Text = "Username"
         ' 
@@ -58,10 +58,9 @@ Partial Class Form5
         btnSched.BackColor = Color.HotPink
         btnSched.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSched.ForeColor = Color.Black
-        btnSched.Location = New Point(237, 437)
-        btnSched.Margin = New Padding(3, 4, 3, 4)
+        btnSched.Location = New Point(192, 450)
         btnSched.Name = "btnSched"
-        btnSched.Size = New Size(129, 47)
+        btnSched.Size = New Size(113, 35)
         btnSched.TabIndex = 3
         btnSched.Text = "Schedule"
         btnSched.UseVisualStyleBackColor = False
@@ -71,10 +70,9 @@ Partial Class Form5
         btnPay.BackColor = Color.HotPink
         btnPay.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnPay.ForeColor = Color.Black
-        btnPay.Location = New Point(635, 437)
-        btnPay.Margin = New Padding(3, 4, 3, 4)
+        btnPay.Location = New Point(630, 450)
         btnPay.Name = "btnPay"
-        btnPay.Size = New Size(129, 47)
+        btnPay.Size = New Size(113, 35)
         btnPay.TabIndex = 7
         btnPay.Text = "Payment"
         btnPay.UseVisualStyleBackColor = False
@@ -83,10 +81,9 @@ Partial Class Form5
         ' 
         btnLogOut.BackColor = Color.HotPink
         btnLogOut.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnLogOut.Location = New Point(14, 696)
-        btnLogOut.Margin = New Padding(3, 4, 3, 4)
+        btnLogOut.Location = New Point(12, 522)
         btnLogOut.Name = "btnLogOut"
-        btnLogOut.Size = New Size(129, 36)
+        btnLogOut.Size = New Size(113, 27)
         btnLogOut.TabIndex = 10
         btnLogOut.Text = "Log Out"
         btnLogOut.UseVisualStyleBackColor = False
@@ -94,7 +91,8 @@ Partial Class Form5
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(909, 0)
+        PictureBox1.Location = New Point(795, 0)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(102, 102)
         PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
@@ -104,18 +102,19 @@ Partial Class Form5
         ' PictureBox2
         ' 
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(144, 165)
+        PictureBox2.Location = New Point(125, 144)
+        PictureBox2.Margin = New Padding(3, 2, 3, 2)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(749, 265)
+        PictureBox2.Size = New Size(717, 276)
         PictureBox2.TabIndex = 12
         PictureBox2.TabStop = False
         ' 
         ' Form5
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
-        ClientSize = New Size(1010, 748)
+        ClientSize = New Size(884, 561)
         Controls.Add(PictureBox2)
         Controls.Add(PictureBox1)
         Controls.Add(btnLogOut)
@@ -123,7 +122,6 @@ Partial Class Form5
         Controls.Add(btnSched)
         Controls.Add(lblUserName)
         Controls.Add(Label1)
-        Margin = New Padding(3, 4, 3, 4)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False

@@ -53,10 +53,9 @@ Partial Class Form6
         ' 
         btnNext.BackColor = Color.HotPink
         btnNext.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnNext.Location = New Point(568, 468)
-        btnNext.Margin = New Padding(3, 4, 3, 4)
+        btnNext.Location = New Point(497, 351)
         btnNext.Name = "btnNext"
-        btnNext.Size = New Size(103, 46)
+        btnNext.Size = New Size(90, 34)
         btnNext.TabIndex = 1
         btnNext.Text = "Next"
         btnNext.UseVisualStyleBackColor = False
@@ -65,10 +64,9 @@ Partial Class Form6
         ' 
         btnCancel.BackColor = Color.HotPink
         btnCancel.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnCancel.Location = New Point(338, 468)
-        btnCancel.Margin = New Padding(3, 4, 3, 4)
+        btnCancel.Location = New Point(296, 351)
         btnCancel.Name = "btnCancel"
-        btnCancel.Size = New Size(107, 46)
+        btnCancel.Size = New Size(94, 34)
         btnCancel.TabIndex = 4
         btnCancel.Text = "Cancel"
         btnCancel.UseVisualStyleBackColor = False
@@ -76,7 +74,8 @@ Partial Class Form6
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(908, 1)
+        PictureBox1.Location = New Point(785, -2)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(102, 102)
         PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
@@ -87,9 +86,9 @@ Partial Class Form6
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(323, 138)
+        Label1.Location = New Point(283, 104)
         Label1.Name = "Label1"
-        Label1.Size = New Size(62, 23)
+        Label1.Size = New Size(53, 19)
         Label1.TabIndex = 13
         Label1.Text = "Name:"
         ' 
@@ -97,9 +96,9 @@ Partial Class Form6
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(323, 169)
+        Label2.Location = New Point(283, 127)
         Label2.Name = "Label2"
-        Label2.Size = New Size(99, 23)
+        Label2.Size = New Size(83, 19)
         Label2.TabIndex = 14
         Label2.Text = "Last Name:"
         ' 
@@ -107,9 +106,9 @@ Partial Class Form6
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(557, 142)
+        Label3.Location = New Point(487, 106)
         Label3.Name = "Label3"
-        Label3.Size = New Size(41, 23)
+        Label3.Size = New Size(34, 19)
         Label3.TabIndex = 15
         Label3.Text = "M.I:"
         ' 
@@ -117,9 +116,9 @@ Partial Class Form6
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(323, 209)
+        Label4.Location = New Point(283, 157)
         Label4.Name = "Label4"
-        Label4.Size = New Size(47, 23)
+        Label4.Size = New Size(40, 19)
         Label4.TabIndex = 16
         Label4.Text = "Age:"
         ' 
@@ -127,9 +126,9 @@ Partial Class Form6
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(488, 213)
+        Label5.Location = New Point(427, 160)
         Label5.Name = "Label5"
-        Label5.Size = New Size(74, 23)
+        Label5.Size = New Size(63, 19)
         Label5.TabIndex = 17
         Label5.Text = "Gender:"
         ' 
@@ -137,43 +136,46 @@ Partial Class Form6
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(323, 291)
+        Label6.Location = New Point(283, 218)
         Label6.Name = "Label6"
-        Label6.Size = New Size(105, 23)
+        Label6.Size = New Size(86, 19)
         Label6.TabIndex = 18
         Label6.Text = "Civil Status:"
         ' 
         ' txtName
         ' 
         txtName.BackColor = SystemColors.ScrollBar
-        txtName.Location = New Point(391, 137)
+        txtName.Location = New Point(342, 103)
+        txtName.Margin = New Padding(3, 2, 3, 2)
         txtName.Name = "txtName"
-        txtName.Size = New Size(160, 27)
+        txtName.Size = New Size(140, 23)
         txtName.TabIndex = 19
         ' 
         ' txtLastName
         ' 
         txtLastName.BackColor = SystemColors.ScrollBar
-        txtLastName.Location = New Point(418, 168)
+        txtLastName.Location = New Point(366, 126)
+        txtLastName.Margin = New Padding(3, 2, 3, 2)
         txtLastName.Name = "txtLastName"
-        txtLastName.Size = New Size(257, 27)
+        txtLastName.Size = New Size(225, 23)
         txtLastName.TabIndex = 20
         ' 
         ' txtMI
         ' 
         txtMI.BackColor = SystemColors.ScrollBar
-        txtMI.Location = New Point(604, 138)
+        txtMI.Location = New Point(528, 104)
+        txtMI.Margin = New Padding(3, 2, 3, 2)
         txtMI.Name = "txtMI"
-        txtMI.Size = New Size(71, 27)
+        txtMI.Size = New Size(63, 23)
         txtMI.TabIndex = 21
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(323, 252)
+        Label7.Location = New Point(283, 189)
         Label7.Name = "Label7"
-        Label7.Size = New Size(79, 23)
+        Label7.Size = New Size(67, 19)
         Label7.TabIndex = 22
         Label7.Text = "Address:"
         ' 
@@ -181,9 +183,9 @@ Partial Class Form6
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(327, 347)
+        Label8.Location = New Point(286, 260)
         Label8.Name = "Label8"
-        Label8.Size = New Size(95, 23)
+        Label8.Size = New Size(79, 19)
         Label8.TabIndex = 23
         Label8.Text = "First Baby:"
         ' 
@@ -191,85 +193,91 @@ Partial Class Form6
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(327, 330)
+        Label9.Location = New Point(286, 248)
         Label9.Name = "Label9"
-        Label9.Size = New Size(118, 17)
+        Label9.Size = New Size(102, 13)
         Label9.TabIndex = 24
         Label9.Text = "(State if, yes or no)"
         ' 
         ' txtAge
         ' 
         txtAge.BackColor = SystemColors.ScrollBar
-        txtAge.Location = New Point(376, 209)
+        txtAge.Location = New Point(329, 157)
+        txtAge.Margin = New Padding(3, 2, 3, 2)
         txtAge.Name = "txtAge"
-        txtAge.Size = New Size(106, 27)
+        txtAge.Size = New Size(93, 23)
         txtAge.TabIndex = 25
         ' 
         ' txtGender
         ' 
         txtGender.BackColor = SystemColors.ScrollBar
-        txtGender.Location = New Point(568, 208)
+        txtGender.Location = New Point(497, 156)
+        txtGender.Margin = New Padding(3, 2, 3, 2)
         txtGender.Name = "txtGender"
-        txtGender.Size = New Size(107, 27)
+        txtGender.Size = New Size(94, 23)
         txtGender.TabIndex = 26
         ' 
         ' txtAddress
         ' 
         txtAddress.BackColor = SystemColors.ScrollBar
-        txtAddress.Location = New Point(408, 248)
+        txtAddress.Location = New Point(357, 186)
+        txtAddress.Margin = New Padding(3, 2, 3, 2)
         txtAddress.Name = "txtAddress"
-        txtAddress.Size = New Size(267, 27)
+        txtAddress.Size = New Size(234, 23)
         txtAddress.TabIndex = 27
         ' 
         ' txtCivil
         ' 
         txtCivil.BackColor = SystemColors.ScrollBar
-        txtCivil.Location = New Point(434, 285)
+        txtCivil.Location = New Point(380, 214)
+        txtCivil.Margin = New Padding(3, 2, 3, 2)
         txtCivil.Name = "txtCivil"
-        txtCivil.Size = New Size(241, 27)
+        txtCivil.Size = New Size(211, 23)
         txtCivil.TabIndex = 28
         ' 
         ' txtBaby
         ' 
         txtBaby.BackColor = SystemColors.ScrollBar
-        txtBaby.Location = New Point(434, 350)
+        txtBaby.Location = New Point(380, 262)
+        txtBaby.Margin = New Padding(3, 2, 3, 2)
         txtBaby.Name = "txtBaby"
-        txtBaby.Size = New Size(241, 27)
+        txtBaby.Size = New Size(211, 23)
         txtBaby.TabIndex = 29
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label10.Location = New Point(182, 393)
+        Label10.Location = New Point(159, 295)
         Label10.Name = "Label10"
-        Label10.Size = New Size(240, 23)
+        Label10.Size = New Size(199, 19)
         Label10.TabIndex = 30
         Label10.Text = "Date of last Menstrual Cycle:"
         ' 
         ' txtLMC
         ' 
         txtLMC.BackColor = SystemColors.ScrollBar
-        txtLMC.Location = New Point(428, 389)
+        txtLMC.Location = New Point(374, 292)
+        txtLMC.Margin = New Padding(3, 2, 3, 2)
         txtLMC.Name = "txtLMC"
-        txtLMC.Size = New Size(247, 27)
+        txtLMC.Size = New Size(217, 23)
         txtLMC.TabIndex = 31
         ' 
         ' Label11
         ' 
         Label11.AutoSize = True
         Label11.Font = New Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label11.Location = New Point(192, 376)
+        Label11.Location = New Point(168, 282)
         Label11.Name = "Label11"
-        Label11.Size = New Size(219, 17)
+        Label11.Size = New Size(195, 13)
         Label11.TabIndex = 32
         Label11.Text = "State this in weeks (Just the number)"
         ' 
         ' Form6
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1010, 748)
+        ClientSize = New Size(884, 561)
         Controls.Add(Label11)
         Controls.Add(txtLMC)
         Controls.Add(Label10)
@@ -293,7 +301,6 @@ Partial Class Form6
         Controls.Add(PictureBox1)
         Controls.Add(btnCancel)
         Controls.Add(btnNext)
-        Margin = New Padding(3, 4, 3, 4)
         Name = "Form6"
         StartPosition = FormStartPosition.CenterScreen
         Text = "NOMG CLINIC (PATIENTS DETAILS)"

@@ -42,18 +42,18 @@ Partial Class Form3
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(398, 261)
+        Label1.Location = New Point(348, 196)
         Label1.Name = "Label1"
-        Label1.Size = New Size(0, 20)
+        Label1.Size = New Size(0, 15)
         Label1.TabIndex = 0
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(398, 281)
+        Label2.Location = New Point(348, 211)
         Label2.Name = "Label2"
-        Label2.Size = New Size(63, 25)
+        Label2.Size = New Size(51, 20)
         Label2.TabIndex = 17
         Label2.Text = "Email:"
         ' 
@@ -61,9 +61,9 @@ Partial Class Form3
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(398, 212)
+        Label3.Location = New Point(348, 159)
         Label3.Name = "Label3"
-        Label3.Size = New Size(110, 25)
+        Label3.Size = New Size(91, 20)
         Label3.TabIndex = 16
         Label3.Text = "User Name:"
         ' 
@@ -71,29 +71,26 @@ Partial Class Form3
         ' 
         txtUser.BackColor = SystemColors.ActiveBorder
         txtUser.ForeColor = SystemColors.InactiveBorder
-        txtUser.Location = New Point(398, 236)
-        txtUser.Margin = New Padding(3, 4, 3, 4)
+        txtUser.Location = New Point(348, 177)
         txtUser.Name = "txtUser"
-        txtUser.Size = New Size(261, 27)
+        txtUser.Size = New Size(229, 23)
         txtUser.TabIndex = 15
         ' 
         ' txtEmail
         ' 
         txtEmail.BackColor = SystemColors.ActiveBorder
-        txtEmail.Location = New Point(398, 305)
-        txtEmail.Margin = New Padding(3, 4, 3, 4)
+        txtEmail.Location = New Point(348, 229)
         txtEmail.Name = "txtEmail"
-        txtEmail.Size = New Size(261, 27)
+        txtEmail.Size = New Size(229, 23)
         txtEmail.TabIndex = 14
         ' 
         ' btnSignUp
         ' 
         btnSignUp.BackColor = Color.HotPink
         btnSignUp.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnSignUp.Location = New Point(537, 485)
-        btnSignUp.Margin = New Padding(3, 4, 3, 4)
+        btnSignUp.Location = New Point(470, 364)
         btnSignUp.Name = "btnSignUp"
-        btnSignUp.Size = New Size(122, 47)
+        btnSignUp.Size = New Size(107, 35)
         btnSignUp.TabIndex = 13
         btnSignUp.Text = "Sign up"
         btnSignUp.UseVisualStyleBackColor = False
@@ -102,10 +99,9 @@ Partial Class Form3
         ' 
         btnCancel.BackColor = Color.HotPink
         btnCancel.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnCancel.Location = New Point(398, 485)
-        btnCancel.Margin = New Padding(3, 4, 3, 4)
+        btnCancel.Location = New Point(348, 364)
         btnCancel.Name = "btnCancel"
-        btnCancel.Size = New Size(122, 47)
+        btnCancel.Size = New Size(107, 35)
         btnCancel.TabIndex = 12
         btnCancel.Text = "Cancel"
         btnCancel.UseVisualStyleBackColor = False
@@ -114,36 +110,34 @@ Partial Class Form3
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(398, 347)
+        Label4.Location = New Point(348, 260)
         Label4.Name = "Label4"
-        Label4.Size = New Size(97, 25)
+        Label4.Size = New Size(80, 20)
         Label4.TabIndex = 20
         Label4.Text = "Password:"
         ' 
         ' TxtPass
         ' 
         TxtPass.BackColor = SystemColors.ActiveBorder
-        TxtPass.Location = New Point(398, 371)
-        TxtPass.Margin = New Padding(3, 4, 3, 4)
+        TxtPass.Location = New Point(348, 278)
         TxtPass.Name = "TxtPass"
-        TxtPass.Size = New Size(261, 27)
+        TxtPass.Size = New Size(229, 23)
         TxtPass.TabIndex = 19
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(398, 313)
+        Label5.Location = New Point(348, 235)
         Label5.Name = "Label5"
-        Label5.Size = New Size(0, 20)
+        Label5.Size = New Size(0, 15)
         Label5.TabIndex = 18
         ' 
         ' CheckBox1
         ' 
         CheckBox1.AutoSize = True
-        CheckBox1.Location = New Point(388, 426)
-        CheckBox1.Margin = New Padding(3, 4, 3, 4)
+        CheckBox1.Location = New Point(340, 320)
         CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(145, 24)
+        CheckBox1.Size = New Size(115, 19)
         CheckBox1.TabIndex = 21
         CheckBox1.Text = "Yes I agree to the"
         CheckBox1.UseVisualStyleBackColor = True
@@ -151,9 +145,9 @@ Partial Class Form3
         ' LinkLabel1
         ' 
         LinkLabel1.AutoSize = True
-        LinkLabel1.Location = New Point(526, 427)
+        LinkLabel1.Location = New Point(460, 320)
         LinkLabel1.Name = "LinkLabel1"
-        LinkLabel1.Size = New Size(146, 20)
+        LinkLabel1.Size = New Size(117, 15)
         LinkLabel1.TabIndex = 22
         LinkLabel1.TabStop = True
         LinkLabel1.Text = "Terms and Condition"
@@ -161,7 +155,8 @@ Partial Class Form3
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(908, 1)
+        PictureBox1.Location = New Point(784, 0)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(102, 102)
         PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
@@ -170,10 +165,10 @@ Partial Class Form3
         ' 
         ' Form3
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
-        ClientSize = New Size(1010, 748)
+        ClientSize = New Size(884, 561)
         Controls.Add(PictureBox1)
         Controls.Add(LinkLabel1)
         Controls.Add(CheckBox1)
@@ -187,7 +182,6 @@ Partial Class Form3
         Controls.Add(btnSignUp)
         Controls.Add(btnCancel)
         Controls.Add(Label1)
-        Margin = New Padding(3, 4, 3, 4)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False

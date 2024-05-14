@@ -32,10 +32,9 @@ Partial Class Form4
         ' 
         ' btnLogOut
         ' 
-        btnLogOut.Location = New Point(14, 696)
-        btnLogOut.Margin = New Padding(3, 4, 3, 4)
+        btnLogOut.Location = New Point(12, 522)
         btnLogOut.Name = "btnLogOut"
-        btnLogOut.Size = New Size(129, 36)
+        btnLogOut.Size = New Size(113, 27)
         btnLogOut.TabIndex = 11
         btnLogOut.Text = "Log Out"
         btnLogOut.UseVisualStyleBackColor = True
@@ -43,17 +42,18 @@ Partial Class Form4
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(66, 197)
+        PictureBox1.Location = New Point(0, 162)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(884, 212)
-        PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
         PictureBox1.TabIndex = 12
         PictureBox1.TabStop = False
         ' 
         ' PictureBox2
         ' 
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(909, 0)
+        PictureBox2.Location = New Point(782, 1)
+        PictureBox2.Margin = New Padding(3, 2, 3, 2)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(102, 102)
         PictureBox2.SizeMode = PictureBoxSizeMode.AutoSize
@@ -62,13 +62,12 @@ Partial Class Form4
         ' 
         ' Form4
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1010, 748)
+        ClientSize = New Size(884, 561)
         Controls.Add(PictureBox2)
         Controls.Add(PictureBox1)
         Controls.Add(btnLogOut)
-        Margin = New Padding(3, 4, 3, 4)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False

@@ -36,10 +36,9 @@ Partial Class Form7
         btnSignIn.BackColor = Color.HotPink
         btnSignIn.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSignIn.ForeColor = Color.Black
-        btnSignIn.Location = New Point(63, 572)
-        btnSignIn.Margin = New Padding(3, 4, 3, 4)
+        btnSignIn.Location = New Point(48, 501)
         btnSignIn.Name = "btnSignIn"
-        btnSignIn.Size = New Size(86, 40)
+        btnSignIn.Size = New Size(75, 30)
         btnSignIn.TabIndex = 0
         btnSignIn.Text = "Sign-In"
         btnSignIn.UseVisualStyleBackColor = False
@@ -47,10 +46,9 @@ Partial Class Form7
         ' btnContact
         ' 
         btnContact.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnContact.Location = New Point(122, 28)
-        btnContact.Margin = New Padding(3, 4, 3, 4)
+        btnContact.Location = New Point(107, 21)
         btnContact.Name = "btnContact"
-        btnContact.Size = New Size(86, 31)
+        btnContact.Size = New Size(75, 23)
         btnContact.TabIndex = 1
         btnContact.Text = "Contact"
         btnContact.UseVisualStyleBackColor = True
@@ -58,10 +56,9 @@ Partial Class Form7
         ' btnSignUp
         ' 
         btnSignUp.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnSignUp.Location = New Point(241, 28)
-        btnSignUp.Margin = New Padding(3, 4, 3, 4)
+        btnSignUp.Location = New Point(211, 21)
         btnSignUp.Name = "btnSignUp"
-        btnSignUp.Size = New Size(86, 31)
+        btnSignUp.Size = New Size(75, 23)
         btnSignUp.TabIndex = 2
         btnSignUp.Text = "Sign Up"
         btnSignUp.UseVisualStyleBackColor = True
@@ -71,34 +68,33 @@ Partial Class Form7
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.HotPink
-        Label1.Location = New Point(31, 34)
+        Label1.Location = New Point(27, 26)
         Label1.Name = "Label1"
-        Label1.Size = New Size(67, 25)
+        Label1.Size = New Size(53, 20)
         Label1.TabIndex = 3
         Label1.Text = "HOME"
         ' 
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(-165, 12)
+        PictureBox1.Location = New Point(-162, -7)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(1366, 768)
-        PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox1.Size = New Size(1059, 578)
         PictureBox1.TabIndex = 4
         PictureBox1.TabStop = False
         ' 
         ' Form7
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1010, 748)
+        ClientSize = New Size(884, 561)
         Controls.Add(Label1)
         Controls.Add(btnSignUp)
         Controls.Add(btnContact)
         Controls.Add(btnSignIn)
         Controls.Add(PictureBox1)
-        Margin = New Padding(3, 4, 3, 4)
         Name = "Form7"
         StartPosition = FormStartPosition.CenterScreen
         Text = "NOMG CLINIC (HOME PAGE)"
