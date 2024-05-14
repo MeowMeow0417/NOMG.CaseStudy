@@ -26,6 +26,7 @@ Partial Class Form4
         btnLogOut = New Button()
         PictureBox1 = New PictureBox()
         PictureBox2 = New PictureBox()
+        btnBill = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -60,11 +61,22 @@ Partial Class Form4
         PictureBox2.TabIndex = 13
         PictureBox2.TabStop = False
         ' 
+        ' btnBill
+        ' 
+        btnBill.Location = New Point(510, 396)
+        btnBill.Name = "btnBill"
+        btnBill.Size = New Size(75, 23)
+        btnBill.TabIndex = 14
+        btnBill.Text = "Billing"
+        btnBill.UseVisualStyleBackColor = True
+        ' 
         ' Form4
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ControlLightLight
         ClientSize = New Size(884, 561)
+        Controls.Add(btnBill)
         Controls.Add(PictureBox2)
         Controls.Add(PictureBox1)
         Controls.Add(btnLogOut)
@@ -83,4 +95,5 @@ Partial Class Form4
     Friend WithEvents btnLogOut As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents btnBill As Button
 End Class
