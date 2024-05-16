@@ -74,7 +74,7 @@ Partial Class Form6
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(785, -2)
+        PictureBox1.Location = New Point(781, -1)
         PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(102, 102)
@@ -154,7 +154,7 @@ Partial Class Form6
         ' txtLastName
         ' 
         txtLastName.BackColor = SystemColors.ScrollBar
-        txtLastName.Location = New Point(366, 126)
+        txtLastName.Location = New Point(366, 127)
         txtLastName.Margin = New Padding(3, 2, 3, 2)
         txtLastName.Name = "txtLastName"
         txtLastName.Size = New Size(225, 23)
@@ -277,6 +277,7 @@ Partial Class Form6
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ControlLightLight
         ClientSize = New Size(884, 561)
         Controls.Add(Label11)
         Controls.Add(txtLMC)

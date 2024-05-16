@@ -4,8 +4,9 @@
         result = MsgBox("Are you sure, you want to Log-Out?", vbOKCancel, "NOMG CLINIC")
         If result = MsgBoxResult.Ok Then
             MessageBox.Show("Logging-Out")
-            Form1.Close()
-            Form2.Close()
+
+            Form2.Show()
+            Me.Close()
         ElseIf result = MsgBoxResult.Cancel Then
             'No function
         End If

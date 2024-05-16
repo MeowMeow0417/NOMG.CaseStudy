@@ -26,6 +26,10 @@ Partial Class Form13
         Label1 = New Label()
         lblTamount = New Label()
         GroupBox3 = New GroupBox()
+        txtInvoice = New TextBox()
+        Label21 = New Label()
+        txtBill = New TextBox()
+        Label20 = New Label()
         txtEmail = New TextBox()
         btnSend = New Button()
         Label24 = New Label()
@@ -97,20 +101,56 @@ Partial Class Form13
         ' 
         ' GroupBox3
         ' 
+        GroupBox3.Controls.Add(txtInvoice)
+        GroupBox3.Controls.Add(Label21)
+        GroupBox3.Controls.Add(txtBill)
+        GroupBox3.Controls.Add(Label20)
         GroupBox3.Controls.Add(txtEmail)
         GroupBox3.Controls.Add(GroupBox4)
         GroupBox3.Controls.Add(btnSend)
         GroupBox3.Controls.Add(Label24)
         GroupBox3.Controls.Add(Label25)
-        GroupBox3.Location = New Point(509, 46)
+        GroupBox3.Location = New Point(536, 46)
         GroupBox3.Name = "GroupBox3"
         GroupBox3.Size = New Size(336, 448)
         GroupBox3.TabIndex = 15
         GroupBox3.TabStop = False
         ' 
+        ' txtInvoice
+        ' 
+        txtInvoice.Location = New Point(20, 300)
+        txtInvoice.Name = "txtInvoice"
+        txtInvoice.Size = New Size(283, 23)
+        txtInvoice.TabIndex = 22
+        ' 
+        ' Label21
+        ' 
+        Label21.AutoSize = True
+        Label21.Location = New Point(20, 282)
+        Label21.Name = "Label21"
+        Label21.Size = New Size(48, 15)
+        Label21.TabIndex = 21
+        Label21.Text = "Invoice:"
+        ' 
+        ' txtBill
+        ' 
+        txtBill.Location = New Point(19, 236)
+        txtBill.Name = "txtBill"
+        txtBill.Size = New Size(283, 23)
+        txtBill.TabIndex = 20
+        ' 
+        ' Label20
+        ' 
+        Label20.AutoSize = True
+        Label20.Location = New Point(19, 218)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(40, 15)
+        Label20.TabIndex = 19
+        Label20.Text = "Bill to:"
+        ' 
         ' txtEmail
         ' 
-        txtEmail.Location = New Point(20, 278)
+        txtEmail.Location = New Point(19, 174)
         txtEmail.Name = "txtEmail"
         txtEmail.Size = New Size(283, 23)
         txtEmail.TabIndex = 18
@@ -127,11 +167,11 @@ Partial Class Form13
         ' Label24
         ' 
         Label24.AutoSize = True
-        Label24.Location = New Point(20, 260)
+        Label24.Location = New Point(19, 156)
         Label24.Name = "Label24"
-        Label24.Size = New Size(36, 15)
+        Label24.Size = New Size(39, 15)
         Label24.TabIndex = 1
-        Label24.Text = "Email"
+        Label24.Text = "Email:"
         ' 
         ' Label25
         ' 
@@ -435,6 +475,7 @@ Partial Class Form13
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
         Name = "Form13"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Form13"
         GroupBox4.ResumeLayout(False)
         GroupBox4.PerformLayout()
@@ -486,4 +527,8 @@ Partial Class Form13
     Friend WithEvents btnClearAll As Button
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents txtEmail As TextBox
+    Friend WithEvents txtInvoice As TextBox
+    Friend WithEvents Label21 As Label
+    Friend WithEvents txtBill As TextBox
+    Friend WithEvents Label20 As Label
 End Class

@@ -41,9 +41,9 @@ Partial Class Form2
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(386, 328)
+        Label2.Location = New Point(338, 246)
         Label2.Name = "Label2"
-        Label2.Size = New Size(97, 25)
+        Label2.Size = New Size(80, 20)
         Label2.TabIndex = 11
         Label2.Text = "Password:"
         ' 
@@ -51,38 +51,35 @@ Partial Class Form2
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(383, 252)
+        Label1.Location = New Point(335, 189)
         Label1.Name = "Label1"
-        Label1.Size = New Size(110, 25)
+        Label1.Size = New Size(91, 20)
         Label1.TabIndex = 10
         Label1.Text = "User Name:"
         ' 
         ' txtUser
         ' 
         txtUser.BackColor = SystemColors.ActiveBorder
-        txtUser.Location = New Point(383, 276)
-        txtUser.Margin = New Padding(3, 4, 3, 4)
+        txtUser.Location = New Point(335, 207)
         txtUser.Name = "txtUser"
-        txtUser.Size = New Size(269, 27)
+        txtUser.Size = New Size(236, 23)
         txtUser.TabIndex = 9
         ' 
         ' txtPass
         ' 
         txtPass.BackColor = SystemColors.ActiveBorder
-        txtPass.Location = New Point(383, 352)
-        txtPass.Margin = New Padding(3, 4, 3, 4)
+        txtPass.Location = New Point(335, 264)
         txtPass.Name = "txtPass"
-        txtPass.Size = New Size(269, 27)
+        txtPass.Size = New Size(236, 23)
         txtPass.TabIndex = 8
         ' 
         ' btnCancel
         ' 
         btnCancel.BackColor = Color.HotPink
         btnCancel.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnCancel.Location = New Point(530, 407)
-        btnCancel.Margin = New Padding(3, 4, 3, 4)
+        btnCancel.Location = New Point(464, 305)
         btnCancel.Name = "btnCancel"
-        btnCancel.Size = New Size(122, 47)
+        btnCancel.Size = New Size(107, 35)
         btnCancel.TabIndex = 7
         btnCancel.Text = "Cancel"
         btnCancel.UseVisualStyleBackColor = False
@@ -91,10 +88,9 @@ Partial Class Form2
         ' 
         btnSignIn.BackColor = Color.HotPink
         btnSignIn.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnSignIn.Location = New Point(383, 407)
-        btnSignIn.Margin = New Padding(3, 4, 3, 4)
+        btnSignIn.Location = New Point(335, 305)
         btnSignIn.Name = "btnSignIn"
-        btnSignIn.Size = New Size(122, 47)
+        btnSignIn.Size = New Size(107, 35)
         btnSignIn.TabIndex = 6
         btnSignIn.Text = "Sign In"
         btnSignIn.UseVisualStyleBackColor = False
@@ -102,7 +98,8 @@ Partial Class Form2
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(910, 0)
+        PictureBox1.Location = New Point(781, 1)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(102, 102)
         PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
@@ -112,9 +109,10 @@ Partial Class Form2
         ' PictureBox2
         ' 
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(103, 231)
+        PictureBox2.Location = New Point(90, 173)
+        PictureBox2.Margin = New Padding(3, 2, 3, 2)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(380, 202)
+        PictureBox2.Size = New Size(273, 152)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox2.TabIndex = 13
         PictureBox2.TabStop = False
@@ -122,19 +120,20 @@ Partial Class Form2
         ' PictureBox3
         ' 
         PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(577, 223)
+        PictureBox3.Location = New Point(542, 167)
+        PictureBox3.Margin = New Padding(3, 2, 3, 2)
         PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(354, 210)
+        PictureBox3.Size = New Size(273, 158)
         PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox3.TabIndex = 14
         PictureBox3.TabStop = False
         ' 
         ' Form2
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
-        ClientSize = New Size(1010, 748)
+        ClientSize = New Size(884, 561)
         Controls.Add(PictureBox1)
         Controls.Add(Label2)
         Controls.Add(Label1)
@@ -144,7 +143,6 @@ Partial Class Form2
         Controls.Add(btnSignIn)
         Controls.Add(PictureBox2)
         Controls.Add(PictureBox3)
-        Margin = New Padding(3, 4, 3, 4)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False
