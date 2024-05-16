@@ -24,57 +24,34 @@
     End Sub
 
     Private Sub btnClearAll_Click(sender As Object, e As EventArgs) Handles btnClearAll.Click
+        txtEmail.Clear()
+        txtInvoice.Clear()
+        txtBill.Clear()
         txtCheck1.Clear()
         txtCheck2.Clear()
         txtVitamin1.Clear()
         txtVitamin2.Clear()
         txtVitamin3.Clear()
         txtVitamin4.Clear()
-        lblTamount.Text = "0.00"
+        lblTamount.Text = "0"
 
     End Sub
+
 
     Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
+        Dim newPayment As New Form11.Billing
+        newPayment.setPay(Val(txtCheck1.Text), Val(txtCheck2.Text), Val(txtVitamin1.Text), Val(txtVitamin2.Text), Val(txtVitamin3.Text), Val(txtVitamin4.Text))
+        newPayment.setDetails(txtEmail.Text, txtBill.Text, txtInvoice.Text)
 
+        ' Pass the newPayment instance to Form11
+        Form11.listCard.Add(newPayment)
+        Form11.strCurrentCard = newPayment
 
+        ' Check if the data has been added
+        If Form11.listCard.Contains(newPayment) Then
+            MessageBox.Show("Data added successfully.")
+        Else
+            MessageBox.Show("Failed to add data.")
+        End If
     End Sub
-
-
-    Class Payment
-
-        Private V1, V2, V3, V4, V5, C1, C2 As Integer
-
-        Public Sub setPayment(ByVal tempC1 As Integer, ByVal tempC2 As Integer, ByVal tempV1 As Integer, ByVal tempV2 As Integer, ByVal tempV3 As Integer, ByVal tempV4 As Integer)
-            C1 = tempC1
-            C2 = tempC2
-            V1 = tempV1
-            V2 = tempV2
-            V3 = tempV3
-            V4 = tempV4
-        End Sub
-
-        Public Sub New(ByVal tempC1 As Integer, ByVal tempC2 As Integer, ByVal tempV1 As Integer, ByVal tempV2 As Integer, ByVal tempV3 As Integer, ByVal tempV4 As Integer)
-            C1 = tempC1
-            C2 = tempC2
-            V1 = tempV1
-            V2 = tempV2
-            V3 = tempV3
-            V4 = tempV4
-        End Sub
-
-        Public Sub New()
-
-        End Sub
-
-        Public Function getPayment() As String
-            Return C1
-            Return C2
-            Return V1
-            Return V2
-            Return V3
-            Return V4
-        End Function
-    End Class
-
-
 End Class

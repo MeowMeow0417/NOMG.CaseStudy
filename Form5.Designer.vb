@@ -58,7 +58,7 @@ Partial Class Form5
         btnSched.BackColor = Color.HotPink
         btnSched.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSched.ForeColor = Color.Black
-        btnSched.Location = New Point(192, 450)
+        btnSched.Location = New Point(204, 428)
         btnSched.Name = "btnSched"
         btnSched.Size = New Size(113, 35)
         btnSched.TabIndex = 3
@@ -70,7 +70,7 @@ Partial Class Form5
         btnPay.BackColor = Color.HotPink
         btnPay.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnPay.ForeColor = Color.Black
-        btnPay.Location = New Point(630, 450)
+        btnPay.Location = New Point(607, 428)
         btnPay.Name = "btnPay"
         btnPay.Size = New Size(113, 35)
         btnPay.TabIndex = 7
@@ -91,7 +91,7 @@ Partial Class Form5
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(795, 0)
+        PictureBox1.Location = New Point(782, -1)
         PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(102, 102)
@@ -102,7 +102,7 @@ Partial Class Form5
         ' PictureBox2
         ' 
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(125, 144)
+        PictureBox2.Location = New Point(105, 147)
         PictureBox2.Margin = New Padding(3, 2, 3, 2)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(717, 276)

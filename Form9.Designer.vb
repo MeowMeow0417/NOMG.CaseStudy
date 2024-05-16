@@ -112,6 +112,7 @@ Partial Class Form9
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ControlLightLight
         ClientSize = New Size(884, 561)
         Controls.Add(pnlFollowup)
         Controls.Add(btnGetSched)
