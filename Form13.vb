@@ -18,7 +18,7 @@
         V4 = If(Integer.TryParse(txtVitamin4.Text, V4), V4, 0)
 
         'calcualtes the input
-        lblTamount.Text = (C1 * 2000) + (C2 * 500) + (V1 * 15) + (V2 * 25) + (V3 * 20) + (V4 * 1500)
+        lblTamount.Text = (V1 * 15) + (V2 * 25) + (V3 * 20) + (V4 * 1500) + (C1 * 2000) + (C2 * 500)
 
 
     End Sub
@@ -40,7 +40,7 @@
 
     Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
         Dim newPayment As New Form11.Billing
-        newPayment.setPay(Val(txtCheck1.Text), Val(txtCheck2.Text), Val(txtVitamin1.Text), Val(txtVitamin2.Text), Val(txtVitamin3.Text), Val(txtVitamin4.Text))
+        newPayment.setPay(Val(txtVitamin1.Text), Val(txtVitamin2.Text), Val(txtVitamin3.Text), Val(txtVitamin4.Text), Val(txtCheck1.Text), Val(txtCheck2.Text))
         newPayment.setDetails(txtEmail.Text, txtBill.Text, txtInvoice.Text)
 
         ' Pass the newPayment instance to Form11

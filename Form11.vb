@@ -39,12 +39,12 @@ Public Class Form11
             lbl5.Text = check(4)
             lbl6.Text = check(5)
 
-            t1.Text = (check(0) * 2000)
-            t2.Text = (check(1) * 500)
-            t3.Text = (check(2) * 15)
-            t4.Text = (check(3) * 25)
-            t5.Text = (check(4) * 20)
-            t6.Text = (check(5) * 1500)
+            t1.Text = (check(0) * 15)
+            t2.Text = (check(1) * 25)
+            t3.Text = (check(2) * 20)
+            t4.Text = (check(3) * 1500)
+            t5.Text = (check(4) * 2000)
+            t6.Text = (check(5) * 500)
 
             lblTamount.Text = Val(t1.Text) + Val(t2.Text) + Val(t3.Text) + Val(t4.Text) + Val(t5.Text) + Val(t6.Text)
         Else
@@ -117,23 +117,23 @@ Public Class Form11
             Invoice = tempI
         End Sub
 
-        Public Sub setPay(ByVal tempC1 As Integer, ByVal tempC2 As Integer, ByVal tempV1 As Integer, ByVal tempV2 As Integer, ByVal tempV3 As Integer, ByVal tempV4 As Integer)
-            C1 = tempC1
-            C2 = tempC2
+        Public Sub setPay(ByVal tempV1 As Integer, ByVal tempV2 As Integer, ByVal tempV3 As Integer, ByVal tempV4 As Integer, ByVal tempC1 As Integer, ByVal tempC2 As Integer)
             V1 = tempV1
             V2 = tempV2
             V3 = tempV3
             V4 = tempV4
+            C1 = tempC1
+            C2 = tempC2
         End Sub
 
         Public Function getCheckUp() As Array
             Dim ACheck(5) As Double
-            ACheck(0) = C1
-            ACheck(1) = C2
-            ACheck(2) = V1
-            ACheck(3) = V2
-            ACheck(4) = V3
-            ACheck(5) = V4
+            ACheck(0) = V1
+            ACheck(1) = V2
+            ACheck(2) = V3
+            ACheck(3) = V4
+            ACheck(4) = C1
+            ACheck(5) = C2
             Return ACheck
         End Function
 

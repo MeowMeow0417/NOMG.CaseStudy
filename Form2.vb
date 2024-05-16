@@ -76,7 +76,7 @@ Public Class Form2
 
     Dim admin1 As New Admin("Admin", "Admin") 'Admin user and Password'
 
-    Dim form5Instance As New Form5
+
     Private Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
         Dim isAdminLoggedIn As Boolean = False
         Dim isPatientLoggedIn As Boolean = False
@@ -108,7 +108,7 @@ Public Class Form2
             txtUser.Clear()
             txtPass.Clear()
             Form5.Show()
-            form5Instance.lblUserName.Text = txtUser.Text 'fix this, it's for showing who is the user
+
             Me.Hide()
 
         Else
@@ -161,11 +161,5 @@ Public Class Form2
             Address = tempAdd
             LMC = tempLMC
         End Sub
-
     End Class
-
-
-
-
-
 End Class

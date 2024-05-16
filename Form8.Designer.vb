@@ -37,7 +37,7 @@ Partial Class Form8
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.HotPink
-        Label1.Location = New Point(118, 20)
+        Label1.Location = New Point(110, 22)
         Label1.Name = "Label1"
         Label1.Size = New Size(78, 20)
         Label1.TabIndex = 6
@@ -46,9 +46,9 @@ Partial Class Form8
         ' btnSignUp
         ' 
         btnSignUp.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnSignUp.Location = New Point(216, 16)
+        btnSignUp.Location = New Point(194, 16)
         btnSignUp.Name = "btnSignUp"
-        btnSignUp.Size = New Size(75, 23)
+        btnSignUp.Size = New Size(75, 30)
         btnSignUp.TabIndex = 5
         btnSignUp.Text = "Sign Up"
         btnSignUp.UseVisualStyleBackColor = True
@@ -58,7 +58,7 @@ Partial Class Form8
         btnHome.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnHome.Location = New Point(29, 16)
         btnHome.Name = "btnHome"
-        btnHome.Size = New Size(75, 23)
+        btnHome.Size = New Size(75, 30)
         btnHome.TabIndex = 4
         btnHome.Text = "Home"
         btnHome.UseVisualStyleBackColor = True
@@ -77,10 +77,11 @@ Partial Class Form8
         ' PictureBox2
         ' 
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(-204, 11)
+        PictureBox2.Location = New Point(-149, -3)
         PictureBox2.Margin = New Padding(3, 2, 3, 2)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(1135, 559)
+        PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox2.TabIndex = 8
         PictureBox2.TabStop = False
         ' 

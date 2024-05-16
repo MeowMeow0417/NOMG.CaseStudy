@@ -39,7 +39,7 @@ Partial Class Form1
         ProgressBar1.Location = New Point(12, 534)
         ProgressBar1.Name = "ProgressBar1"
         ProgressBar1.Size = New Size(860, 15)
-        ProgressBar1.Step = 1
+        ProgressBar1.Step = 5
         ProgressBar1.Style = ProgressBarStyle.Continuous
         ProgressBar1.TabIndex = 2
         ' 
