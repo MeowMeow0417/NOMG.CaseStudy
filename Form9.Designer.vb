@@ -25,6 +25,7 @@ Partial Class Form9
         btnBack = New Button()
         btnGetSched = New Button()
         pnlFollowup = New Panel()
+        btnOK = New Button()
         lblFollow4 = New Label()
         lblFollow3 = New Label()
         lblFollow2 = New Label()
@@ -35,24 +36,25 @@ Partial Class Form9
         ' 
         ' btnBack
         ' 
-        btnBack.Location = New Point(658, 526)
+        btnBack.Location = New Point(12, 506)
         btnBack.Name = "btnBack"
-        btnBack.Size = New Size(75, 23)
+        btnBack.Size = New Size(108, 43)
         btnBack.TabIndex = 0
         btnBack.Text = "Back"
         btnBack.UseVisualStyleBackColor = True
         ' 
         ' btnGetSched
         ' 
-        btnGetSched.Location = New Point(739, 526)
+        btnGetSched.Location = New Point(128, 464)
         btnGetSched.Name = "btnGetSched"
-        btnGetSched.Size = New Size(133, 23)
+        btnGetSched.Size = New Size(132, 23)
         btnGetSched.TabIndex = 1
         btnGetSched.Text = "Get Schedule"
         btnGetSched.UseVisualStyleBackColor = True
         ' 
         ' pnlFollowup
         ' 
+        pnlFollowup.Controls.Add(btnOK)
         pnlFollowup.Controls.Add(lblFollow4)
         pnlFollowup.Controls.Add(lblFollow3)
         pnlFollowup.Controls.Add(lblFollow2)
@@ -60,8 +62,18 @@ Partial Class Form9
         pnlFollowup.Controls.Add(lblAppoint)
         pnlFollowup.Location = New Point(12, 12)
         pnlFollowup.Name = "pnlFollowup"
-        pnlFollowup.Size = New Size(860, 508)
+        pnlFollowup.Size = New Size(860, 537)
         pnlFollowup.TabIndex = 3
+        pnlFollowup.Visible = False
+        ' 
+        ' btnOK
+        ' 
+        btnOK.Location = New Point(33, 494)
+        btnOK.Name = "btnOK"
+        btnOK.Size = New Size(75, 23)
+        btnOK.TabIndex = 5
+        btnOK.Text = "OK"
+        btnOK.UseVisualStyleBackColor = True
         ' 
         ' lblFollow4
         ' 
@@ -132,4 +144,5 @@ Partial Class Form9
     Friend WithEvents lblFollow2 As Label
     Friend WithEvents lblFollow1 As Label
     Friend WithEvents lblAppoint As Label
+    Friend WithEvents btnOK As Button
 End Class
