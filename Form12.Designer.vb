@@ -3,7 +3,7 @@ Partial Class Form12
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form12
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
 <<<<<<< HEAD
         SuspendLayout()
@@ -101,7 +101,7 @@ Partial Class Form12
         ' lblAssigned
         ' 
         lblAssigned.AutoSize = True
-        lblAssigned.Font = New Font("Segoe UI", 15F)
+        lblAssigned.Font = New Font("Segoe UI", 15.0F)
         lblAssigned.Location = New Point(12, 350)
         lblAssigned.Name = "lblAssigned"
         lblAssigned.Size = New Size(126, 28)
@@ -111,7 +111,7 @@ Partial Class Form12
         ' lblVitamin
         ' 
         lblVitamin.AutoSize = True
-        lblVitamin.Font = New Font("Segoe UI", 15F)
+        lblVitamin.Font = New Font("Segoe UI", 15.0F)
         lblVitamin.Location = New Point(269, 11)
         lblVitamin.Name = "lblVitamin"
         lblVitamin.Size = New Size(206, 28)
@@ -121,7 +121,7 @@ Partial Class Form12
         ' lblGestational
         ' 
         lblGestational.AutoSize = True
-        lblGestational.Font = New Font("Segoe UI", 15F)
+        lblGestational.Font = New Font("Segoe UI", 15.0F)
         lblGestational.Location = New Point(12, 303)
         lblGestational.Name = "lblGestational"
         lblGestational.Size = New Size(155, 28)
@@ -131,7 +131,7 @@ Partial Class Form12
         ' lblLMC
         ' 
         lblLMC.AutoSize = True
-        lblLMC.Font = New Font("Segoe UI", 15F)
+        lblLMC.Font = New Font("Segoe UI", 15.0F)
         lblLMC.Location = New Point(12, 252)
         lblLMC.Name = "lblLMC"
         lblLMC.Size = New Size(193, 28)
@@ -141,7 +141,7 @@ Partial Class Form12
         ' lblBaby
         ' 
         lblBaby.AutoSize = True
-        lblBaby.Font = New Font("Segoe UI", 15F)
+        lblBaby.Font = New Font("Segoe UI", 15.0F)
         lblBaby.Location = New Point(12, 208)
         lblBaby.Name = "lblBaby"
         lblBaby.Size = New Size(101, 28)
@@ -151,7 +151,7 @@ Partial Class Form12
         ' lblCivil
         ' 
         lblCivil.AutoSize = True
-        lblCivil.Font = New Font("Segoe UI", 15F)
+        lblCivil.Font = New Font("Segoe UI", 15.0F)
         lblCivil.Location = New Point(12, 169)
         lblCivil.Name = "lblCivil"
         lblCivil.Size = New Size(111, 28)
@@ -161,7 +161,7 @@ Partial Class Form12
         ' lblAddress
         ' 
         lblAddress.AutoSize = True
-        lblAddress.Font = New Font("Segoe UI", 15F)
+        lblAddress.Font = New Font("Segoe UI", 15.0F)
         lblAddress.Location = New Point(12, 127)
         lblAddress.Name = "lblAddress"
         lblAddress.Size = New Size(82, 28)
@@ -171,7 +171,7 @@ Partial Class Form12
         ' lblGender
         ' 
         lblGender.AutoSize = True
-        lblGender.Font = New Font("Segoe UI", 15F)
+        lblGender.Font = New Font("Segoe UI", 15.0F)
         lblGender.Location = New Point(12, 88)
         lblGender.Name = "lblGender"
         lblGender.Size = New Size(76, 28)
@@ -181,7 +181,7 @@ Partial Class Form12
         ' lblAge
         ' 
         lblAge.AutoSize = True
-        lblAge.Font = New Font("Segoe UI", 15F)
+        lblAge.Font = New Font("Segoe UI", 15.0F)
         lblAge.Location = New Point(12, 48)
         lblAge.Name = "lblAge"
         lblAge.Size = New Size(47, 28)
@@ -191,7 +191,7 @@ Partial Class Form12
         ' lblName
         ' 
         lblName.AutoSize = True
-        lblName.Font = New Font("Segoe UI", 15F)
+        lblName.Font = New Font("Segoe UI", 15.0F)
         lblName.Location = New Point(12, 11)
         lblName.Name = "lblName"
         lblName.Size = New Size(64, 28)
@@ -201,7 +201,7 @@ Partial Class Form12
 >>>>>>> SCHED,DATABASES
         ' Form12
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(884, 561)
         Name = "Form12"
