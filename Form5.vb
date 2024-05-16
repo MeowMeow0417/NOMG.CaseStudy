@@ -23,7 +23,6 @@
             MessageBox.Show("Logging-Out")
             Form2.Show()
             Me.Close()
-            Form1.Hide()
         ElseIf result = MsgBoxResult.Cancel Then
             'simply returns the user back to dashboard
         End If
