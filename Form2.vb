@@ -37,8 +37,6 @@ Public Class Form2
     'list for Patient creds
     Public listPatient As New List(Of Patient)
 
-
-
     Public Sub New() 'storing data for the Patien/s name and password
         InitializeComponent()
         Dim Patient1 As New Patient("Juana", "1234")
@@ -76,7 +74,6 @@ Public Class Form2
         End Function
     End Class
 
-
     Dim admin1 As New Admin("Admin", "Admin") 'Admin user and Password'
 
     Dim form5Instance As New Form5
@@ -113,10 +110,10 @@ Public Class Form2
             Form5.Show()
             form5Instance.lblUserName.Text = txtUser.Text 'fix this, it's for showing who is the user
             Me.Hide()
+
         Else
             MsgBox("Invalid username or password", vbOKOnly, "NOMG Clinic")
         End If
-
     End Sub
 
     'btn for sign-up
@@ -165,9 +162,10 @@ Public Class Form2
             LMC = tempLMC
         End Sub
 
-
-        'for setting new data
-
     End Class
+
+
+
+
 
 End Class

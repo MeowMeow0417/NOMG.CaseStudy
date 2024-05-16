@@ -6,12 +6,8 @@
         Me.Close()
     End Sub
 
-    Private Sub btnRem_Click(sender As Object, e As EventArgs) Handles btnRem.Click
-        Form10.Show()
-        Me.Close()
-    End Sub
-
     Private Sub btnPay_Click(sender As Object, e As EventArgs) Handles btnPay.Click
+
         Form11.Show()
         Me.Close()
     End Sub

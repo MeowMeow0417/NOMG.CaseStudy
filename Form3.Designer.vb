@@ -22,6 +22,7 @@ Partial Class Form3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form3))
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
@@ -34,6 +35,8 @@ Partial Class Form3
         Label5 = New Label()
         CheckBox1 = New CheckBox()
         LinkLabel1 = New LinkLabel()
+        PictureBox1 = New PictureBox()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label1
@@ -47,23 +50,27 @@ Partial Class Form3
         ' Label2
         ' 
         Label2.AutoSize = True
+        Label2.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(348, 211)
         Label2.Name = "Label2"
-        Label2.Size = New Size(36, 15)
+        Label2.Size = New Size(51, 20)
         Label2.TabIndex = 17
-        Label2.Text = "Email"
+        Label2.Text = "Email:"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
+        Label3.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(348, 159)
         Label3.Name = "Label3"
-        Label3.Size = New Size(60, 15)
+        Label3.Size = New Size(91, 20)
         Label3.TabIndex = 16
-        Label3.Text = "Username"
+        Label3.Text = "User Name:"
         ' 
         ' txtUser
         ' 
+        txtUser.BackColor = SystemColors.ActiveBorder
+        txtUser.ForeColor = SystemColors.InactiveBorder
         txtUser.Location = New Point(348, 177)
         txtUser.Name = "txtUser"
         txtUser.Size = New Size(229, 23)
@@ -71,6 +78,7 @@ Partial Class Form3
         ' 
         ' txtEmail
         ' 
+        txtEmail.BackColor = SystemColors.ActiveBorder
         txtEmail.Location = New Point(348, 229)
         txtEmail.Name = "txtEmail"
         txtEmail.Size = New Size(229, 23)
@@ -78,33 +86,39 @@ Partial Class Form3
         ' 
         ' btnSignUp
         ' 
+        btnSignUp.BackColor = Color.HotPink
+        btnSignUp.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSignUp.Location = New Point(470, 364)
         btnSignUp.Name = "btnSignUp"
         btnSignUp.Size = New Size(107, 35)
         btnSignUp.TabIndex = 13
         btnSignUp.Text = "Sign up"
-        btnSignUp.UseVisualStyleBackColor = True
+        btnSignUp.UseVisualStyleBackColor = False
         ' 
         ' btnCancel
         ' 
+        btnCancel.BackColor = Color.HotPink
+        btnCancel.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnCancel.Location = New Point(348, 364)
         btnCancel.Name = "btnCancel"
         btnCancel.Size = New Size(107, 35)
         btnCancel.TabIndex = 12
         btnCancel.Text = "Cancel"
-        btnCancel.UseVisualStyleBackColor = True
+        btnCancel.UseVisualStyleBackColor = False
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
+        Label4.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(348, 260)
         Label4.Name = "Label4"
-        Label4.Size = New Size(57, 15)
+        Label4.Size = New Size(80, 20)
         Label4.TabIndex = 20
-        Label4.Text = "Password"
+        Label4.Text = "Password:"
         ' 
         ' TxtPass
         ' 
+        TxtPass.BackColor = SystemColors.ActiveBorder
         TxtPass.Location = New Point(348, 278)
         TxtPass.Name = "TxtPass"
         TxtPass.Size = New Size(229, 23)
@@ -121,7 +135,7 @@ Partial Class Form3
         ' CheckBox1
         ' 
         CheckBox1.AutoSize = True
-        CheckBox1.Location = New Point(348, 319)
+        CheckBox1.Location = New Point(340, 320)
         CheckBox1.Name = "CheckBox1"
         CheckBox1.Size = New Size(115, 19)
         CheckBox1.TabIndex = 21
@@ -138,11 +152,24 @@ Partial Class Form3
         LinkLabel1.TabStop = True
         LinkLabel1.Text = "Terms and Condition"
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(784, 0)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(102, 102)
+        PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox1.TabIndex = 23
+        PictureBox1.TabStop = False
+        ' 
         ' Form3
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(884, 561)
+        Controls.Add(PictureBox1)
         Controls.Add(LinkLabel1)
         Controls.Add(CheckBox1)
         Controls.Add(Label4)
@@ -161,6 +188,7 @@ Partial Class Form3
         Name = "Form3"
         StartPosition = FormStartPosition.CenterScreen
         Text = "NOMG CLINIC (Sign - up)"
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -177,4 +205,5 @@ Partial Class Form3
     Friend WithEvents Label5 As Label
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

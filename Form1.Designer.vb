@@ -23,10 +23,13 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         ProgressBar1 = New ProgressBar()
         Timer1 = New Timer(components)
         Timer2 = New Timer(components)
         lblPercent = New Label()
+        PictureBox1 = New PictureBox()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' ProgressBar1
@@ -58,19 +61,33 @@ Partial Class Form1
         lblPercent.TabIndex = 3
         lblPercent.Text = "%"
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.BackColor = SystemColors.ControlLightLight
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(71, 77)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(734, 397)
+        PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox1.TabIndex = 4
+        PictureBox1.TabStop = False
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ControlLightLight
         ClientSize = New Size(884, 561)
         Controls.Add(lblPercent)
         Controls.Add(ProgressBar1)
+        Controls.Add(PictureBox1)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False
         Name = "Form1"
         StartPosition = FormStartPosition.CenterScreen
         Text = "NOMG CLINIC (Splash  Screen)"
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -84,5 +101,6 @@ Partial Class Form1
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
     Friend WithEvents lblPercent As Label
+    Friend WithEvents PictureBox1 As PictureBox
 
 End Class
