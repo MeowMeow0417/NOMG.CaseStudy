@@ -31,7 +31,6 @@ Partial Class Form12
         lblAssigned = New Label()
         lblVitamin = New Label()
         lblGestational = New Label()
-        lblCheckup = New Label()
         lblLMC = New Label()
         lblBaby = New Label()
         lblCivil = New Label()
@@ -83,7 +82,6 @@ Partial Class Form12
         pnlInfo.Controls.Add(lblAssigned)
         pnlInfo.Controls.Add(lblVitamin)
         pnlInfo.Controls.Add(lblGestational)
-        pnlInfo.Controls.Add(lblCheckup)
         pnlInfo.Controls.Add(lblLMC)
         pnlInfo.Controls.Add(lblBaby)
         pnlInfo.Controls.Add(lblCivil)
@@ -101,7 +99,7 @@ Partial Class Form12
         ' 
         lblAssigned.AutoSize = True
         lblAssigned.Font = New Font("Segoe UI", 15F)
-        lblAssigned.Location = New Point(12, 377)
+        lblAssigned.Location = New Point(12, 350)
         lblAssigned.Name = "lblAssigned"
         lblAssigned.Size = New Size(126, 28)
         lblAssigned.TabIndex = 10
@@ -121,21 +119,11 @@ Partial Class Form12
         ' 
         lblGestational.AutoSize = True
         lblGestational.Font = New Font("Segoe UI", 15F)
-        lblGestational.Location = New Point(12, 338)
+        lblGestational.Location = New Point(12, 303)
         lblGestational.Name = "lblGestational"
         lblGestational.Size = New Size(155, 28)
         lblGestational.TabIndex = 8
         lblGestational.Text = "Gestational Age:"
-        ' 
-        ' lblCheckup
-        ' 
-        lblCheckup.AutoSize = True
-        lblCheckup.Font = New Font("Segoe UI", 15F)
-        lblCheckup.Location = New Point(12, 293)
-        lblCheckup.Name = "lblCheckup"
-        lblCheckup.Size = New Size(209, 28)
-        lblCheckup.TabIndex = 7
-        lblCheckup.Text = "Date Of Next Checkup:"
         ' 
         ' lblLMC
         ' 
