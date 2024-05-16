@@ -1,17 +1,28 @@
-﻿Imports System.Net.Security
+﻿Imports System.IO
+Imports System.Net.Security
 Imports NOMG.CaseStudy.Form1
+Imports NOMG.CaseStudy.Form3
 
 Public Class Form2
+    ' Declare a variable to hold the instance of Form2
+    Public Shared Form2Instance As Form2
+    Public Shared Form6Instance As Form6
+
+    ' Initialize the list of patients with a default patient
+    Private Sub InitializePatients()
+        Dim Patient1 As New Patient("Juana", "1234")
+        listPatient.Add(Patient1)
+    End Sub
 
     Class Admin 'FOR ADMIN Login
         Private strAdmin, strAdminPass As String
-
 
         'for setting new admins
         Public Sub New(ByVal strTempAdmin As String, ByVal strTempAdminPass As String)
             strAdmin = strTempAdmin
             strAdminPass = strTempAdminPass
         End Sub
+
         Public Sub New()
 
         End Sub
@@ -26,6 +37,7 @@ Public Class Form2
         Public Function getAdminUser() As String
             Return strAdmin
         End Function
+
         Public Function getAdminPass() As String
             Return strAdminPass
         End Function
@@ -36,8 +48,6 @@ Public Class Form2
 
     'list for Patient creds
     Public listPatient As New List(Of Patient)
-
-
 
     Public Sub New() 'storing data for the Patien/s name and password
         InitializeComponent()
@@ -53,6 +63,7 @@ Public Class Form2
             strPatient = strTempPatient
             strPass = strPPass
         End Sub
+
         Public Sub New()
 
         End Sub
@@ -68,18 +79,20 @@ Public Class Form2
         Public Function getPatient() As String
             Return strPatient
         End Function
+
         Public Function getPatientPass() As String
             Return strPass
         End Function
+
         Public Function getPatientEmail() As String
             Return strEmail
         End Function
     End Class
 
-
     Dim admin1 As New Admin("Admin", "Admin") 'Admin user and Password'
 
     Dim form5Instance As New Form5
+
     Private Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
         Dim isAdminLoggedIn As Boolean = False
         Dim isPatientLoggedIn As Boolean = False
@@ -90,15 +103,15 @@ Public Class Form2
         End If
 
         ' Check if patient is logging in
-        Dim intCount = 0
-        For Each patient As Patient In listPatient
-            If txtUser.Text = patient.getPatient AndAlso txtPass.Text = patient.getPatientPass Then
+        If Not isAdminLoggedIn Then
+            Dim userManager As New UserManager()
+            If userManager.AuthenticateUser(txtUser.Text, txtPass.Text) Then
                 isPatientLoggedIn = True
-                strCurrentPatient = listPatient(intCount)
-                Exit For ' Exit the loop once a match is found
+                Form9.PatientName = txtUser.Text
+                ' Save user information to a text file
+                SaveUserInformation()
             End If
-            intCount += 1
-        Next
+        End If
 
         ' Check login status and show appropriate message and form
         If isAdminLoggedIn Then
@@ -116,7 +129,41 @@ Public Class Form2
         Else
             MsgBox("Invalid username or password", vbOKOnly, "NOMG Clinic")
         End If
+    End Sub
 
+    Private Sub SaveUserInformation()
+        ' Generate a unique file name for the user
+        Dim fileName As String = "UserInfo_" & DateTime.Now.ToString("yyyyMMddHHmmss") & ".txt"
+
+        Try
+            ' Get the path to the folder where user information will be saved
+            Dim folderPath As String = Path.Combine(Application.StartupPath, "UserInformation")
+
+            ' Create the folder if it does not exist
+            If Not Directory.Exists(folderPath) Then
+                Directory.CreateDirectory(folderPath)
+            End If
+
+            ' Combine folder path with file name to get full file path
+            Dim filePath As String = Path.Combine(folderPath, fileName)
+
+            ' Create or overwrite the text file with user information
+            Using writer As New StreamWriter(filePath)
+                ' Write user information to the file
+
+                If Form6Instance IsNot Nothing Then
+                    writer.WriteLine("Last Name: " & Form6Instance.txtLastName.Text)
+                    writer.WriteLine("Age: " & Form6Instance.txtAge.Text)
+                    ' Add other fields as needed
+                End If
+            End Using
+
+            ' Display a success message
+            MessageBox.Show("User information saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            ' Display an error message if saving fails
+            MessageBox.Show("An error occurred while saving user information: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     'btn for sign-up
@@ -129,11 +176,10 @@ Public Class Form2
     Public listDetails As New List(Of PatientDetails)
 
     Class PatientDetails
+        Public Name, MI, LastName, Age, Baby, Address, Gender, CivilStat, LMC, Vitamin As String
 
-        Private Name, MI, LastName, Age, Baby, Address, Gender, CivilStat, LMC As String
-
-        'for setting new data
-        Public Sub New(ByVal tempName As String, ByVal tempMI As String, ByVal tempLast As String, ByVal tempAdd As String, ByVal tempAge As String, ByVal tempBaby As String, ByVal tempGender As String, ByVal tempCivil As String, ByVal tempLMC As String)
+        ' Constructor with parameters to set all details including Vitamin
+        Public Sub New(ByVal tempName As String, ByVal tempMI As String, ByVal tempLast As String, ByVal tempAdd As String, ByVal tempAge As String, ByVal tempBaby As String, ByVal tempGender As String, ByVal tempCivil As String, ByVal tempLMC As String, ByVal tempVitamin As String)
             Name = tempName
             MI = tempMI
             LastName = tempLast
@@ -143,18 +189,15 @@ Public Class Form2
             Address = tempAdd
             CivilStat = tempCivil
             LMC = tempLMC
-        End Sub
-        Public Sub New()
-
+            Vitamin = tempVitamin ' Set Vitamin
         End Sub
 
-        'for setting details
+        ' Method to set details
         Public Sub setDetails1(ByVal tempName As String, ByVal tempMI As String, ByVal tempLast As String, ByVal tempAge As String)
             Name = tempName
             MI = tempMI
             LastName = tempLast
             Age = tempAge
-
         End Sub
 
         Public Sub setDetails2(ByVal tempBaby As String, ByVal tempGender As String, ByVal tempAdd As String, ByVal tempCivil As String, ByVal tempLMC As String)
@@ -164,10 +207,22 @@ Public Class Form2
             Address = tempAdd
             LMC = tempLMC
         End Sub
-
-
-        'for setting new data
-
     End Class
+
+    Private Sub txtUser_TextChanged(sender As Object, e As EventArgs) Handles txtUser.TextChanged
+
+    End Sub
+
+    ' Method to get a list of patient names
+    Public Shared Function GetPatientNames(ByVal listDetails As List(Of PatientDetails)) As List(Of String)
+        Dim patientNames As New List(Of String)
+
+        For Each patientDetail As PatientDetails In listDetails
+            ' Add the name of each patient to the list
+            patientNames.Add(patientDetail.Name)
+        Next
+
+        Return patientNames
+    End Function
 
 End Class
