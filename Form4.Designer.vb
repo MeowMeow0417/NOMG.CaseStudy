@@ -22,11 +22,11 @@ Partial Class Form4
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form4))
         btnLogOut = New Button()
         btnPatientInfo = New Button()
         btnBill = New Button()
-        Button3 = New Button()
-        Button1 = New Button()
+        btnView = New Button()
         pnlAppointments = New Panel()
         txtPatient8 = New TextBox()
         txtPatient7 = New TextBox()
@@ -39,53 +39,55 @@ Partial Class Form4
         Label2 = New Label()
         Label3 = New Label()
         Label1 = New Label()
+        PictureBox1 = New PictureBox()
+        btnBack = New Button()
         pnlAppointments.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnLogOut
         ' 
-        btnLogOut.Location = New Point(12, 522)
+        btnLogOut.BackColor = Color.HotPink
+        btnLogOut.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
+        btnLogOut.Location = New Point(12, 518)
         btnLogOut.Name = "btnLogOut"
-        btnLogOut.Size = New Size(113, 27)
+        btnLogOut.Size = New Size(113, 31)
         btnLogOut.TabIndex = 11
         btnLogOut.Text = "Log Out"
-        btnLogOut.UseVisualStyleBackColor = True
+        btnLogOut.UseVisualStyleBackColor = False
         ' 
         ' btnPatientInfo
         ' 
-        btnPatientInfo.Location = New Point(168, 491)
+        btnPatientInfo.BackColor = Color.HotPink
+        btnPatientInfo.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
+        btnPatientInfo.Location = New Point(173, 491)
         btnPatientInfo.Name = "btnPatientInfo"
-        btnPatientInfo.Size = New Size(116, 58)
+        btnPatientInfo.Size = New Size(136, 58)
         btnPatientInfo.TabIndex = 13
         btnPatientInfo.Text = "Patient's Details"
-        btnPatientInfo.UseVisualStyleBackColor = True
+        btnPatientInfo.UseVisualStyleBackColor = False
         ' 
         ' btnBill
         ' 
-        btnBill.Location = New Point(334, 491)
-        btnBill.Name = "btnBilling"
-        btnBill.Size = New Size(116, 58)
+        btnBill.BackColor = Color.HotPink
+        btnBill.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
+        btnBill.Location = New Point(403, 491)
+        btnBill.Name = "btnBill"
+        btnBill.Size = New Size(124, 58)
         btnBill.TabIndex = 14
         btnBill.Text = "Billing"
-        btnBill.UseVisualStyleBackColor = True
+        btnBill.UseVisualStyleBackColor = False
         ' 
-        ' Button3
+        ' btnView
         ' 
-        Button3.Location = New Point(505, 491)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(116, 58)
-        Button3.TabIndex = 15
-        Button3.Text = "Conflict Checking"
-        Button3.UseVisualStyleBackColor = True
-        ' 
-        ' Button1
-        ' 
-        Button1.Location = New Point(677, 491)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(116, 58)
-        Button1.TabIndex = 16
-        Button1.Text = "View Appointments"
-        Button1.UseVisualStyleBackColor = True
+        btnView.BackColor = Color.HotPink
+        btnView.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
+        btnView.Location = New Point(677, 491)
+        btnView.Name = "btnView"
+        btnView.Size = New Size(138, 58)
+        btnView.TabIndex = 16
+        btnView.Text = "View Appointments"
+        btnView.UseVisualStyleBackColor = False
         ' 
         ' pnlAppointments
         ' 
@@ -103,7 +105,7 @@ Partial Class Form4
         pnlAppointments.Location = New Point(12, 12)
         pnlAppointments.Name = "pnlAppointments"
         pnlAppointments.Size = New Size(860, 473)
-        pnlAppointments.TabIndex = 17
+        pnlAppointments.TabIndex = 2
         pnlAppointments.Visible = False
         ' 
         ' txtPatient8
@@ -176,49 +178,74 @@ Partial Class Form4
         txtPatient1.Name = "txtPatient1"
         txtPatient1.ReadOnly = True
         txtPatient1.Size = New Size(788, 49)
-        txtPatient1.TabIndex = 21
+        txtPatient1.TabIndex = 0
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 15.0F)
+        Label2.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
         Label2.Location = New Point(533, 19)
         Label2.Name = "Label2"
-        Label2.Size = New Size(147, 28)
+        Label2.Size = New Size(111, 19)
         Label2.TabIndex = 19
         Label2.Text = "Follow Up Date"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 15.0F)
+        Label3.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
         Label3.Location = New Point(211, 19)
         Label3.Name = "Label3"
-        Label3.Size = New Size(175, 28)
+        Label3.Size = New Size(132, 19)
         Label3.TabIndex = 20
         Label3.Text = "Appointment Date"
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 15.0F)
+        Label1.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
         Label1.Location = New Point(41, 19)
         Label1.Name = "Label1"
-        Label1.Size = New Size(72, 28)
+        Label1.Size = New Size(56, 19)
         Label1.TabIndex = 18
         Label1.Text = "Patient"
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(782, -1)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(102, 102)
+        PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox1.TabIndex = 18
+        PictureBox1.TabStop = False
+        ' 
+        ' btnBack
+        ' 
+        btnBack.BackColor = Color.HotPink
+        btnBack.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
+        btnBack.Location = New Point(677, 491)
+        btnBack.Name = "btnBack"
+        btnBack.Size = New Size(138, 58)
+        btnBack.TabIndex = 19
+        btnBack.Text = "Back"
+        btnBack.UseVisualStyleBackColor = False
+        btnBack.Visible = False
+        ' 
         ' Form4
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ControlLightLight
         ClientSize = New Size(884, 561)
+        Controls.Add(btnBack)
         Controls.Add(pnlAppointments)
-        Controls.Add(Button1)
-        Controls.Add(Button3)
+        Controls.Add(btnView)
         Controls.Add(btnBill)
         Controls.Add(btnPatientInfo)
         Controls.Add(btnLogOut)
+        Controls.Add(PictureBox1)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False
@@ -227,7 +254,9 @@ Partial Class Form4
         Text = "NOMG CLINIC (ADMIN)"
         pnlAppointments.ResumeLayout(False)
         pnlAppointments.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents btnLogOut As Button
@@ -240,7 +269,6 @@ Partial Class Form4
     Friend WithEvents Label4 As Label
     Friend WithEvents btnPatientInfo As Button
     Friend WithEvents btnBill As Button
-    Friend WithEvents Button3 As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents lblPatient5 As Label
     Friend WithEvents lblPatient4 As Label
@@ -257,7 +285,7 @@ Partial Class Form4
     Friend WithEvents lblAppoint3 As Label
     Friend WithEvents lblAppoint2 As Label
     Friend WithEvents lblAppoint1 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnView As Button
     Friend WithEvents pnlAppointments As Panel
     Friend WithEvents txtPatient8 As TextBox
     Friend WithEvents txtPatient7 As TextBox
@@ -267,4 +295,5 @@ Partial Class Form4
     Friend WithEvents txtPatient3 As TextBox
     Friend WithEvents txtPatient2 As TextBox
     Friend WithEvents txtPatient1 As TextBox
+    Friend WithEvents btnBack As Button
 End Class

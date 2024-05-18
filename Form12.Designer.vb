@@ -39,6 +39,7 @@ Partial Class Form12
         lblGender = New Label()
         lblAge = New Label()
         lblName = New Label()
+        Label1 = New Label()
         pnlInfo.SuspendLayout()
         SuspendLayout()
         ' 
@@ -46,37 +47,43 @@ Partial Class Form12
         ' 
         ListBox1.FormattingEnabled = True
         ListBox1.ItemHeight = 15
-        ListBox1.Location = New Point(27, 28)
+        ListBox1.Location = New Point(27, 85)
         ListBox1.Name = "ListBox1"
         ListBox1.Size = New Size(176, 19)
         ListBox1.TabIndex = 0
         ' 
         ' btnEnter
         ' 
-        btnEnter.Location = New Point(27, 53)
+        btnEnter.BackColor = Color.HotPink
+        btnEnter.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
+        btnEnter.Location = New Point(27, 132)
         btnEnter.Name = "btnEnter"
-        btnEnter.Size = New Size(85, 38)
+        btnEnter.Size = New Size(176, 38)
         btnEnter.TabIndex = 1
         btnEnter.Text = "Enter"
-        btnEnter.UseVisualStyleBackColor = True
+        btnEnter.UseVisualStyleBackColor = False
         ' 
         ' btnClear
         ' 
-        btnClear.Location = New Point(118, 53)
+        btnClear.BackColor = Color.HotPink
+        btnClear.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
+        btnClear.Location = New Point(27, 176)
         btnClear.Name = "btnClear"
-        btnClear.Size = New Size(85, 38)
+        btnClear.Size = New Size(176, 38)
         btnClear.TabIndex = 2
         btnClear.Text = "Clear"
-        btnClear.UseVisualStyleBackColor = True
+        btnClear.UseVisualStyleBackColor = False
         ' 
         ' Button3
         ' 
+        Button3.BackColor = Color.HotPink
+        Button3.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
         Button3.Location = New Point(18, 512)
         Button3.Name = "Button3"
         Button3.Size = New Size(109, 37)
         Button3.TabIndex = 3
         Button3.Text = "Back"
-        Button3.UseVisualStyleBackColor = True
+        Button3.UseVisualStyleBackColor = False
         ' 
         ' pnlInfo
         ' 
@@ -91,16 +98,17 @@ Partial Class Form12
         pnlInfo.Controls.Add(lblGender)
         pnlInfo.Controls.Add(lblAge)
         pnlInfo.Controls.Add(lblName)
-        pnlInfo.Location = New Point(261, 28)
+        pnlInfo.Font = New Font("Segoe UI", 9.75F)
+        pnlInfo.Location = New Point(222, 55)
         pnlInfo.Name = "pnlInfo"
-        pnlInfo.Size = New Size(551, 470)
+        pnlInfo.Size = New Size(631, 470)
         pnlInfo.TabIndex = 4
         pnlInfo.Visible = False
         ' 
         ' lblAssigned
         ' 
         lblAssigned.AutoSize = True
-        lblAssigned.Font = New Font("Segoe UI", 15.0F)
+        lblAssigned.Font = New Font("Segoe UI", 15F)
         lblAssigned.Location = New Point(12, 377)
         lblAssigned.Name = "lblAssigned"
         lblAssigned.Size = New Size(126, 28)
@@ -110,8 +118,8 @@ Partial Class Form12
         ' lblVitamin
         ' 
         lblVitamin.AutoSize = True
-        lblVitamin.Font = New Font("Segoe UI", 15.0F)
-        lblVitamin.Location = New Point(269, 11)
+        lblVitamin.Font = New Font("Segoe UI", 15F)
+        lblVitamin.Location = New Point(281, 11)
         lblVitamin.Name = "lblVitamin"
         lblVitamin.Size = New Size(206, 28)
         lblVitamin.TabIndex = 9
@@ -120,7 +128,7 @@ Partial Class Form12
         ' lblGestational
         ' 
         lblGestational.AutoSize = True
-        lblGestational.Font = New Font("Segoe UI", 15.0F)
+        lblGestational.Font = New Font("Segoe UI", 15F)
         lblGestational.Location = New Point(12, 338)
         lblGestational.Name = "lblGestational"
         lblGestational.Size = New Size(155, 28)
@@ -130,7 +138,7 @@ Partial Class Form12
         ' lblCheckup
         ' 
         lblCheckup.AutoSize = True
-        lblCheckup.Font = New Font("Segoe UI", 15.0F)
+        lblCheckup.Font = New Font("Segoe UI", 15F)
         lblCheckup.Location = New Point(12, 293)
         lblCheckup.Name = "lblCheckup"
         lblCheckup.Size = New Size(209, 28)
@@ -140,7 +148,7 @@ Partial Class Form12
         ' lblLMC
         ' 
         lblLMC.AutoSize = True
-        lblLMC.Font = New Font("Segoe UI", 15.0F)
+        lblLMC.Font = New Font("Segoe UI", 15F)
         lblLMC.Location = New Point(12, 252)
         lblLMC.Name = "lblLMC"
         lblLMC.Size = New Size(193, 28)
@@ -150,7 +158,7 @@ Partial Class Form12
         ' lblBaby
         ' 
         lblBaby.AutoSize = True
-        lblBaby.Font = New Font("Segoe UI", 15.0F)
+        lblBaby.Font = New Font("Segoe UI", 15F)
         lblBaby.Location = New Point(12, 208)
         lblBaby.Name = "lblBaby"
         lblBaby.Size = New Size(101, 28)
@@ -160,7 +168,7 @@ Partial Class Form12
         ' lblCivil
         ' 
         lblCivil.AutoSize = True
-        lblCivil.Font = New Font("Segoe UI", 15.0F)
+        lblCivil.Font = New Font("Segoe UI", 15F)
         lblCivil.Location = New Point(12, 169)
         lblCivil.Name = "lblCivil"
         lblCivil.Size = New Size(111, 28)
@@ -170,7 +178,7 @@ Partial Class Form12
         ' lblAddress
         ' 
         lblAddress.AutoSize = True
-        lblAddress.Font = New Font("Segoe UI", 15.0F)
+        lblAddress.Font = New Font("Segoe UI", 15F)
         lblAddress.Location = New Point(12, 127)
         lblAddress.Name = "lblAddress"
         lblAddress.Size = New Size(82, 28)
@@ -180,7 +188,7 @@ Partial Class Form12
         ' lblGender
         ' 
         lblGender.AutoSize = True
-        lblGender.Font = New Font("Segoe UI", 15.0F)
+        lblGender.Font = New Font("Segoe UI", 15F)
         lblGender.Location = New Point(12, 88)
         lblGender.Name = "lblGender"
         lblGender.Size = New Size(76, 28)
@@ -190,7 +198,7 @@ Partial Class Form12
         ' lblAge
         ' 
         lblAge.AutoSize = True
-        lblAge.Font = New Font("Segoe UI", 15.0F)
+        lblAge.Font = New Font("Segoe UI", 15F)
         lblAge.Location = New Point(12, 48)
         lblAge.Name = "lblAge"
         lblAge.Size = New Size(47, 28)
@@ -200,28 +208,42 @@ Partial Class Form12
         ' lblName
         ' 
         lblName.AutoSize = True
-        lblName.Font = New Font("Segoe UI", 15.0F)
+        lblName.Font = New Font("Segoe UI", 15F)
         lblName.Location = New Point(12, 11)
         lblName.Name = "lblName"
         lblName.Size = New Size(64, 28)
         lblName.TabIndex = 0
         lblName.Text = "Name"
         ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
+        Label1.ForeColor = Color.HotPink
+        Label1.Location = New Point(27, 28)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(159, 19)
+        Label1.TabIndex = 11
+        Label1.Text = "VIEW PATIENT DETAILS"
+        ' 
         ' Form12
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = SystemColors.ControlLightLight
         ClientSize = New Size(884, 561)
+        Controls.Add(Label1)
         Controls.Add(pnlInfo)
         Controls.Add(Button3)
         Controls.Add(btnClear)
         Controls.Add(btnEnter)
         Controls.Add(ListBox1)
         Name = "Form12"
-        Text = "Form12"
+        Text = "NOMG CLINIC (VIEW PATIENT DETAILS)"
         pnlInfo.ResumeLayout(False)
         pnlInfo.PerformLayout()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents ListBox1 As ListBox
@@ -240,4 +262,5 @@ Partial Class Form12
     Friend WithEvents lblGender As Label
     Friend WithEvents lblAge As Label
     Friend WithEvents lblName As Label
+    Friend WithEvents Label1 As Label
 End Class

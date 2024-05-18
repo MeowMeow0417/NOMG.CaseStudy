@@ -30,6 +30,15 @@ Partial Class Form11
         t3 = New Label()
         t2 = New Label()
         t1 = New Label()
+        GroupBox2 = New GroupBox()
+        t6 = New Label()
+        t5 = New Label()
+        lbl6 = New Label()
+        lbl5 = New Label()
+        lblFollow = New Label()
+        lblInitial = New Label()
+        Label8 = New Label()
+        Label2 = New Label()
         lbl4 = New Label()
         lbl3 = New Label()
         lbl2 = New Label()
@@ -52,21 +61,13 @@ Partial Class Form11
         GroupBox4 = New GroupBox()
         Label1 = New Label()
         lblTamount = New Label()
-        GroupBox2 = New GroupBox()
-        t6 = New Label()
-        t5 = New Label()
-        lbl6 = New Label()
-        lbl5 = New Label()
-        lblFollow = New Label()
-        lblInitial = New Label()
-        Label8 = New Label()
-        Label2 = New Label()
         btnBack = New Button()
         btnInvoice = New Button()
+        Label11 = New Label()
         GroupBox1.SuspendLayout()
+        GroupBox2.SuspendLayout()
         Panel1.SuspendLayout()
         GroupBox4.SuspendLayout()
-        GroupBox2.SuspendLayout()
         SuspendLayout()
         ' 
         ' GroupBox1
@@ -78,6 +79,7 @@ Partial Class Form11
         GroupBox1.Controls.Add(t3)
         GroupBox1.Controls.Add(t2)
         GroupBox1.Controls.Add(t1)
+        GroupBox1.Controls.Add(GroupBox2)
         GroupBox1.Controls.Add(lbl4)
         GroupBox1.Controls.Add(lbl3)
         GroupBox1.Controls.Add(lbl2)
@@ -90,6 +92,7 @@ Partial Class Form11
         GroupBox1.Controls.Add(Label6)
         GroupBox1.Controls.Add(Label5)
         GroupBox1.Controls.Add(Label4)
+        GroupBox1.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold)
         GroupBox1.Location = New Point(2, 86)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(859, 287)
@@ -132,7 +135,7 @@ Partial Class Form11
         t4.AutoSize = True
         t4.Location = New Point(804, 144)
         t4.Name = "t4"
-        t4.Size = New Size(12, 15)
+        t4.Size = New Size(13, 17)
         t4.TabIndex = 18
         t4.Text = "-"
         ' 
@@ -141,7 +144,7 @@ Partial Class Form11
         t3.AutoSize = True
         t3.Location = New Point(804, 106)
         t3.Name = "t3"
-        t3.Size = New Size(12, 15)
+        t3.Size = New Size(13, 17)
         t3.TabIndex = 17
         t3.Text = "-"
         ' 
@@ -150,7 +153,7 @@ Partial Class Form11
         t2.AutoSize = True
         t2.Location = New Point(804, 66)
         t2.Name = "t2"
-        t2.Size = New Size(12, 15)
+        t2.Size = New Size(13, 17)
         t2.TabIndex = 16
         t2.Text = "-"
         ' 
@@ -159,16 +162,106 @@ Partial Class Form11
         t1.AutoSize = True
         t1.Location = New Point(804, 29)
         t1.Name = "t1"
-        t1.Size = New Size(12, 15)
+        t1.Size = New Size(13, 17)
         t1.TabIndex = 15
         t1.Text = "-"
+        ' 
+        ' GroupBox2
+        ' 
+        GroupBox2.Controls.Add(t6)
+        GroupBox2.Controls.Add(t5)
+        GroupBox2.Controls.Add(lbl6)
+        GroupBox2.Controls.Add(lbl5)
+        GroupBox2.Controls.Add(lblFollow)
+        GroupBox2.Controls.Add(lblInitial)
+        GroupBox2.Controls.Add(Label8)
+        GroupBox2.Controls.Add(Label2)
+        GroupBox2.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold)
+        GroupBox2.Location = New Point(3, 179)
+        GroupBox2.Name = "GroupBox2"
+        GroupBox2.Size = New Size(856, 108)
+        GroupBox2.TabIndex = 1
+        GroupBox2.TabStop = False
+        GroupBox2.Text = "Check-up Bills"
+        ' 
+        ' t6
+        ' 
+        t6.AutoSize = True
+        t6.Location = New Point(804, 66)
+        t6.Name = "t6"
+        t6.Size = New Size(13, 17)
+        t6.TabIndex = 16
+        t6.Text = "-"
+        ' 
+        ' t5
+        ' 
+        t5.AutoSize = True
+        t5.Location = New Point(804, 33)
+        t5.Name = "t5"
+        t5.Size = New Size(13, 17)
+        t5.TabIndex = 15
+        t5.Text = "-"
+        ' 
+        ' lbl6
+        ' 
+        lbl6.AutoSize = True
+        lbl6.Location = New Point(605, 66)
+        lbl6.Name = "lbl6"
+        lbl6.Size = New Size(13, 17)
+        lbl6.TabIndex = 14
+        lbl6.Text = "-"
+        ' 
+        ' lbl5
+        ' 
+        lbl5.AutoSize = True
+        lbl5.Location = New Point(605, 33)
+        lbl5.Name = "lbl5"
+        lbl5.Size = New Size(13, 17)
+        lbl5.TabIndex = 13
+        lbl5.Text = "-"
+        ' 
+        ' lblFollow
+        ' 
+        lblFollow.AutoSize = True
+        lblFollow.Location = New Point(705, 66)
+        lblFollow.Name = "lblFollow"
+        lblFollow.Size = New Size(29, 17)
+        lblFollow.TabIndex = 12
+        lblFollow.Text = "500"
+        ' 
+        ' lblInitial
+        ' 
+        lblInitial.AutoSize = True
+        lblInitial.Location = New Point(705, 33)
+        lblInitial.Name = "lblInitial"
+        lblInitial.Size = New Size(36, 17)
+        lblInitial.TabIndex = 11
+        lblInitial.Text = "2000"
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Location = New Point(30, 33)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(101, 17)
+        Label8.TabIndex = 4
+        Label8.Text = "Initial Check-up"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(30, 66)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(128, 17)
+        Label2.TabIndex = 0
+        Label2.Text = "Follow-up Check-up"
         ' 
         ' lbl4
         ' 
         lbl4.AutoSize = True
         lbl4.Location = New Point(605, 144)
         lbl4.Name = "lbl4"
-        lbl4.Size = New Size(12, 15)
+        lbl4.Size = New Size(13, 17)
         lbl4.TabIndex = 14
         lbl4.Text = "-"
         ' 
@@ -177,7 +270,7 @@ Partial Class Form11
         lbl3.AutoSize = True
         lbl3.Location = New Point(605, 106)
         lbl3.Name = "lbl3"
-        lbl3.Size = New Size(12, 15)
+        lbl3.Size = New Size(13, 17)
         lbl3.TabIndex = 13
         lbl3.Text = "-"
         ' 
@@ -186,7 +279,7 @@ Partial Class Form11
         lbl2.AutoSize = True
         lbl2.Location = New Point(605, 66)
         lbl2.Name = "lbl2"
-        lbl2.Size = New Size(12, 15)
+        lbl2.Size = New Size(13, 17)
         lbl2.TabIndex = 12
         lbl2.Text = "-"
         ' 
@@ -195,7 +288,7 @@ Partial Class Form11
         lbl1.AutoSize = True
         lbl1.Location = New Point(605, 29)
         lbl1.Name = "lbl1"
-        lbl1.Size = New Size(12, 15)
+        lbl1.Size = New Size(13, 17)
         lbl1.TabIndex = 11
         lbl1.Text = "-"
         ' 
@@ -204,7 +297,7 @@ Partial Class Form11
         lblFluVac.AutoSize = True
         lblFluVac.Location = New Point(705, 144)
         lblFluVac.Name = "lblFluVac"
-        lblFluVac.Size = New Size(31, 15)
+        lblFluVac.Size = New Size(34, 17)
         lblFluVac.TabIndex = 10
         lblFluVac.Text = "1500"
         ' 
@@ -213,7 +306,7 @@ Partial Class Form11
         lblDHA.AutoSize = True
         lblDHA.Location = New Point(705, 106)
         lblDHA.Name = "lblDHA"
-        lblDHA.Size = New Size(19, 15)
+        lblDHA.Size = New Size(22, 17)
         lblDHA.TabIndex = 9
         lblDHA.Text = "20"
         ' 
@@ -222,7 +315,7 @@ Partial Class Form11
         lblBComp.AutoSize = True
         lblBComp.Location = New Point(705, 66)
         lblBComp.Name = "lblBComp"
-        lblBComp.Size = New Size(19, 15)
+        lblBComp.Size = New Size(22, 17)
         lblBComp.TabIndex = 8
         lblBComp.Text = "25"
         ' 
@@ -231,7 +324,7 @@ Partial Class Form11
         lblVitaminA.AutoSize = True
         lblVitaminA.Location = New Point(705, 27)
         lblVitaminA.Name = "lblVitaminA"
-        lblVitaminA.Size = New Size(19, 15)
+        lblVitaminA.Size = New Size(20, 17)
         lblVitaminA.TabIndex = 3
         lblVitaminA.Text = "15"
         ' 
@@ -240,7 +333,7 @@ Partial Class Form11
         Label7.AutoSize = True
         Label7.Location = New Point(30, 144)
         Label7.Name = "Label7"
-        Label7.Size = New Size(44, 15)
+        Label7.Size = New Size(50, 17)
         Label7.TabIndex = 3
         Label7.Text = "Flu Vac"
         ' 
@@ -249,7 +342,7 @@ Partial Class Form11
         Label6.AutoSize = True
         Label6.Location = New Point(30, 106)
         Label6.Name = "Label6"
-        Label6.Size = New Size(35, 15)
+        Label6.Size = New Size(40, 17)
         Label6.TabIndex = 2
         Label6.Text = "DHA "
         ' 
@@ -258,17 +351,17 @@ Partial Class Form11
         Label5.AutoSize = True
         Label5.Location = New Point(30, 66)
         Label5.Name = "Label5"
-        Label5.Size = New Size(65, 15)
+        Label5.Size = New Size(73, 17)
         Label5.TabIndex = 1
         Label5.Text = "B Complex"
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Microsoft Sans Serif", 8.25F)
+        Label4.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold)
         Label4.Location = New Point(30, 29)
         Label4.Name = "Label4"
-        Label4.Size = New Size(62, 13)
+        Label4.Size = New Size(83, 17)
         Label4.TabIndex = 0
         Label4.Text = "Iron Vitamin"
         ' 
@@ -281,7 +374,6 @@ Partial Class Form11
         Panel1.Controls.Add(Label9)
         Panel1.Controls.Add(Label3)
         Panel1.Controls.Add(GroupBox4)
-        Panel1.Controls.Add(GroupBox2)
         Panel1.Controls.Add(GroupBox1)
         Panel1.Location = New Point(10, 42)
         Panel1.Name = "Panel1"
@@ -346,6 +438,7 @@ Partial Class Form11
         ' 
         GroupBox4.Controls.Add(Label1)
         GroupBox4.Controls.Add(lblTamount)
+        GroupBox4.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold)
         GroupBox4.Location = New Point(532, 372)
         GroupBox4.Margin = New Padding(3, 2, 3, 2)
         GroupBox4.Name = "GroupBox4"
@@ -357,10 +450,10 @@ Partial Class Form11
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(45, 31)
+        Label1.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(45, 35)
         Label1.Name = "Label1"
-        Label1.Size = New Size(100, 25)
+        Label1.Size = New Size(85, 21)
         Label1.TabIndex = 0
         Label1.Text = "Sub Total:"
         ' 
@@ -369,116 +462,42 @@ Partial Class Form11
         lblTamount.AutoSize = True
         lblTamount.Location = New Point(255, 39)
         lblTamount.Name = "lblTamount"
-        lblTamount.Size = New Size(13, 15)
+        lblTamount.Size = New Size(15, 17)
         lblTamount.TabIndex = 2
         lblTamount.Text = "0"
         ' 
-        ' GroupBox2
-        ' 
-        GroupBox2.Controls.Add(t6)
-        GroupBox2.Controls.Add(t5)
-        GroupBox2.Controls.Add(lbl6)
-        GroupBox2.Controls.Add(lbl5)
-        GroupBox2.Controls.Add(lblFollow)
-        GroupBox2.Controls.Add(lblInitial)
-        GroupBox2.Controls.Add(Label8)
-        GroupBox2.Controls.Add(Label2)
-        GroupBox2.Location = New Point(2, 265)
-        GroupBox2.Name = "GroupBox2"
-        GroupBox2.Size = New Size(856, 108)
-        GroupBox2.TabIndex = 1
-        GroupBox2.TabStop = False
-        GroupBox2.Text = "Check-up Bills"
-        ' 
-        ' t6
-        ' 
-        t6.AutoSize = True
-        t6.Location = New Point(804, 66)
-        t6.Name = "t6"
-        t6.Size = New Size(12, 15)
-        t6.TabIndex = 16
-        t6.Text = "-"
-        ' 
-        ' t5
-        ' 
-        t5.AutoSize = True
-        t5.Location = New Point(804, 33)
-        t5.Name = "t5"
-        t5.Size = New Size(12, 15)
-        t5.TabIndex = 15
-        t5.Text = "-"
-        ' 
-        ' lbl6
-        ' 
-        lbl6.AutoSize = True
-        lbl6.Location = New Point(605, 66)
-        lbl6.Name = "lbl6"
-        lbl6.Size = New Size(12, 15)
-        lbl6.TabIndex = 14
-        lbl6.Text = "-"
-        ' 
-        ' lbl5
-        ' 
-        lbl5.AutoSize = True
-        lbl5.Location = New Point(605, 33)
-        lbl5.Name = "lbl5"
-        lbl5.Size = New Size(12, 15)
-        lbl5.TabIndex = 13
-        lbl5.Text = "-"
-        ' 
-        ' lblFollow
-        ' 
-        lblFollow.AutoSize = True
-        lblFollow.Location = New Point(705, 66)
-        lblFollow.Name = "lblFollow"
-        lblFollow.Size = New Size(25, 15)
-        lblFollow.TabIndex = 12
-        lblFollow.Text = "500"
-        ' 
-        ' lblInitial
-        ' 
-        lblInitial.AutoSize = True
-        lblInitial.Location = New Point(705, 33)
-        lblInitial.Name = "lblInitial"
-        lblInitial.Size = New Size(31, 15)
-        lblInitial.TabIndex = 11
-        lblInitial.Text = "2000"
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.Location = New Point(30, 33)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(91, 15)
-        Label8.TabIndex = 4
-        Label8.Text = "Initial Check-up"
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(30, 66)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(116, 15)
-        Label2.TabIndex = 0
-        Label2.Text = "Follow-up Check-up"
-        ' 
         ' btnBack
         ' 
+        btnBack.BackColor = Color.HotPink
+        btnBack.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
         btnBack.Location = New Point(12, 515)
         btnBack.Name = "btnBack"
         btnBack.Size = New Size(125, 34)
         btnBack.TabIndex = 2
         btnBack.Text = "Back"
-        btnBack.UseVisualStyleBackColor = True
+        btnBack.UseVisualStyleBackColor = False
         ' 
         ' btnInvoice
         ' 
+        btnInvoice.BackColor = Color.HotPink
+        btnInvoice.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
         btnInvoice.Location = New Point(169, 515)
         btnInvoice.Name = "btnInvoice"
         btnInvoice.Size = New Size(175, 34)
         btnInvoice.TabIndex = 13
         btnInvoice.Text = "Show Invoice"
-        btnInvoice.UseVisualStyleBackColor = True
+        btnInvoice.UseVisualStyleBackColor = False
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
+        Label11.ForeColor = Color.HotPink
+        Label11.Location = New Point(12, 9)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(74, 19)
+        Label11.TabIndex = 14
+        Label11.Text = "PAYMENT"
         ' 
         ' Form11
         ' 
@@ -486,6 +505,7 @@ Partial Class Form11
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ControlLightLight
         ClientSize = New Size(884, 561)
+        Controls.Add(Label11)
         Controls.Add(btnInvoice)
         Controls.Add(btnBack)
         Controls.Add(Panel1)
@@ -494,13 +514,14 @@ Partial Class Form11
         Text = "NOMG CLINIC (Payment)"
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
+        GroupBox2.ResumeLayout(False)
+        GroupBox2.PerformLayout()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         GroupBox4.ResumeLayout(False)
         GroupBox4.PerformLayout()
-        GroupBox2.ResumeLayout(False)
-        GroupBox2.PerformLayout()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
@@ -544,4 +565,5 @@ Partial Class Form11
     Friend WithEvents Label3 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents TxtEmail As TextBox
+    Friend WithEvents Label11 As Label
 End Class

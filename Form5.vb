@@ -1,5 +1,11 @@
 ﻿Public Class Form5
+    Public strCurrentPatient As Form2.Patient
 
+    Private Sub ShowForm13()
+        Dim form13 As New Form13(strCurrentPatient) ' Pass current patient to Form13 via constructor
+        form13.Show()
+        Me.Hide()
+    End Sub
 
     Private Sub btnSched_Click(sender As Object, e As EventArgs) Handles btnSched.Click
         Form9.Show()
@@ -7,7 +13,6 @@
     End Sub
 
     Private Sub btnPay_Click(sender As Object, e As EventArgs) Handles btnPay.Click
-
         Form11.Show()
         Me.Close()
     End Sub

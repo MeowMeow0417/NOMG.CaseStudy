@@ -1,5 +1,6 @@
 ﻿Imports System.Net.Security
 Imports NOMG.CaseStudy.Form1
+Imports System.IO
 
 Public Class Form2
 
@@ -31,50 +32,90 @@ Public Class Form2
         End Function
     End Class
 
-    'for the data to be usable in other forms
+    Dim admin1 As New Admin("Admin", "Admin") 'Admin user and Password'
+
+    ' For the data to be usable in other forms
     Public strCurrentPatient As Patient
 
-    'list for Patient creds
+    ' List for Patient creds
     Public listPatient As New List(Of Patient)
 
-    Public Sub New() 'storing data for the Patien/s name and password
+    Public Sub New() ' Storing data for the Patient's name and password
         InitializeComponent()
+
+        ' Load patients from the text file
+        LoadPatientsFromFile("patients.txt")
+
+        ' Uncomment the following lines if you want to add a new patient initially
         Dim Patient1 As New Patient("Juana", "1234")
+        Dim Patient2 As New Patient("Amara", "1234")
         listPatient.Add(Patient1)
+        listPatient.Add(Patient2)
+        SavePatientsToFile("patients.txt")
     End Sub
 
-    Class Patient 'FOR PATIENT LogIn
+    Private Sub LoadPatientsFromFile(ByVal filePath As String)
+        If File.Exists(filePath) Then
+            Dim lines() As String = File.ReadAllLines(filePath)
+            For Each line In lines
+                Dim parts() As String = line.Split(","c)
+                If parts.Length = 3 Then
+                    Dim patient As New Patient(parts(0), parts(1), parts(2))
+                    listPatient.Add(patient)
+                End If
+            Next
+        End If
+    End Sub
+
+    Private Sub SavePatientsToFile(ByVal filePath As String)
+        Using writer As New StreamWriter(filePath)
+            For Each patient In listPatient
+                writer.WriteLine($"{patient.getPatient()},{patient.getPatientPass()},{patient.getPatientEmail()}")
+            Next
+        End Using
+    End Sub
+
+    Public Sub AddPatient(ByVal strTempPatient As String, ByVal strPPass As String, ByVal strPaEmail As String)
+        Dim newPatient As New Patient(strTempPatient, strPPass, strPaEmail)
+        listPatient.Add(newPatient)
+        SavePatientsToFile("patients.txt")
+    End Sub
+
+    Public Class Patient ' FOR PATIENT LogIn
         Private strPatient, strPass, strEmail As String
 
-        'for setting new patients
+        ' For setting new patients
         Public Sub New(ByVal strTempPatient As String, ByVal strPPass As String)
             strPatient = strTempPatient
             strPass = strPPass
         End Sub
-        Public Sub New()
 
-        End Sub
-
-        'method for setting patients creds
-        Public Sub setPatientCred(ByVal strTempPatient As String, ByVal strPPass As String, ByVal strPaEmail As String)
+        Public Sub New(ByVal strTempPatient As String, ByVal strPPass As String, ByVal strPaEmail As String)
             strPatient = strTempPatient
             strPass = strPPass
             strEmail = strPaEmail
         End Sub
 
-        'for returning the admins username, pass and email
+        Public Sub New()
+        End Sub
+
+
+
+        ' For returning the patient's username, pass and email
         Public Function getPatient() As String
             Return strPatient
         End Function
+
         Public Function getPatientPass() As String
             Return strPass
         End Function
+
         Public Function getPatientEmail() As String
             Return strEmail
         End Function
     End Class
 
-    Dim admin1 As New Admin("Admin", "Admin") 'Admin user and Password'
+
 
 
     Private Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
@@ -107,8 +148,8 @@ Public Class Form2
         ElseIf isPatientLoggedIn Then
             txtUser.Clear()
             txtPass.Clear()
+            Form5.strCurrentPatient = strCurrentPatient ' Pass current patient to Form5
             Form5.Show()
-
             Me.Hide()
 
         Else
@@ -122,44 +163,5 @@ Public Class Form2
         Me.Hide()
     End Sub
 
-    'list for Patient details
-    Public listDetails As New List(Of PatientDetails)
 
-    Class PatientDetails
-
-        Private Name, MI, LastName, Age, Baby, Address, Gender, CivilStat, LMC As String
-
-        'for setting new data
-        Public Sub New(ByVal tempName As String, ByVal tempMI As String, ByVal tempLast As String, ByVal tempAdd As String, ByVal tempAge As String, ByVal tempBaby As String, ByVal tempGender As String, ByVal tempCivil As String, ByVal tempLMC As String)
-            Name = tempName
-            MI = tempMI
-            LastName = tempLast
-            Age = tempAge
-            Baby = tempBaby
-            Gender = tempGender
-            Address = tempAdd
-            CivilStat = tempCivil
-            LMC = tempLMC
-        End Sub
-        Public Sub New()
-
-        End Sub
-
-        'for setting details
-        Public Sub setDetails1(ByVal tempName As String, ByVal tempMI As String, ByVal tempLast As String, ByVal tempAge As String)
-            Name = tempName
-            MI = tempMI
-            LastName = tempLast
-            Age = tempAge
-
-        End Sub
-
-        Public Sub setDetails2(ByVal tempBaby As String, ByVal tempGender As String, ByVal tempAdd As String, ByVal tempCivil As String, ByVal tempLMC As String)
-            Baby = tempBaby
-            Gender = tempGender
-            CivilStat = tempCivil
-            Address = tempAdd
-            LMC = tempLMC
-        End Sub
-    End Class
 End Class

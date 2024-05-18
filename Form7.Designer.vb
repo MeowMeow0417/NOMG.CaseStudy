@@ -79,10 +79,10 @@ Partial Class Form7
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(-135, 1)
+        PictureBox1.Location = New Point(-112, -22)
         PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(1086, 560)
+        PictureBox1.Size = New Size(1086, 664)
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 4
         PictureBox1.TabStop = False

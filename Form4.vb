@@ -2,7 +2,9 @@
 Imports System.Globalization
 
 Public Class Form4
+
     Public Property Appointments As List(Of Form9.Appointment)
+    Public Property strCurrentPatient As Form2.Patient
 
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
         Dim result As MsgBoxResult
@@ -18,10 +20,12 @@ Public Class Form4
 
     Private Sub btnPatientInfo_Click(sender As Object, e As EventArgs) Handles btnPatientInfo.Click
         Form12.Show()
+        Me.Close()
     End Sub
 
     Private Sub btnBill_Click(sender As Object, e As EventArgs) Handles btnBill.Click
-        Form13.Show()
+        Dim form13 As New Form13(strCurrentPatient)
+        form13.Show()
         Me.Close()
     End Sub
 
@@ -117,8 +121,18 @@ Public Class Form4
         Return appointments
     End Function
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub btnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
         pnlAppointments.Visible = True
+        PictureBox1.Visible = False
+        btnView.Visible = False
+        btnBack.Visible = True
+    End Sub
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        pnlAppointments.Visible = False
+        PictureBox1.Visible = True
+        btnView.Visible = True
+        btnBack.Visible = False
     End Sub
 
     ' Other text changed handlers...
@@ -142,4 +156,6 @@ Public Class Form4
 
     Private Sub txtPatient8_TextChanged(sender As Object, e As EventArgs) Handles txtPatient8.TextChanged
     End Sub
+
+
 End Class

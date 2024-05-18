@@ -135,7 +135,7 @@ Partial Class Form3
         ' CheckBox1
         ' 
         CheckBox1.AutoSize = True
-        CheckBox1.Location = New Point(340, 320)
+        CheckBox1.Location = New Point(348, 319)
         CheckBox1.Name = "CheckBox1"
         CheckBox1.Size = New Size(115, 19)
         CheckBox1.TabIndex = 21

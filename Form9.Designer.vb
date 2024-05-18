@@ -35,21 +35,25 @@ Partial Class Form9
         ' 
         ' btnBack
         ' 
-        btnBack.Location = New Point(658, 526)
+        btnBack.BackColor = Color.HotPink
+        btnBack.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
+        btnBack.Location = New Point(12, 510)
         btnBack.Name = "btnBack"
-        btnBack.Size = New Size(75, 23)
+        btnBack.Size = New Size(117, 39)
         btnBack.TabIndex = 0
         btnBack.Text = "Back"
-        btnBack.UseVisualStyleBackColor = True
+        btnBack.UseVisualStyleBackColor = False
         ' 
         ' btnGetSched
         ' 
-        btnGetSched.Location = New Point(739, 526)
+        btnGetSched.BackColor = Color.HotPink
+        btnGetSched.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
+        btnGetSched.Location = New Point(135, 510)
         btnGetSched.Name = "btnGetSched"
-        btnGetSched.Size = New Size(133, 23)
+        btnGetSched.Size = New Size(133, 39)
         btnGetSched.TabIndex = 1
         btnGetSched.Text = "Get Schedule"
-        btnGetSched.UseVisualStyleBackColor = True
+        btnGetSched.UseVisualStyleBackColor = False
         ' 
         ' pnlFollowup
         ' 
@@ -60,7 +64,7 @@ Partial Class Form9
         pnlFollowup.Controls.Add(lblAppoint)
         pnlFollowup.Location = New Point(12, 12)
         pnlFollowup.Name = "pnlFollowup"
-        pnlFollowup.Size = New Size(860, 508)
+        pnlFollowup.Size = New Size(860, 492)
         pnlFollowup.TabIndex = 3
         ' 
         ' lblFollow4

@@ -77,7 +77,7 @@ Partial Class Form8
         ' PictureBox2
         ' 
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(-149, -3)
+        PictureBox2.Location = New Point(-101, -3)
         PictureBox2.Margin = New Padding(3, 2, 3, 2)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(1135, 559)
