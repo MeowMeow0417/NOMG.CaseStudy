@@ -141,7 +141,10 @@
         pnlFollowup.Visible = True
     End Sub
 
+    Public strCurrentPatient As Form2.Patient ' Declare strCurrentPatient as public
+
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+
         Form5.Show()
         Me.Close()
 

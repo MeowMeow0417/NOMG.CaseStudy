@@ -41,8 +41,11 @@ Partial Class Form4
         Label1 = New Label()
         PictureBox1 = New PictureBox()
         btnBack = New Button()
+        PictureBox2 = New PictureBox()
+        Label6 = New Label()
         pnlAppointments.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnLogOut
@@ -60,7 +63,7 @@ Partial Class Form4
         ' 
         btnPatientInfo.BackColor = Color.HotPink
         btnPatientInfo.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
-        btnPatientInfo.Location = New Point(173, 491)
+        btnPatientInfo.Location = New Point(393, 380)
         btnPatientInfo.Name = "btnPatientInfo"
         btnPatientInfo.Size = New Size(136, 58)
         btnPatientInfo.TabIndex = 13
@@ -71,7 +74,7 @@ Partial Class Form4
         ' 
         btnBill.BackColor = Color.HotPink
         btnBill.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
-        btnBill.Location = New Point(403, 491)
+        btnBill.Location = New Point(661, 380)
         btnBill.Name = "btnBill"
         btnBill.Size = New Size(124, 58)
         btnBill.TabIndex = 14
@@ -82,7 +85,7 @@ Partial Class Form4
         ' 
         btnView.BackColor = Color.HotPink
         btnView.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
-        btnView.Location = New Point(677, 491)
+        btnView.Location = New Point(111, 380)
         btnView.Name = "btnView"
         btnView.Size = New Size(138, 58)
         btnView.TabIndex = 16
@@ -184,6 +187,7 @@ Partial Class Form4
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
+        Label2.ForeColor = Color.HotPink
         Label2.Location = New Point(533, 19)
         Label2.Name = "Label2"
         Label2.Size = New Size(111, 19)
@@ -194,6 +198,7 @@ Partial Class Form4
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
+        Label3.ForeColor = Color.HotPink
         Label3.Location = New Point(211, 19)
         Label3.Name = "Label3"
         Label3.Size = New Size(132, 19)
@@ -204,6 +209,7 @@ Partial Class Form4
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
+        Label1.ForeColor = Color.HotPink
         Label1.Location = New Point(41, 19)
         Label1.Name = "Label1"
         Label1.Size = New Size(56, 19)
@@ -213,7 +219,7 @@ Partial Class Form4
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(782, -1)
+        PictureBox1.Location = New Point(770, 1)
         PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(102, 102)
@@ -225,13 +231,34 @@ Partial Class Form4
         ' 
         btnBack.BackColor = Color.HotPink
         btnBack.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
-        btnBack.Location = New Point(677, 491)
+        btnBack.Location = New Point(12, 507)
         btnBack.Name = "btnBack"
-        btnBack.Size = New Size(138, 58)
+        btnBack.Size = New Size(138, 42)
         btnBack.TabIndex = 19
         btnBack.Text = "Back"
         btnBack.UseVisualStyleBackColor = False
         btnBack.Visible = False
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
+        PictureBox2.Location = New Point(1, 108)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(970, 335)
+        PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox2.TabIndex = 20
+        PictureBox2.TabStop = False
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.ForeColor = Color.HotPink
+        Label6.Location = New Point(12, 31)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(218, 25)
+        Label6.TabIndex = 21
+        Label6.Text = "ADMIN'S DASHBOARD"
         ' 
         ' Form4
         ' 
@@ -245,6 +272,8 @@ Partial Class Form4
         Controls.Add(btnBill)
         Controls.Add(btnPatientInfo)
         Controls.Add(btnLogOut)
+        Controls.Add(PictureBox2)
+        Controls.Add(Label6)
         Controls.Add(PictureBox1)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
@@ -255,6 +284,7 @@ Partial Class Form4
         pnlAppointments.ResumeLayout(False)
         pnlAppointments.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -296,4 +326,5 @@ Partial Class Form4
     Friend WithEvents txtPatient2 As TextBox
     Friend WithEvents txtPatient1 As TextBox
     Friend WithEvents btnBack As Button
+    Friend WithEvents Label6 As Label
 End Class

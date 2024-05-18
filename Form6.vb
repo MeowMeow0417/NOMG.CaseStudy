@@ -91,7 +91,7 @@ Public Class Form6
         MsgBox("Your account is now all set", vbOKOnly, "NOMG CLINIC")
 
         ' Show Form5
-        Form5.Show()
+        Form3.Show()
         Me.Close()
     End Sub
 

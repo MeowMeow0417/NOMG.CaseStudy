@@ -40,7 +40,9 @@ Partial Class Form12
         lblAge = New Label()
         lblName = New Label()
         Label1 = New Label()
+        GroupBox1 = New GroupBox()
         pnlInfo.SuspendLayout()
+        GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
         ' ListBox1
@@ -99,9 +101,9 @@ Partial Class Form12
         pnlInfo.Controls.Add(lblAge)
         pnlInfo.Controls.Add(lblName)
         pnlInfo.Font = New Font("Segoe UI", 9.75F)
-        pnlInfo.Location = New Point(222, 55)
+        pnlInfo.Location = New Point(16, 22)
         pnlInfo.Name = "pnlInfo"
-        pnlInfo.Size = New Size(631, 470)
+        pnlInfo.Size = New Size(630, 470)
         pnlInfo.TabIndex = 4
         pnlInfo.Visible = False
         ' 
@@ -226,14 +228,23 @@ Partial Class Form12
         Label1.TabIndex = 11
         Label1.Text = "VIEW PATIENT DETAILS"
         ' 
+        ' GroupBox1
+        ' 
+        GroupBox1.Controls.Add(pnlInfo)
+        GroupBox1.Location = New Point(209, 46)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Size = New Size(663, 503)
+        GroupBox1.TabIndex = 11
+        GroupBox1.TabStop = False
+        ' 
         ' Form12
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ControlLightLight
         ClientSize = New Size(884, 561)
+        Controls.Add(GroupBox1)
         Controls.Add(Label1)
-        Controls.Add(pnlInfo)
         Controls.Add(Button3)
         Controls.Add(btnClear)
         Controls.Add(btnEnter)
@@ -242,6 +253,7 @@ Partial Class Form12
         Text = "NOMG CLINIC (VIEW PATIENT DETAILS)"
         pnlInfo.ResumeLayout(False)
         pnlInfo.PerformLayout()
+        GroupBox1.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -263,4 +275,5 @@ Partial Class Form12
     Friend WithEvents lblAge As Label
     Friend WithEvents lblName As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents GroupBox1 As GroupBox
 End Class

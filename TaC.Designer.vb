@@ -39,16 +39,16 @@ Partial Class TaC
         ' 
         btnBack.BackColor = Color.HotPink
         btnBack.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnBack.Location = New Point(247, 486)
+        btnBack.Location = New Point(285, 471)
         btnBack.Name = "btnBack"
-        btnBack.Size = New Size(134, 51)
+        btnBack.Size = New Size(145, 51)
         btnBack.TabIndex = 1
         btnBack.Text = "Back"
         btnBack.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 
-        Label1.Location = New Point(44, 81)
+        Label1.Location = New Point(56, 82)
         Label1.Name = "Label1"
         Label1.Size = New Size(583, 51)
         Label1.TabIndex = 0
@@ -56,7 +56,7 @@ Partial Class TaC
         ' 
         ' Label2
         ' 
-        Label2.Location = New Point(44, 161)
+        Label2.Location = New Point(56, 162)
         Label2.Name = "Label2"
         Label2.Size = New Size(583, 51)
         Label2.TabIndex = 2
@@ -64,7 +64,7 @@ Partial Class TaC
         ' 
         ' Label3
         ' 
-        Label3.Location = New Point(44, 244)
+        Label3.Location = New Point(56, 245)
         Label3.Name = "Label3"
         Label3.Size = New Size(583, 51)
         Label3.TabIndex = 3
@@ -72,7 +72,7 @@ Partial Class TaC
         ' 
         ' Label4
         ' 
-        Label4.Location = New Point(44, 331)
+        Label4.Location = New Point(56, 332)
         Label4.Name = "Label4"
         Label4.Size = New Size(583, 51)
         Label4.TabIndex = 4
@@ -81,20 +81,20 @@ Partial Class TaC
         ' Label5
         ' 
         Label5.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(44, 396)
+        Label5.Location = New Point(56, 397)
         Label5.Name = "Label5"
-        Label5.Size = New Size(583, 87)
+        Label5.Size = New Size(583, 71)
         Label5.TabIndex = 5
         Label5.Text = resources.GetString("Label5.Text")
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.HotPink
-        Label6.Location = New Point(229, 26)
+        Label6.Location = New Point(232, 28)
         Label6.Name = "Label6"
-        Label6.Size = New Size(199, 25)
+        Label6.Size = New Size(230, 30)
         Label6.TabIndex = 6
         Label6.Text = "Terms And Conditions"
         ' 
@@ -103,7 +103,7 @@ Partial Class TaC
         Label7.AutoSize = True
         Label7.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.HotPink
-        Label7.Location = New Point(44, 132)
+        Label7.Location = New Point(265, 133)
         Label7.Name = "Label7"
         Label7.Size = New Size(165, 20)
         Label7.TabIndex = 7
@@ -114,7 +114,7 @@ Partial Class TaC
         Label8.AutoSize = True
         Label8.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold)
         Label8.ForeColor = Color.HotPink
-        Label8.Location = New Point(44, 224)
+        Label8.Location = New Point(251, 225)
         Label8.Name = "Label8"
         Label8.Size = New Size(193, 20)
         Label8.TabIndex = 8
@@ -125,7 +125,7 @@ Partial Class TaC
         Label9.AutoSize = True
         Label9.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold)
         Label9.ForeColor = Color.HotPink
-        Label9.Location = New Point(44, 311)
+        Label9.Location = New Point(255, 312)
         Label9.Name = "Label9"
         Label9.Size = New Size(184, 20)
         Label9.TabIndex = 9
