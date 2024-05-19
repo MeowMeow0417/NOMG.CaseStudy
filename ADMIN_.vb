@@ -1,9 +1,9 @@
 ﻿Imports System.IO
 Imports System.Globalization
 
-Public Class Form4
+Public Class ADMIN_
 
-    Public Property Appointments As List(Of Form9.Appointment)
+    Public Property Appointments As List(Of GetSched.Appointment)
     Public Property strCurrentPatient As Form2.Patient
 
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
@@ -19,12 +19,12 @@ Public Class Form4
     End Sub
 
     Private Sub btnPatientInfo_Click(sender As Object, e As EventArgs) Handles btnPatientInfo.Click
-        Form12.Show()
+        PATIENTDETAILS.Show()
         Me.Close()
     End Sub
 
     Private Sub btnBill_Click(sender As Object, e As EventArgs) Handles btnBill.Click
-        Dim form13 As New Form13(strCurrentPatient)
+        Dim form13 As New BILLING(strCurrentPatient)
         form13.Show()
         Me.Close()
     End Sub
@@ -83,8 +83,8 @@ Public Class Form4
         UpdateTextFields()
     End Sub
 
-    Private Function LoadAppointmentsFromFile() As List(Of Form9.Appointment)
-        Dim appointments As New List(Of Form9.Appointment)()
+    Private Function LoadAppointmentsFromFile() As List(Of GetSched.Appointment)
+        Dim appointments As New List(Of GetSched.Appointment)()
 
         ' Define the path to the text file
         Dim filePath As String = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Appointments.txt")
@@ -92,7 +92,7 @@ Public Class Form4
         ' Read the appointments from the file
         If File.Exists(filePath) Then
             Dim lines As String() = File.ReadAllLines(filePath)
-            Dim currentAppointment As New Form9.Appointment() With {.FollowUpDates = New List(Of DateTime)}
+            Dim currentAppointment As New GetSched.Appointment() With {.FollowUpDates = New List(Of DateTime)}
 
             For Each line As String In lines
                 If line <> "---" Then
@@ -107,7 +107,7 @@ Public Class Form4
                     ' Add the completed appointment to the list
                     If Not String.IsNullOrEmpty(currentAppointment.PatientName) Then
                         appointments.Add(currentAppointment)
-                        currentAppointment = New Form9.Appointment() With {.FollowUpDates = New List(Of DateTime)}
+                        currentAppointment = New GetSched.Appointment() With {.FollowUpDates = New List(Of DateTime)}
                     End If
                 End If
             Next

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form13
+Partial Class BILLING
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.

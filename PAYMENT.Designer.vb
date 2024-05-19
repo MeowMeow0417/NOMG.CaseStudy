@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form11
+Partial Class PAYMENT
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -62,7 +62,6 @@ Partial Class Form11
         Label1 = New Label()
         lblTamount = New Label()
         btnBack = New Button()
-        btnInvoice = New Button()
         Label11 = New Label()
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
@@ -480,17 +479,6 @@ Partial Class Form11
         btnBack.Text = "Back"
         btnBack.UseVisualStyleBackColor = False
         ' 
-        ' btnInvoice
-        ' 
-        btnInvoice.BackColor = Color.HotPink
-        btnInvoice.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold)
-        btnInvoice.Location = New Point(169, 515)
-        btnInvoice.Name = "btnInvoice"
-        btnInvoice.Size = New Size(175, 34)
-        btnInvoice.TabIndex = 13
-        btnInvoice.Text = "Show Invoice"
-        btnInvoice.UseVisualStyleBackColor = False
-        ' 
         ' Label11
         ' 
         Label11.AutoSize = True
@@ -509,7 +497,6 @@ Partial Class Form11
         BackColor = SystemColors.ControlLightLight
         ClientSize = New Size(884, 561)
         Controls.Add(Label11)
-        Controls.Add(btnInvoice)
         Controls.Add(btnBack)
         Controls.Add(Panel1)
         Name = "Form11"
@@ -561,7 +548,6 @@ Partial Class Form11
     Friend WithEvents t5 As Label
     Friend WithEvents lbl6 As Label
     Friend WithEvents lbl5 As Label
-    Friend WithEvents btnInvoice As Button
     Friend WithEvents TxtInvoice As TextBox
     Friend WithEvents TxtBill As TextBox
     Friend WithEvents Label9 As Label

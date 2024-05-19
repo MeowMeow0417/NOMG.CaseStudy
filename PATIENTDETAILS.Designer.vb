@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form12
+Partial Class PATIENTDETAILS
     Inherits System.Windows.Forms.Form
 
 

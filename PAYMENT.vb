@@ -4,7 +4,7 @@ Imports System.Net.Security
 Imports System.Security.Cryptography.X509Certificates
 Imports NOMG.CaseStudy.Form2
 
-Public Class Form11
+Public Class PAYMENT
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         Form5.Show()
@@ -95,75 +95,6 @@ Public Class Form11
     End Sub
 
 
-
-    Private Sub btnInvoice_Click(sender As Object, e As EventArgs) Handles btnInvoice.Click
-        If Me.strCurrentCard IsNot Nothing Then
-            ' Retrieve the checkup data
-            Dim check() As Double = Me.strCurrentCard.getCheckUp()
-
-            ' Set the text boxes with actual data
-            TxtBill.Text = Me.strCurrentCard.getBill()
-            TxtEmail.Text = Me.strCurrentCard.getEmail()
-            TxtInvoice.Text = Me.strCurrentCard.getInvoice()
-
-            ' Display checkup data
-            lbl1.Text = check(0)
-            lbl2.Text = check(1)
-            lbl3.Text = check(2)
-            lbl4.Text = check(3)
-            lbl5.Text = check(4)
-            lbl6.Text = check(5)
-
-            t1.Text = (check(0) * 15)
-            t2.Text = (check(1) * 25)
-            t3.Text = (check(2) * 20)
-            t4.Text = (check(3) * 1500)
-            t5.Text = (check(4) * 2000)
-            t6.Text = (check(5) * 500)
-
-            lblTamount.Text = Val(t1.Text) + Val(t2.Text) + Val(t3.Text) + Val(t4.Text) + Val(t5.Text) + Val(t6.Text)
-        Else
-            ' Handle the case where strCurrentCard is null
-            TxtBill.Text = "n/a"
-            TxtEmail.Text = "n/a"
-            TxtInvoice.Text = "n/a"
-
-            ' Display default values for checkup data
-            lbl1.Text = "0"
-            lbl2.Text = "0"
-            lbl3.Text = "0"
-            lbl4.Text = "0"
-            lbl5.Text = "0"
-            lbl6.Text = "0"
-
-            t1.Text = "0"
-            t2.Text = "0"
-            t3.Text = "0"
-            t4.Text = "0"
-            t5.Text = "0"
-            t6.Text = "0"
-
-            lblTamount.Text = "0"
-        End If
-
-        ' Make text boxes and labels visible
-        TxtBill.Visible = True
-        TxtEmail.Visible = True
-        TxtInvoice.Visible = True
-        lbl1.Visible = True
-        lbl2.Visible = True
-        lbl3.Visible = True
-        lbl4.Visible = True
-        lbl5.Visible = True
-        lbl6.Visible = True
-        t1.Visible = True
-        t2.Visible = True
-        t3.Visible = True
-        t4.Visible = True
-        t5.Visible = True
-        t6.Visible = True
-    End Sub
-
     ' Define the Billing class
     Public Class Billing
         Private C1, C2, V1, V2, V3, V4 As Integer
@@ -223,9 +154,4 @@ Public Class Form11
             Return Invoice
         End Function
     End Class
-
-
-    Private Sub TxtBill_TextChanged(sender As Object, e As EventArgs) Handles TxtBill.TextChanged
-
-    End Sub
 End Class

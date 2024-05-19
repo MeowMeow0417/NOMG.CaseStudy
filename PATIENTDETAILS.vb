@@ -1,7 +1,7 @@
 ﻿Imports System.IO
 Imports System.Text
 
-Public Class Form12
+Public Class PATIENTDETAILS
     ' Define a class to hold patient details
     Private Class PatientDetails
         Public Property Name As String
@@ -172,7 +172,7 @@ Public Class Form12
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Close()
-        Form4.Show()
+        ADMIN_.Show()
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click

@@ -1,8 +1,9 @@
 ﻿Imports System.IO
 Imports System.Runtime.Serialization.Formatters.Binary
 Imports System.Runtime.Serialization
+Imports System.Security.Cryptography.Xml
 
-Public Class Form6
+Public Class PatientInput
     Private Sub Form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim filePath As String = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "PatientDatabase.txt")
         If File.Exists(filePath) Then
@@ -91,7 +92,7 @@ Public Class Form6
         MsgBox("Your account is now all set", vbOKOnly, "NOMG CLINIC")
 
         ' Show Form5
-        Form3.Show()
+        Form2.Show()
         Me.Close()
     End Sub
 

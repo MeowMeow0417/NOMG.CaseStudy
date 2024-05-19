@@ -1,4 +1,4 @@
-﻿Public Class Form9
+﻿Public Class GetSched
 
     Structure Appointment
         Public PatientName As String

@@ -1,4 +1,4 @@
-﻿Public Class Form7
+﻿Public Class HomePage
     Private Sub btnSignIn_Click(sender As Object, e As EventArgs) Handles btnSignIn.Click
         Form2.Show()
         Me.Close()
@@ -10,7 +10,7 @@
     End Sub
 
     Private Sub btnContact_Click(sender As Object, e As EventArgs) Handles btnContact.Click
-        Form8.Show()
+        PatientInput.Show()
         Me.Hide()
     End Sub
 

@@ -1,6 +1,6 @@
-﻿Public Class Form13
+﻿Public Class BILLING
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Form4.Show()
+        ADMIN_.Show()
         Me.Close()
     End Sub
 
@@ -54,17 +54,17 @@
             Dim selectedPatient As Form2.Patient = Form2.listPatient.Find(Function(p) p.getPatient() = selectedUsername)
 
             If selectedPatient IsNot Nothing Then
-                Dim newPayment As New Form11.Billing()
+                Dim newPayment As New PAYMENT.Billing()
                 newPayment.setPay(Val(txtVitamin1.Text), Val(txtVitamin2.Text), Val(txtVitamin3.Text), Val(txtVitamin4.Text), Val(txtCheck1.Text), Val(txtCheck2.Text))
                 newPayment.setDetails(txtEmail.Text, lbBill.Text, txtInvoice.Text)
 
                 ' Ensure the billing data is attached to the current patient
-                Form11.listCard.Add(newPayment)
-                Form11.strCurrentCard = newPayment
+                PAYMENT.listCard.Add(newPayment)
+                PAYMENT.strCurrentCard = newPayment
 
                 ' Check if the data has been added
                 Dim result As MsgBoxResult
-                If Form11.listCard.Contains(newPayment) Then
+                If PAYMENT.listCard.Contains(newPayment) Then
                     result = MsgBox("Invoice has been successfully sent.", vbOKOnly, "NOMG CLINIC")
                     If result = MsgBoxResult.Ok Then
                         btnClearAll_Click(sender, e)

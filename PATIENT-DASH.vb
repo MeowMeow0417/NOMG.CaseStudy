@@ -2,25 +2,25 @@
     Public strCurrentPatient As Form2.Patient
 
     Private Sub ShowForm13()
-        Dim form13 As New Form13(strCurrentPatient) ' Pass current patient to Form13 via constructor
+        Dim form13 As New BILLING(strCurrentPatient) ' Pass current patient to Form13 via constructor
         form13.Show()
         Me.Hide()
     End Sub
 
     Private Sub btnSched_Click(sender As Object, e As EventArgs) Handles btnSched.Click
-        Form9.Show()
+        ContactsPage.Show()
         Me.Close()
     End Sub
 
     Private Sub btnPay_Click(sender As Object, e As EventArgs) Handles btnPay.Click
         ' Check if there are billing details for the current patient before showing Form11
-        Dim patientBilling As Form11.Billing = Form11.listCard.Find(Function(b) b.getEmail() = strCurrentPatient.getPatientEmail())
+        Dim patientBilling As PAYMENT.Billing = PAYMENT.listCard.Find(Function(b) b.getEmail() = strCurrentPatient.getPatientEmail())
 
         If patientBilling IsNot Nothing Then
             ' If there are billing details, show Form11
-            Form11.strCurrentCard = patientBilling
-            Form11.LoadBillingDetails(strCurrentPatient)
-            Form11.Show()
+            PAYMENT.strCurrentCard = patientBilling
+            PAYMENT.LoadBillingDetails(strCurrentPatient)
+            PAYMENT.Show()
             Me.Hide()
         Else
             ' If there are no billing details, show a message and stay on Form5

@@ -1,5 +1,5 @@
 ﻿Imports System.Web
-Public Class Form1
+Public Class SPLASH
     'splash screen code
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         ProgressBar1.Value += 1
@@ -9,7 +9,7 @@ Public Class Form1
             Timer1.Stop()
             Timer2.Start()
 
-            Form7.Show()
+            HomePage.Show()
             Me.Hide()
         End If
     End Sub

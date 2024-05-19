@@ -1,5 +1,5 @@
 ﻿Imports System.Net.Security
-Imports NOMG.CaseStudy.Form1
+Imports NOMG.CaseStudy.SPLASH
 Imports System.IO
 
 Public Class Form2
@@ -46,11 +46,10 @@ Public Class Form2
         ' Load patients from the text file
         LoadPatientsFromFile("patients.txt")
 
-        ' Uncomment the following lines if you want to add a new patient initially
-        Dim Patient1 As New Patient("Juana", "1234")
-        Dim Patient2 As New Patient("Amara", "1234")
-        listPatient.Add(Patient1)
-        listPatient.Add(Patient2)
+        ' default patient
+        'Dim Patient1 As New Patient("Juana", "1234", "example@gmail.com")
+        'listPatient.Add(Patient1)
+
         SavePatientsToFile("patients.txt")
     End Sub
 
@@ -143,7 +142,7 @@ Public Class Form2
             MsgBox("Successfully Log-In as the Admin", vbOKOnly, "NOMG Clinic")
             txtUser.Clear()
             txtPass.Clear()
-            Form4.Show()
+            ADMIN_.Show()
             Me.Hide()
         ElseIf isPatientLoggedIn Then
             txtUser.Clear()
@@ -159,7 +158,7 @@ Public Class Form2
 
     'btn for sign-up
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-        Form7.Show()
+        HomePage.Show()
         Me.Hide()
     End Sub
 

@@ -9,7 +9,7 @@
 
                 MsgBox("Your credentials have been set. Press 'OK' to finish the sign-up process.", vbOKOnly, "NOMG CLINIC")
                 Me.Close()
-                Form6.Show()
+                PatientInput.Show()
             Else
                 MsgBox("Please enter all the required details", vbOKOnly, "NOMG CLINIC")
             End If
@@ -26,6 +26,6 @@
     ' Button for cancel
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
-        Form7.Show()
+        GetSched.Show()
     End Sub
 End Class
