@@ -13,9 +13,21 @@
     End Sub
 
     Private Sub btnPay_Click(sender As Object, e As EventArgs) Handles btnPay.Click
-        Form11.Show()
-        Me.Close()
+        ' Check if there are billing details for the current patient before showing Form11
+        Dim patientBilling As Form11.Billing = Form11.listCard.Find(Function(b) b.getEmail() = strCurrentPatient.getPatientEmail())
+
+        If patientBilling IsNot Nothing Then
+            ' If there are billing details, show Form11
+            Form11.strCurrentCard = patientBilling
+            Form11.LoadBillingDetails(strCurrentPatient)
+            Form11.Show()
+            Me.Hide()
+        Else
+            ' If there are no billing details, show a message and stay on Form5
+            MsgBox("There are currently no invoices.", vbOKOnly, "NOMG CLINIC")
+        End If
     End Sub
+
 
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
         Dim result As MsgBoxResult

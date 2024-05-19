@@ -382,6 +382,7 @@ Partial Class Form11
         ' 
         ' TxtEmail
         ' 
+        TxtEmail.Enabled = False
         TxtEmail.Location = New Point(86, 55)
         TxtEmail.Name = "TxtEmail"
         TxtEmail.Size = New Size(229, 23)
@@ -400,6 +401,7 @@ Partial Class Form11
         ' 
         ' TxtInvoice
         ' 
+        TxtInvoice.Enabled = False
         TxtInvoice.Location = New Point(647, 26)
         TxtInvoice.Name = "TxtInvoice"
         TxtInvoice.Size = New Size(146, 23)
@@ -408,6 +410,7 @@ Partial Class Form11
         ' 
         ' TxtBill
         ' 
+        TxtBill.Enabled = False
         TxtBill.Location = New Point(86, 26)
         TxtBill.Name = "TxtBill"
         TxtBill.Size = New Size(229, 23)
@@ -418,11 +421,11 @@ Partial Class Form11
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(562, 24)
+        Label9.Location = New Point(556, 24)
         Label9.Name = "Label9"
-        Label9.Size = New Size(79, 25)
+        Label9.Size = New Size(98, 25)
         Label9.TabIndex = 14
-        Label9.Text = "Invoice:"
+        Label9.Text = "Due Date:"
         ' 
         ' Label3
         ' 

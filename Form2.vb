@@ -148,10 +148,10 @@ Public Class Form2
         ElseIf isPatientLoggedIn Then
             txtUser.Clear()
             txtPass.Clear()
+            strCurrentPatient = listPatient(intCount)
             Form5.strCurrentPatient = strCurrentPatient ' Pass current patient to Form5
             Form5.Show()
             Me.Hide()
-
         Else
             MsgBox("Invalid username or password", vbOKOnly, "NOMG Clinic")
         End If

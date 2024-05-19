@@ -19,8 +19,20 @@ Public Class Form11
 
     End Sub
 
-    ' In Form11:
+    Private Sub Form11_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'fix this
+        If Form2.strCurrentPatient Is Nothing Then
+            MessageBox.Show("You must be logged in to access this page.")
+            Me.Close()
+            Form2.Show()
+        Else
+            'LoadBillingDetails(Form2.strCurrentPatient)
+        End If
+    End Sub
+
+
+
     Public Sub LoadBillingDetails(currentPatient As Form2.Patient)
+        ' Filter the billing details specific to the logged-in patient
         Dim patientBilling As Billing = listCard.Find(Function(b) b.getEmail() = currentPatient.getPatientEmail())
 
         If patientBilling IsNot Nothing Then
@@ -52,7 +64,16 @@ Public Class Form11
             lblTamount.Text = Val(t1.Text) + Val(t2.Text) + Val(t3.Text) + Val(t4.Text) + Val(t5.Text) + Val(t6.Text)
         Else
             ' Handle case where no billing data is found for the current patient
-            MessageBox.Show("No billing data found for the current patient.")
+            Dim result As MsgBoxResult
+
+            result = MsgBox("There are currently no invoice.", vbOKOnly, "NOMG CLINIC")
+            If result = MsgBoxResult.Ok Then
+                Form5.Show()
+                Me.Hide()
+            Else
+                Form5.Show()
+                Me.Hide()
+            End If
         End If
 
         ' Make text boxes and labels visible
@@ -72,6 +93,7 @@ Public Class Form11
         t5.Visible = True
         t6.Visible = True
     End Sub
+
 
 
     Private Sub btnInvoice_Click(sender As Object, e As EventArgs) Handles btnInvoice.Click

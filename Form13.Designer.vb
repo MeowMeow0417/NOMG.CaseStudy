@@ -188,9 +188,9 @@ Partial Class Form13
         Label21.AutoSize = True
         Label21.Location = New Point(31, 272)
         Label21.Name = "Label21"
-        Label21.Size = New Size(54, 17)
+        Label21.Size = New Size(67, 17)
         Label21.TabIndex = 21
-        Label21.Text = "Invoice:"
+        Label21.Text = "Due Date:"
         ' 
         ' Label20
         ' 

@@ -49,32 +49,38 @@
 
     ' Handle the btnSend_Click to send billing details to Form11
     Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
-        ' Ensure the current patient's email matches before adding to Form11
-        If strCurrentPatient.getPatientEmail() = txtEmail.Text Then
-            Dim newPayment As New Form11.Billing
-            newPayment.setPay(Val(txtVitamin1.Text), Val(txtVitamin2.Text), Val(txtVitamin3.Text), Val(txtVitamin4.Text), Val(txtCheck1.Text), Val(txtCheck2.Text))
-            newPayment.setDetails(txtEmail.Text, strCurrentPatient.getPatient(), txtInvoice.Text)
+        If lbBill.SelectedItem IsNot Nothing Then
+            Dim selectedUsername As String = lbBill.SelectedItem.ToString()
+            Dim selectedPatient As Form2.Patient = Form2.listPatient.Find(Function(p) p.getPatient() = selectedUsername)
 
-            ' Ensure Form11.listCard is initialized
-            If Form11.listCard Is Nothing Then
-                Form11.listCard = New List(Of Form11.Billing)
-            End If
+            If selectedPatient IsNot Nothing Then
+                Dim newPayment As New Form11.Billing()
+                newPayment.setPay(Val(txtVitamin1.Text), Val(txtVitamin2.Text), Val(txtVitamin3.Text), Val(txtVitamin4.Text), Val(txtCheck1.Text), Val(txtCheck2.Text))
+                newPayment.setDetails(txtEmail.Text, lbBill.Text, txtInvoice.Text)
 
-            ' Pass the newPayment instance to Form11
-            Form11.listCard.Add(newPayment)
-            Form11.strCurrentCard = newPayment
+                ' Ensure the billing data is attached to the current patient
+                Form11.listCard.Add(newPayment)
+                Form11.strCurrentCard = newPayment
 
-            ' Check if the data has been added
-            If Form11.listCard.Contains(newPayment) Then
-                MessageBox.Show("Invoice successfully sent to patient.", "NOMG CLINIC", MessageBoxButtons.OK)
-                btnClearAll_Click(sender, e) ' Clear the form
+                ' Check if the data has been added
+                Dim result As MsgBoxResult
+                If Form11.listCard.Contains(newPayment) Then
+                    result = MsgBox("Invoice has been successfully sent.", vbOKOnly, "NOMG CLINIC")
+                    If result = MsgBoxResult.Ok Then
+                        btnClearAll_Click(sender, e)
+                    End If
+                Else
+                    MessageBox.Show("Failed to send Invoice.")
+                End If
             Else
-                MessageBox.Show("Error on sending Invoice.")
+                MessageBox.Show("Selected patient not found.")
             End If
         Else
-            MessageBox.Show("Invalid patient details.")
+            MessageBox.Show("Please select a patient from the list.")
         End If
     End Sub
+
+
 
     ' Handle the btnSelect click to populate email for the selected patient
     Private Sub btnSelect_Click(sender As Object, e As EventArgs) Handles btnSelect.Click
