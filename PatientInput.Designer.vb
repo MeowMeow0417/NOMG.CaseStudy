@@ -48,13 +48,13 @@ Partial Class PatientInput
         txtVitamin = New TextBox()
         Label2 = New Label()
         gbInfo = New GroupBox()
-        PictureBox1 = New PictureBox()
         FlowLayoutPanel1 = New FlowLayoutPanel()
+        PictureBox1 = New PictureBox()
         GroupBox2.SuspendLayout()
         GroupBox3.SuspendLayout()
         gbInfo.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         FlowLayoutPanel1.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnNext
@@ -282,17 +282,6 @@ Partial Class PatientInput
         gbInfo.TabStop = False
         gbInfo.Text = "Patients Info:"
         ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(785, 2)
-        PictureBox1.Margin = New Padding(3, 2, 3, 2)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(102, 102)
-        PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
-        PictureBox1.TabIndex = 8
-        PictureBox1.TabStop = False
-        ' 
         ' FlowLayoutPanel1
         ' 
         FlowLayoutPanel1.Controls.Add(Label2)
@@ -321,7 +310,18 @@ Partial Class PatientInput
         FlowLayoutPanel1.Size = New Size(414, 466)
         FlowLayoutPanel1.TabIndex = 27
         ' 
-        ' Form6
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(785, 2)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(102, 102)
+        PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
+        PictureBox1.TabIndex = 8
+        PictureBox1.TabStop = False
+        ' 
+        ' PatientInput
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
@@ -331,7 +331,7 @@ Partial Class PatientInput
         Controls.Add(btnCancel)
         Controls.Add(gbInfo)
         Controls.Add(btnNext)
-        Name = "Form6"
+        Name = "PatientInput"
         StartPosition = FormStartPosition.CenterScreen
         Text = "NOMG CLINIC (PATIENTS DETAILS)"
         GroupBox2.ResumeLayout(False)
@@ -339,9 +339,9 @@ Partial Class PatientInput
         GroupBox3.ResumeLayout(False)
         GroupBox3.PerformLayout()
         gbInfo.ResumeLayout(False)
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         FlowLayoutPanel1.ResumeLayout(False)
         FlowLayoutPanel1.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub

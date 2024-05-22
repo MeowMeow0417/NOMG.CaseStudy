@@ -26,6 +26,6 @@
     ' Button for cancel
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
-        GetSched.Show()
+        HomePage.Show()
     End Sub
 End Class

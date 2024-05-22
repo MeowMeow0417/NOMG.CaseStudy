@@ -120,6 +120,9 @@ Public Class PatientInput
         End Try
     End Sub
 
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Me.Close()
+        Form3.Show()
 
-
+    End Sub
 End Class

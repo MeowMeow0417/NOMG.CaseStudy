@@ -237,7 +237,7 @@ Partial Class PATIENTDETAILS
         GroupBox1.TabIndex = 11
         GroupBox1.TabStop = False
         ' 
-        ' Form12
+        ' PATIENTDETAILS
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
@@ -249,7 +249,8 @@ Partial Class PATIENTDETAILS
         Controls.Add(btnClear)
         Controls.Add(btnEnter)
         Controls.Add(ListBox1)
-        Name = "Form12"
+        Name = "PATIENTDETAILS"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "NOMG CLINIC (VIEW PATIENT DETAILS)"
         pnlInfo.ResumeLayout(False)
         pnlInfo.PerformLayout()
