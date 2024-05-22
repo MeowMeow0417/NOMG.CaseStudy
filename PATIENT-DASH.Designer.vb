@@ -24,12 +24,12 @@ Partial Class Form5
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form5))
         Label1 = New Label()
-        lblUserName = New Label()
         btnSched = New Button()
         btnPay = New Button()
         btnLogOut = New Button()
         PictureBox1 = New PictureBox()
         PictureBox2 = New PictureBox()
+        TextBox1 = New TextBox()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -41,17 +41,6 @@ Partial Class Form5
         Label1.Name = "Label1"
         Label1.Size = New Size(0, 15)
         Label1.TabIndex = 0
-        ' 
-        ' lblUserName
-        ' 
-        lblUserName.AutoSize = True
-        lblUserName.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblUserName.ForeColor = SystemColors.ActiveCaptionText
-        lblUserName.Location = New Point(12, 9)
-        lblUserName.Name = "lblUserName"
-        lblUserName.Size = New Size(80, 20)
-        lblUserName.TabIndex = 2
-        lblUserName.Text = "Username"
         ' 
         ' btnSched
         ' 
@@ -109,18 +98,27 @@ Partial Class Form5
         PictureBox2.TabIndex = 12
         PictureBox2.TabStop = False
         ' 
+        ' TextBox1
+        ' 
+        TextBox1.Enabled = False
+        TextBox1.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        TextBox1.Location = New Point(12, 12)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(184, 35)
+        TextBox1.TabIndex = 13
+        ' 
         ' Form5
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(884, 561)
+        Controls.Add(TextBox1)
         Controls.Add(PictureBox2)
         Controls.Add(PictureBox1)
         Controls.Add(btnLogOut)
         Controls.Add(btnPay)
         Controls.Add(btnSched)
-        Controls.Add(lblUserName)
         Controls.Add(Label1)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
@@ -135,10 +133,10 @@ Partial Class Form5
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents lblUserName As Label
     Friend WithEvents btnSched As Button
     Friend WithEvents btnPay As Button
     Friend WithEvents btnLogOut As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents TextBox1 As TextBox
 End Class

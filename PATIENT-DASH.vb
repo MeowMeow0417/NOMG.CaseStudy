@@ -1,6 +1,10 @@
 ﻿Public Class Form5
     Public strCurrentPatient As Form2.Patient
 
+    Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TextBox1.Text = strCurrentPatient.getPatient() ' Set the TextBox to the patient's name
+    End Sub
+
     Private Sub ShowForm13()
         Dim form13 As New BILLING(strCurrentPatient) ' Pass current patient to Form13 via constructor
         form13.Show()
@@ -28,7 +32,6 @@
         End If
     End Sub
 
-
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
         Dim result As MsgBoxResult
         result = MsgBox("Are you sure, you want to Log-Out?", vbOKCancel, "NOMG CLINIC")
@@ -41,7 +44,4 @@
         End If
     End Sub
 
-    Private Sub lblUserName_Click(sender As Object, e As EventArgs) Handles lblUserName.Click
-        lblUserName.Text = Form2.txtUser.Text
-    End Sub
 End Class
