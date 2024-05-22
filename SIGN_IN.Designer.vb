@@ -70,6 +70,7 @@ Partial Class Form2
         txtPass.BackColor = SystemColors.ActiveBorder
         txtPass.Location = New Point(335, 264)
         txtPass.Name = "txtPass"
+        txtPass.PasswordChar = "*"c
         txtPass.Size = New Size(236, 23)
         txtPass.TabIndex = 8
         ' 
@@ -77,7 +78,7 @@ Partial Class Form2
         ' 
         btnCancel.BackColor = Color.HotPink
         btnCancel.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnCancel.Location = New Point(464, 305)
+        btnCancel.Location = New Point(335, 306)
         btnCancel.Name = "btnCancel"
         btnCancel.Size = New Size(107, 35)
         btnCancel.TabIndex = 7
@@ -88,7 +89,7 @@ Partial Class Form2
         ' 
         btnSignIn.BackColor = Color.HotPink
         btnSignIn.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnSignIn.Location = New Point(335, 305)
+        btnSignIn.Location = New Point(464, 306)
         btnSignIn.Name = "btnSignIn"
         btnSignIn.Size = New Size(107, 35)
         btnSignIn.TabIndex = 6

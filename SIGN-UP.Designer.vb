@@ -70,7 +70,7 @@ Partial Class Form3
         ' txtUser
         ' 
         txtUser.BackColor = SystemColors.ActiveBorder
-        txtUser.ForeColor = SystemColors.InactiveBorder
+        txtUser.ForeColor = SystemColors.ControlText
         txtUser.Location = New Point(348, 177)
         txtUser.Name = "txtUser"
         txtUser.Size = New Size(229, 23)
