@@ -5,7 +5,7 @@
     End Sub
 
     Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
-        PatientInput.Show()
+        HomePage.Show()
         Me.Close()
 
     End Sub

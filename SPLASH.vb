@@ -2,7 +2,7 @@
 Public Class SPLASH
     'splash screen code
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        ProgressBar1.Value += 1
+        ProgressBar1.Value += 10
         lblPercent.Text = ProgressBar1.Value & "%"
 
         If ProgressBar1.Value = 100 Then
@@ -27,6 +27,7 @@ Public Class SPLASH
 
     End Sub
 
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
-
+    End Sub
 End Class

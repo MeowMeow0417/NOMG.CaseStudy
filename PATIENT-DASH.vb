@@ -8,7 +8,7 @@
     End Sub
 
     Private Sub btnSched_Click(sender As Object, e As EventArgs) Handles btnSched.Click
-        ContactsPage.Show()
+        GetSched.Show()
         Me.Close()
     End Sub
 
@@ -43,5 +43,9 @@
 
     Private Sub lblUserName_Click(sender As Object, e As EventArgs) Handles lblUserName.Click
         lblUserName.Text = Form2.txtUser.Text
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+
     End Sub
 End Class

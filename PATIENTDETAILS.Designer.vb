@@ -31,7 +31,6 @@ Partial Class PATIENTDETAILS
         lblAssigned = New Label()
         lblVitamin = New Label()
         lblGestational = New Label()
-        lblCheckup = New Label()
         lblLMC = New Label()
         lblBaby = New Label()
         lblCivil = New Label()
@@ -92,7 +91,6 @@ Partial Class PATIENTDETAILS
         pnlInfo.Controls.Add(lblAssigned)
         pnlInfo.Controls.Add(lblVitamin)
         pnlInfo.Controls.Add(lblGestational)
-        pnlInfo.Controls.Add(lblCheckup)
         pnlInfo.Controls.Add(lblLMC)
         pnlInfo.Controls.Add(lblBaby)
         pnlInfo.Controls.Add(lblCivil)
@@ -111,7 +109,7 @@ Partial Class PATIENTDETAILS
         ' 
         lblAssigned.AutoSize = True
         lblAssigned.Font = New Font("Segoe UI", 15F)
-        lblAssigned.Location = New Point(12, 377)
+        lblAssigned.Location = New Point(12, 334)
         lblAssigned.Name = "lblAssigned"
         lblAssigned.Size = New Size(126, 28)
         lblAssigned.TabIndex = 10
@@ -131,21 +129,11 @@ Partial Class PATIENTDETAILS
         ' 
         lblGestational.AutoSize = True
         lblGestational.Font = New Font("Segoe UI", 15F)
-        lblGestational.Location = New Point(12, 338)
+        lblGestational.Location = New Point(12, 295)
         lblGestational.Name = "lblGestational"
         lblGestational.Size = New Size(155, 28)
         lblGestational.TabIndex = 8
         lblGestational.Text = "Gestational Age:"
-        ' 
-        ' lblCheckup
-        ' 
-        lblCheckup.AutoSize = True
-        lblCheckup.Font = New Font("Segoe UI", 15F)
-        lblCheckup.Location = New Point(12, 293)
-        lblCheckup.Name = "lblCheckup"
-        lblCheckup.Size = New Size(209, 28)
-        lblCheckup.TabIndex = 7
-        lblCheckup.Text = "Date Of Next Checkup:"
         ' 
         ' lblLMC
         ' 
@@ -237,7 +225,7 @@ Partial Class PATIENTDETAILS
         GroupBox1.TabIndex = 11
         GroupBox1.TabStop = False
         ' 
-        ' Form12
+        ' PATIENTDETAILS
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
@@ -249,7 +237,7 @@ Partial Class PATIENTDETAILS
         Controls.Add(btnClear)
         Controls.Add(btnEnter)
         Controls.Add(ListBox1)
-        Name = "Form12"
+        Name = "PATIENTDETAILS"
         Text = "NOMG CLINIC (VIEW PATIENT DETAILS)"
         pnlInfo.ResumeLayout(False)
         pnlInfo.PerformLayout()

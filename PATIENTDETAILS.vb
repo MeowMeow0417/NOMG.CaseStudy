@@ -2,7 +2,16 @@
 Imports System.Text
 
 Public Class PATIENTDETAILS
-    ' Define a class to hold patient details
+    Private ReadOnly OBs As List(Of String) = New List(Of String) From {
+    "Dr. Gilbert Cura", "Dr. Jacob Panesa", "Dr. Irish Ramizer",
+    "Dr. Mary Bondoc", "Dr. Jordan Romero", "Dr. Dominic Salta", "Dr. Alice Guo"
+}
+    Private ReadOnly rnd As New Random()
+
+    Private Function AssignOB() As String
+        Return OBs(rnd.Next(OBs.Count))
+    End Function
+
     Private Class PatientDetails
         Public Property Name As String
         Public Property MI As String
@@ -14,8 +23,9 @@ Public Class PATIENTDETAILS
         Public Property CivilStat As String
         Public Property LMC As String
         Public Property Vitamin As String
-        Public Property NextCheckup As DateTime
+        Public Property AssignedOB As String
     End Class
+
 
     Private Sub LoadPatientNames()
         Try
@@ -71,7 +81,7 @@ Public Class PATIENTDETAILS
                         foundPatient = True
                         details = New PatientDetails()
                         details.Name = patientName
-                        ' Read the next lines until an empty line is encountered, storing each field
+
                         Do
                             line = reader.ReadLine()
                             If line IsNot Nothing AndAlso line.StartsWith("Middle Initial:") Then
@@ -92,12 +102,19 @@ Public Class PATIENTDETAILS
                                 details.LMC = line.Substring("LMC:".Length).Trim()
                             ElseIf line IsNot Nothing AndAlso line.StartsWith("Vitamin:") Then
                                 details.Vitamin = line.Substring("Vitamin:".Length).Trim()
+                            ElseIf line IsNot Nothing AndAlso line.StartsWith("Assigned OB:") Then
+                                details.AssignedOB = line.Substring("Assigned OB:".Length).Trim()
                             ElseIf line.Trim() = "" Then
-                                ' Stop reading once an empty line is encountered
+
                                 Exit Do
                             End If
                         Loop Until reader.EndOfStream
-                        ' Exit the loop once the patient is found and details are read
+
+                        If String.IsNullOrEmpty(details.AssignedOB) Then
+                            details.AssignedOB = AssignOB()
+                        End If
+
+
                         Exit While
                     End If
                 End While
@@ -122,18 +139,18 @@ Public Class PATIENTDETAILS
         Dim line As String = reader.ReadLine()
         While line IsNot Nothing
             If line.Trim() = "" Then
-                ' Skip empty lines
+
                 line = reader.ReadLine()
                 Continue While
             End If
 
             If line.StartsWith(fieldName) Then
-                ' Found the field, return its value
+
                 fieldValue = line.Substring(fieldName.Length).Trim()
                 Exit While
             End If
 
-            ' Read the next line
+
             line = reader.ReadLine()
         End While
 
@@ -154,7 +171,6 @@ Public Class PATIENTDETAILS
             lblLMC.Text = "Last Menstrual Cycle: " & patientDetails.LMC
             lblVitamin.Text = "List of Vitamins Intake: " & patientDetails.Vitamin
 
-            ' Display Date of Next Checkup
 
             Dim LMCDate As Date
             If Date.TryParseExact(patientDetails.LMC, "yyyy/MM/dd", Nothing, Globalization.DateTimeStyles.None, LMCDate) Then
@@ -164,11 +180,71 @@ Public Class PATIENTDETAILS
                 lblGestational.Text = "Gestational Age: N/A (Invalid LMC date)"
             End If
 
+            lblAssigned.Text = "Assigned OB: " & patientDetails.AssignedOB
+
             pnlInfo.Visible = True
+            SavePatientDetails(patientDetails)
         Else
             MessageBox.Show("Patient details not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
+    Private Sub SavePatientDetails(patientDetails As PatientDetails)
+        Try
+            Dim filePath As String = Path.Combine(Application.StartupPath, "PatientDatabase.txt")
+            Dim lines As List(Of String) = File.ReadAllLines(filePath).ToList()
+            Dim updatedLines As New List(Of String)()
+            Dim patientFound As Boolean = False
+
+            For i As Integer = 0 To lines.Count - 1
+                Dim line As String = lines(i)
+                If line.StartsWith("Name: " & patientDetails.Name) Then
+                    patientFound = True
+
+                    updatedLines.Add("Name: " & patientDetails.Name)
+                    updatedLines.Add("Middle Initial: " & patientDetails.MI)
+                    updatedLines.Add("Last Name: " & patientDetails.LastName)
+                    updatedLines.Add("Age: " & patientDetails.Age)
+                    updatedLines.Add("Baby: " & patientDetails.Baby)
+                    updatedLines.Add("Address: " & patientDetails.Address)
+                    updatedLines.Add("Gender: " & patientDetails.Gender)
+                    updatedLines.Add("Civil Status: " & patientDetails.CivilStat)
+                    updatedLines.Add("LMC: " & patientDetails.LMC)
+                    updatedLines.Add("Vitamin: " & patientDetails.Vitamin)
+                    updatedLines.Add("Assigned OB: " & patientDetails.AssignedOB)
+                    updatedLines.Add("")
+
+                    Do
+                        i += 1
+                        If i < lines.Count AndAlso lines(i).Trim() = "" Then Exit Do
+                    Loop
+                Else
+                    updatedLines.Add(line)
+                End If
+            Next
+
+            If Not patientFound Then
+
+                updatedLines.Add("Name: " & patientDetails.Name)
+                updatedLines.Add("Middle Initial: " & patientDetails.MI)
+                updatedLines.Add("Last Name: " & patientDetails.LastName)
+                updatedLines.Add("Age: " & patientDetails.Age)
+                updatedLines.Add("Baby: " & patientDetails.Baby)
+                updatedLines.Add("Address: " & patientDetails.Address)
+                updatedLines.Add("Gender: " & patientDetails.Gender)
+                updatedLines.Add("Civil Status: " & patientDetails.CivilStat)
+                updatedLines.Add("LMC: " & patientDetails.LMC)
+                updatedLines.Add("Vitamin: " & patientDetails.Vitamin)
+                updatedLines.Add("Assigned OB: " & patientDetails.AssignedOB)
+                updatedLines.Add("")
+            End If
+
+            File.WriteAllLines(filePath, updatedLines)
+        Catch ex As Exception
+            MessageBox.Show("An error occurred while saving patient details: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Close()
@@ -179,7 +255,7 @@ Public Class PATIENTDETAILS
         pnlInfo.Hide()
     End Sub
 
-    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
+    Private Sub lblAssigned_Click(sender As Object, e As EventArgs) Handles lblAssigned.Click
 
     End Sub
 End Class

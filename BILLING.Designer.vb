@@ -513,7 +513,7 @@ Partial Class BILLING
         Label22.TabIndex = 20
         Label22.Text = "BILLING"
         ' 
-        ' Form13
+        ' BILLING
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
@@ -525,7 +525,7 @@ Partial Class BILLING
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
         Controls.Add(GroupBox4)
-        Name = "Form13"
+        Name = "BILLING"
         StartPosition = FormStartPosition.CenterScreen
         Text = "NOMG CLINIC (Billing)"
         GroupBox4.ResumeLayout(False)

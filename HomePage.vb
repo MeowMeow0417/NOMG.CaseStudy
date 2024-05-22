@@ -10,7 +10,7 @@
     End Sub
 
     Private Sub btnContact_Click(sender As Object, e As EventArgs) Handles btnContact.Click
-        PatientInput.Show()
+        ContactsPage.Show()
         Me.Hide()
     End Sub
 

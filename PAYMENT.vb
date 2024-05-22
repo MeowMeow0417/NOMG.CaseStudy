@@ -14,39 +14,33 @@ Public Class PAYMENT
     Public strCurrentCard As Billing
     Public listCard As New List(Of Billing)
 
-    Public Sub New() ' Storing temporary data for billing
-        InitializeComponent()
 
-    End Sub
-
-    Private Sub Form11_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'fix this
+    Private Sub Form11_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Form2.strCurrentPatient Is Nothing Then
             MessageBox.Show("You must be logged in to access this page.")
             Me.Close()
             Form2.Show()
         Else
-            'LoadBillingDetails(Form2.strCurrentPatient)
+
         End If
     End Sub
 
 
 
     Public Sub LoadBillingDetails(currentPatient As Form2.Patient)
-        ' Filter the billing details specific to the logged-in patient
+
         Dim patientBilling As Billing = listCard.Find(Function(b) b.getEmail() = currentPatient.getPatientEmail())
 
         If patientBilling IsNot Nothing Then
             strCurrentCard = patientBilling
 
-            ' Retrieve the checkup data
             Dim check() As Double = strCurrentCard.getCheckUp()
 
-            ' Set the text boxes with actual data
             TxtBill.Text = strCurrentCard.getBill()
             TxtEmail.Text = strCurrentCard.getEmail()
             TxtInvoice.Text = strCurrentCard.getInvoice()
 
-            ' Display checkup data
+
             lbl1.Text = check(0)
             lbl2.Text = check(1)
             lbl3.Text = check(2)
@@ -63,7 +57,7 @@ Public Class PAYMENT
 
             lblTamount.Text = Val(t1.Text) + Val(t2.Text) + Val(t3.Text) + Val(t4.Text) + Val(t5.Text) + Val(t6.Text)
         Else
-            ' Handle case where no billing data is found for the current patient
+
             Dim result As MsgBoxResult
 
             result = MsgBox("There are currently no invoice.", vbOKOnly, "NOMG CLINIC")
@@ -76,7 +70,7 @@ Public Class PAYMENT
             End If
         End If
 
-        ' Make text boxes and labels visible
+
         TxtBill.Visible = True
         TxtEmail.Visible = True
         TxtInvoice.Visible = True
@@ -154,4 +148,8 @@ Public Class PAYMENT
             Return Invoice
         End Function
     End Class
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
 End Class
