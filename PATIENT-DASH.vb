@@ -8,7 +8,7 @@
     End Sub
 
     Private Sub btnSched_Click(sender As Object, e As EventArgs) Handles btnSched.Click
-        ContactsPage.Show()
+        GetSched.Show()
         Me.Close()
     End Sub
 
