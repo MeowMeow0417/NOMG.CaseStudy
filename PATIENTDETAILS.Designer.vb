@@ -264,4 +264,5 @@ Partial Class PATIENTDETAILS
     Friend WithEvents lblName As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents txtVitamins As TextBox
 End Class

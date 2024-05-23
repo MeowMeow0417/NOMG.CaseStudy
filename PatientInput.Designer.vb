@@ -372,4 +372,5 @@ Partial Class PatientInput
     Friend WithEvents gbInfo As GroupBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents txtGes As TextBox
 End Class
