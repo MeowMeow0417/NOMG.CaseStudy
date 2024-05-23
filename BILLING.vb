@@ -71,6 +71,10 @@
                     PAYMENT.strCurrentCard = newPayment
                     PAYMENT.strCurrentCard = newPayment
 
+
+                    ' Display success message
+                    Dim result As MsgBoxResult = MsgBox("Invoice has been successfully sent to " & selectedPatient.getPatient(), vbOKOnly, "NOMG CLINIC")
+
                     If result = MsgBoxResult.Ok Then
                         btnClearAll_Click(sender, e)
                         If PAYMENT.listCard.Contains(newPayment) Then
@@ -83,6 +87,10 @@
                         Else
                             MessageBox.Show("Selected patient not found.")
                         End If
+                    Else
+
+                    End If
+                End If
             Next
         Else
             MessageBox.Show("Please select at least one patient from the list.")
@@ -91,21 +99,23 @@
 
     ' Handle the btnSelect click to populate email for the selected patient
 
-    If lbBill.SelectedItem IsNot Nothing Then
+    Private Sub btnSelect_Click(sender As Object, e As EventArgs) Handles btnSelect.Click
+        ' Check if an item is selected in the ListBox
+        If lbBill.SelectedItem IsNot Nothing Then
+            ' Get the selected username
+            Dim selectedUsername As String = lbBill.SelectedItem.ToString()
 
-    Dim selectedUsername As String = lbBill.SelectedItem.ToString()
-
-
-    For Each patient As Form2.Patient In Form2.listPatient
-    If patient.getPatient() = selectedUsername Then
-
+            ' Find the patient with the selected username
+            For Each patient As Form2.Patient In Form2.listPatient
+                If patient.getPatient() = selectedUsername Then
+                    ' Output the email associated with the selected username
                     txtEmail.Text = patient.getPatientEmail()
                     Exit For
-    End If
-    Next
-    Else
+                End If
+            Next
+        Else
             MessageBox.Show("Please select a username from the list.")
         End If
+    End Sub
 
-End Class
 End Class

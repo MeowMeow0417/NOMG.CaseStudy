@@ -238,7 +238,6 @@ Partial Class PATIENTDETAILS
         Controls.Add(btnEnter)
         Controls.Add(ListBox1)
         Name = "PATIENTDETAILS"
-        StartPosition = FormStartPosition.CenterScreen
         Text = "NOMG CLINIC (VIEW PATIENT DETAILS)"
         pnlInfo.ResumeLayout(False)
         pnlInfo.PerformLayout()
@@ -265,4 +264,5 @@ Partial Class PATIENTDETAILS
     Friend WithEvents lblName As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents txtVitamins As TextBox
 End Class
