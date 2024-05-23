@@ -38,7 +38,6 @@ Public Class PAYMENT
             strCurrentCard = patientBilling
             Dim check() As Double = strCurrentCard.getCheckUp()
 
-            ' Set the text boxes with actual data
             TxtBill.Text = strCurrentCard.getBill()
             TxtEmail.Text = strCurrentCard.getEmail()
             TxtInvoice.Text = strCurrentCard.getInvoice()
@@ -70,7 +69,7 @@ Public Class PAYMENT
             End If
         End If
 
-        ' Make text boxes and labels visible
+
         TxtBill.Visible = True
         TxtEmail.Visible = True
         TxtInvoice.Visible = True

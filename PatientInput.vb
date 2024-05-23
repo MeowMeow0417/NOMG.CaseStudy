@@ -9,13 +9,12 @@ Public Class PatientInput
         If File.Exists(filePath) Then
             Dim patientDetails As String() = File.ReadAllLines(filePath)
             For Each detail As String In patientDetails
-                ' Process each patient detail line
-                ' Add to a ListBox or DataGridView as needed
+
             Next
         End If
     End Sub
     Private Function AllFieldsFilled() As Boolean
-        ' Check each field
+
         If txtName.Text = "" OrElse
            txtMI.Text = "" OrElse
            txtLastName.Text = "" OrElse
@@ -72,8 +71,6 @@ Public Class PatientInput
         End Sub
     End Class
 
-    ' Your existing code for form6 ...
-
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
         ' Check if all fields have values
         If Not AllFieldsFilled() Then
@@ -81,17 +78,15 @@ Public Class PatientInput
             Return
         End If
 
-        ' Create a new instance of PatientDetails and set the details
+
 
         Dim newDetails As New PatientDetails(txtName.Text, txtMI.Text, txtLastName.Text, txtAge.Text, txtBaby.Text, txtAddress.Text, txtGender.Text, txtCivil.Text, txtLMC.Text, txtVitamin.Text)
 
-        ' Save patient details to the database
         SavePatientDetails(newDetails)
 
-        ' Show the appropriate message
+
         MsgBox("Your account is now all set", vbOKOnly, "NOMG CLINIC")
 
-        ' Show Form5
         Form2.Show()
         Me.Close()
     End Sub
@@ -110,8 +105,13 @@ Public Class PatientInput
                 writer.WriteLine("Civil Status: " & newDetails.CivilStat)
                 writer.WriteLine("Address: " & newDetails.Address)
                 writer.WriteLine("LMC: " & newDetails.LMC)
-                writer.WriteLine("Vitamin: " & newDetails.Vitamin)
-                writer.WriteLine() ' Ensure there is a blank line to separate records
+                writer.WriteLine("Vitamin: ")
+
+                For Each line As String In newDetails.Vitamin.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
+                    writer.WriteLine("    " & line)
+                Next
+
+                writer.WriteLine()
             End Using
 
             MessageBox.Show("Patient details saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)

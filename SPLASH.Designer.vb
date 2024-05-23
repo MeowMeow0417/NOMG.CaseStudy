@@ -72,7 +72,7 @@ Partial Class SPLASH
         PictureBox1.TabIndex = 4
         PictureBox1.TabStop = False
         ' 
-        ' Form1
+        ' SPLASH
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
@@ -84,7 +84,7 @@ Partial Class SPLASH
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False
-        Name = "Form1"
+        Name = "SPLASH"
         StartPosition = FormStartPosition.CenterScreen
         Text = "NOMG CLINIC (Splash  Screen)"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()

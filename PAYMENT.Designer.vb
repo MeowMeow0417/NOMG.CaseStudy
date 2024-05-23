@@ -490,7 +490,7 @@ Partial Class PAYMENT
         Label11.TabIndex = 14
         Label11.Text = "PAYMENT"
         ' 
-        ' Form11
+        ' PAYMENT
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
@@ -499,7 +499,7 @@ Partial Class PAYMENT
         Controls.Add(Label11)
         Controls.Add(btnBack)
         Controls.Add(Panel1)
-        Name = "Form11"
+        Name = "PAYMENT"
         StartPosition = FormStartPosition.CenterScreen
         Text = "NOMG CLINIC (Payment)"
         GroupBox1.ResumeLayout(False)

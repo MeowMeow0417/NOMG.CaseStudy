@@ -31,7 +31,6 @@ Partial Class PATIENTDETAILS
         lblAssigned = New Label()
         lblVitamin = New Label()
         lblGestational = New Label()
-        lblCheckup = New Label()
         lblLMC = New Label()
         lblBaby = New Label()
         lblCivil = New Label()
@@ -92,7 +91,6 @@ Partial Class PATIENTDETAILS
         pnlInfo.Controls.Add(lblAssigned)
         pnlInfo.Controls.Add(lblVitamin)
         pnlInfo.Controls.Add(lblGestational)
-        pnlInfo.Controls.Add(lblCheckup)
         pnlInfo.Controls.Add(lblLMC)
         pnlInfo.Controls.Add(lblBaby)
         pnlInfo.Controls.Add(lblCivil)
@@ -110,8 +108,8 @@ Partial Class PATIENTDETAILS
         ' lblAssigned
         ' 
         lblAssigned.AutoSize = True
-        lblAssigned.Font = New Font("Segoe UI", 15F)
-        lblAssigned.Location = New Point(12, 377)
+        lblAssigned.Font = New Font("Segoe UI", 15.0F)
+        lblAssigned.Location = New Point(12, 334)
         lblAssigned.Name = "lblAssigned"
         lblAssigned.Size = New Size(126, 28)
         lblAssigned.TabIndex = 10
@@ -120,7 +118,7 @@ Partial Class PATIENTDETAILS
         ' lblVitamin
         ' 
         lblVitamin.AutoSize = True
-        lblVitamin.Font = New Font("Segoe UI", 15F)
+        lblVitamin.Font = New Font("Segoe UI", 15.0F)
         lblVitamin.Location = New Point(281, 11)
         lblVitamin.Name = "lblVitamin"
         lblVitamin.Size = New Size(206, 28)
@@ -130,27 +128,17 @@ Partial Class PATIENTDETAILS
         ' lblGestational
         ' 
         lblGestational.AutoSize = True
-        lblGestational.Font = New Font("Segoe UI", 15F)
-        lblGestational.Location = New Point(12, 338)
+        lblGestational.Font = New Font("Segoe UI", 15.0F)
+        lblGestational.Location = New Point(12, 295)
         lblGestational.Name = "lblGestational"
         lblGestational.Size = New Size(155, 28)
         lblGestational.TabIndex = 8
         lblGestational.Text = "Gestational Age:"
         ' 
-        ' lblCheckup
-        ' 
-        lblCheckup.AutoSize = True
-        lblCheckup.Font = New Font("Segoe UI", 15F)
-        lblCheckup.Location = New Point(12, 293)
-        lblCheckup.Name = "lblCheckup"
-        lblCheckup.Size = New Size(209, 28)
-        lblCheckup.TabIndex = 7
-        lblCheckup.Text = "Date Of Next Checkup:"
-        ' 
         ' lblLMC
         ' 
         lblLMC.AutoSize = True
-        lblLMC.Font = New Font("Segoe UI", 15F)
+        lblLMC.Font = New Font("Segoe UI", 15.0F)
         lblLMC.Location = New Point(12, 252)
         lblLMC.Name = "lblLMC"
         lblLMC.Size = New Size(193, 28)
@@ -160,7 +148,7 @@ Partial Class PATIENTDETAILS
         ' lblBaby
         ' 
         lblBaby.AutoSize = True
-        lblBaby.Font = New Font("Segoe UI", 15F)
+        lblBaby.Font = New Font("Segoe UI", 15.0F)
         lblBaby.Location = New Point(12, 208)
         lblBaby.Name = "lblBaby"
         lblBaby.Size = New Size(101, 28)
@@ -170,7 +158,7 @@ Partial Class PATIENTDETAILS
         ' lblCivil
         ' 
         lblCivil.AutoSize = True
-        lblCivil.Font = New Font("Segoe UI", 15F)
+        lblCivil.Font = New Font("Segoe UI", 15.0F)
         lblCivil.Location = New Point(12, 169)
         lblCivil.Name = "lblCivil"
         lblCivil.Size = New Size(111, 28)
@@ -180,7 +168,7 @@ Partial Class PATIENTDETAILS
         ' lblAddress
         ' 
         lblAddress.AutoSize = True
-        lblAddress.Font = New Font("Segoe UI", 15F)
+        lblAddress.Font = New Font("Segoe UI", 15.0F)
         lblAddress.Location = New Point(12, 127)
         lblAddress.Name = "lblAddress"
         lblAddress.Size = New Size(82, 28)
@@ -190,7 +178,7 @@ Partial Class PATIENTDETAILS
         ' lblGender
         ' 
         lblGender.AutoSize = True
-        lblGender.Font = New Font("Segoe UI", 15F)
+        lblGender.Font = New Font("Segoe UI", 15.0F)
         lblGender.Location = New Point(12, 88)
         lblGender.Name = "lblGender"
         lblGender.Size = New Size(76, 28)
@@ -200,7 +188,7 @@ Partial Class PATIENTDETAILS
         ' lblAge
         ' 
         lblAge.AutoSize = True
-        lblAge.Font = New Font("Segoe UI", 15F)
+        lblAge.Font = New Font("Segoe UI", 15.0F)
         lblAge.Location = New Point(12, 48)
         lblAge.Name = "lblAge"
         lblAge.Size = New Size(47, 28)
@@ -210,7 +198,7 @@ Partial Class PATIENTDETAILS
         ' lblName
         ' 
         lblName.AutoSize = True
-        lblName.Font = New Font("Segoe UI", 15F)
+        lblName.Font = New Font("Segoe UI", 15.0F)
         lblName.Location = New Point(12, 11)
         lblName.Name = "lblName"
         lblName.Size = New Size(64, 28)
@@ -239,7 +227,7 @@ Partial Class PATIENTDETAILS
         ' 
         ' PATIENTDETAILS
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ControlLightLight
         ClientSize = New Size(884, 561)

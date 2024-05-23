@@ -6,7 +6,6 @@
 
     Public strCurrentPatient As Form2.Patient
 
-    ' Constructor to accept the current patient
     Public Sub New(ByVal currentPatient As Form2.Patient)
         InitializeComponent()
         strCurrentPatient = currentPatient
@@ -30,15 +29,13 @@
     Private V1, V2, V3, V4, V5, C1, C2 As Integer
 
     Private Sub btnCalculate_Click(sender As Object, e As EventArgs) Handles btnCalculate.Click
-        ' Reading the inputs
+
         C1 = If(Integer.TryParse(txtCheck1.Text, C1), C1, 0)
         C2 = If(Integer.TryParse(txtCheck2.Text, C2), C2, 0)
         V1 = If(Integer.TryParse(txtVitamin1.Text, V1), V1, 0)
         V2 = If(Integer.TryParse(txtVitamin2.Text, V2), V2, 0)
         V3 = If(Integer.TryParse(txtVitamin3.Text, V3), V3, 0)
         V4 = If(Integer.TryParse(txtVitamin4.Text, V4), V4, 0)
-
-        ' Calculates the input
         lblTamount.Text = (V1 * 15) + (V2 * 25) + (V3 * 20) + (V4 * 1500) + (C1 * 2000) + (C2 * 500)
     End Sub
 
@@ -71,37 +68,44 @@
 
                     ' Save the updated billing data to the file
                     PAYMENT.SaveBillingData()
+                    PAYMENT.strCurrentCard = newPayment
+                    PAYMENT.strCurrentCard = newPayment
 
-                    ' Display success message
-                    Dim result As MsgBoxResult = MsgBox("Invoice has been successfully sent to " & selectedPatient.getPatient(), vbOKOnly, "NOMG CLINIC")
                     If result = MsgBoxResult.Ok Then
                         btnClearAll_Click(sender, e)
-                    End If
-                Else
-                    MessageBox.Show("Selected patient not found.")
-                End If
+                        If PAYMENT.listCard.Contains(newPayment) Then
+                            result = MsgBox("Invoice has been successfully sent.", vbOKOnly, "NOMG CLINIC")
+                            If PAYMENT.listCard.Contains(newPayment) Then
+                                result = MsgBox("Invoice has been successfully sent.", vbOKOnly, "NOMG CLINIC")
+                                result = MsgBox("Invoice has been successfully sent.", vbOKOnly, "NOMG CLINIC")
+                                result = MsgBox("Invoice has been successfully sent.", vbOKOnly, "NOMG CLINIC")
+                            End If
+                        Else
+                            MessageBox.Show("Selected patient not found.")
+                        End If
             Next
         Else
             MessageBox.Show("Please select at least one patient from the list.")
         End If
     End Sub
 
-    Private Sub btnSelect_Click(sender As Object, e As EventArgs) Handles btnSelect.Click
-        ' Check if an item is selected in the ListBox
-        If lbBill.SelectedItem IsNot Nothing Then
-            ' Get the selected username
-            Dim selectedUsername As String = lbBill.SelectedItem.ToString()
+    ' Handle the btnSelect click to populate email for the selected patient
 
-            ' Find the patient with the selected username
-            For Each patient As Form2.Patient In Form2.listPatient
-                If patient.getPatient() = selectedUsername Then
-                    ' Output the email associated with the selected username
+    If lbBill.SelectedItem IsNot Nothing Then
+
+    Dim selectedUsername As String = lbBill.SelectedItem.ToString()
+
+
+    For Each patient As Form2.Patient In Form2.listPatient
+    If patient.getPatient() = selectedUsername Then
+
                     txtEmail.Text = patient.getPatientEmail()
                     Exit For
-                End If
-            Next
-        Else
+    End If
+    Next
+    Else
             MessageBox.Show("Please select a username from the list.")
         End If
-    End Sub
+
+End Class
 End Class
