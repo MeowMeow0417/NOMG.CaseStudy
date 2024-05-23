@@ -139,14 +139,18 @@
 
         ' Display the panel
         pnlFollowup.Visible = True
+
+
+
     End Sub
 
     Public strCurrentPatient As Form2.Patient ' Declare strCurrentPatient as public
 
+    ' In GetSched
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-
-        Form5.Show()
+        Dim form5 As New Form5()
+        form5.strCurrentPatient = strCurrentPatient ' Pass the current patient back
+        form5.Show()
         Me.Close()
-
     End Sub
 End Class

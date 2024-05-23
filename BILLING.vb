@@ -12,8 +12,15 @@
         strCurrentPatient = currentPatient
     End Sub
 
-    Private Sub Form13_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub BILLING_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Set ListBox to multi-select mode
+        lbBill.SelectionMode = SelectionMode.MultiExtended
+
         ' Load patient usernames into the ListBox
+        LoadPatientUsernames()
+    End Sub
+
+    Private Sub LoadPatientUsernames()
         lbBill.Items.Clear()
         For Each patient As Form2.Patient In Form2.listPatient
             lbBill.Items.Add(patient.getPatient())
@@ -47,42 +54,38 @@
         lblTamount.Text = "0"
     End Sub
 
-    ' Handle the btnSend_Click to send billing details to Form11
     Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
-        If lbBill.SelectedItem IsNot Nothing Then
-            Dim selectedUsername As String = lbBill.SelectedItem.ToString()
-            Dim selectedPatient As Form2.Patient = Form2.listPatient.Find(Function(p) p.getPatient() = selectedUsername)
+        If lbBill.SelectedItems.Count > 0 Then
+            For Each selectedUsername In lbBill.SelectedItems
+                Dim selectedPatient As Form2.Patient = Form2.listPatient.Find(Function(p) p.getPatient() = selectedUsername.ToString())
 
-            If selectedPatient IsNot Nothing Then
-                Dim newPayment As New PAYMENT.Billing()
-                newPayment.setPay(Val(txtVitamin1.Text), Val(txtVitamin2.Text), Val(txtVitamin3.Text), Val(txtVitamin4.Text), Val(txtCheck1.Text), Val(txtCheck2.Text))
-                newPayment.setDetails(txtEmail.Text, lbBill.Text, txtInvoice.Text)
+                If selectedPatient IsNot Nothing Then
+                    ' Remove existing billing for the same patient
+                    PAYMENT.listCard.RemoveAll(Function(b) b.getEmail() = selectedPatient.getPatientEmail())
 
-                ' Ensure the billing data is attached to the current patient
-                PAYMENT.listCard.Add(newPayment)
-                PAYMENT.strCurrentCard = newPayment
+                    ' Create and add new billing
+                    Dim newPayment As New PAYMENT.Billing()
+                    newPayment.setPay(Val(txtVitamin1.Text), Val(txtVitamin2.Text), Val(txtVitamin3.Text), Val(txtVitamin4.Text), Val(txtCheck1.Text), Val(txtCheck2.Text))
+                    newPayment.setDetails(txtEmail.Text, selectedPatient.getPatient(), txtInvoice.Text)
+                    PAYMENT.listCard.Add(newPayment)
 
-                ' Check if the data has been added
-                Dim result As MsgBoxResult
-                If PAYMENT.listCard.Contains(newPayment) Then
-                    result = MsgBox("Invoice has been successfully sent.", vbOKOnly, "NOMG CLINIC")
+                    ' Save the updated billing data to the file
+                    PAYMENT.SaveBillingData()
+
+                    ' Display success message
+                    Dim result As MsgBoxResult = MsgBox("Invoice has been successfully sent to " & selectedPatient.getPatient(), vbOKOnly, "NOMG CLINIC")
                     If result = MsgBoxResult.Ok Then
                         btnClearAll_Click(sender, e)
                     End If
                 Else
-                    MessageBox.Show("Failed to send Invoice.")
+                    MessageBox.Show("Selected patient not found.")
                 End If
-            Else
-                MessageBox.Show("Selected patient not found.")
-            End If
+            Next
         Else
-            MessageBox.Show("Please select a patient from the list.")
+            MessageBox.Show("Please select at least one patient from the list.")
         End If
     End Sub
 
-
-
-    ' Handle the btnSelect click to populate email for the selected patient
     Private Sub btnSelect_Click(sender As Object, e As EventArgs) Handles btnSelect.Click
         ' Check if an item is selected in the ListBox
         If lbBill.SelectedItem IsNot Nothing Then

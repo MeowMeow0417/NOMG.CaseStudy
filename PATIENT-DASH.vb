@@ -2,7 +2,9 @@
     Public strCurrentPatient As Form2.Patient
 
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TextBox1.Text = strCurrentPatient.getPatient() ' Set the TextBox to the patient's name
+        If strCurrentPatient IsNot Nothing Then
+            txtUserName.Text = strCurrentPatient.getPatient()
+        End If
     End Sub
 
     Private Sub ShowForm13()
@@ -12,7 +14,9 @@
     End Sub
 
     Private Sub btnSched_Click(sender As Object, e As EventArgs) Handles btnSched.Click
-        GetSched.Show()
+        Dim schedForm As New GetSched()
+        schedForm.strCurrentPatient = strCurrentPatient ' Pass the current patient
+        schedForm.Show()
         Me.Close()
     End Sub
 

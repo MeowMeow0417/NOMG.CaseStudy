@@ -29,7 +29,7 @@ Partial Class Form5
         btnLogOut = New Button()
         PictureBox1 = New PictureBox()
         PictureBox2 = New PictureBox()
-        TextBox1 = New TextBox()
+        txtUserName = New TextBox()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -98,14 +98,14 @@ Partial Class Form5
         PictureBox2.TabIndex = 12
         PictureBox2.TabStop = False
         ' 
-        ' TextBox1
+        ' txtUserName
         ' 
-        TextBox1.Enabled = False
-        TextBox1.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(12, 12)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(184, 35)
-        TextBox1.TabIndex = 13
+        txtUserName.Enabled = False
+        txtUserName.Font = New Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtUserName.Location = New Point(12, 12)
+        txtUserName.Name = "txtUserName"
+        txtUserName.Size = New Size(184, 35)
+        txtUserName.TabIndex = 13
         ' 
         ' Form5
         ' 
@@ -113,7 +113,7 @@ Partial Class Form5
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(884, 561)
-        Controls.Add(TextBox1)
+        Controls.Add(txtUserName)
         Controls.Add(PictureBox2)
         Controls.Add(PictureBox1)
         Controls.Add(btnLogOut)
@@ -138,5 +138,5 @@ Partial Class Form5
     Friend WithEvents btnLogOut As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtUserName As TextBox
 End Class

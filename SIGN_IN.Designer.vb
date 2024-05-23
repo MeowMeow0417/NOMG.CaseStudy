@@ -32,6 +32,7 @@ Partial Class Form2
         PictureBox1 = New PictureBox()
         PictureBox2 = New PictureBox()
         PictureBox3 = New PictureBox()
+        passwordCheck = New CheckBox()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
@@ -129,12 +130,23 @@ Partial Class Form2
         PictureBox3.TabIndex = 14
         PictureBox3.TabStop = False
         ' 
+        ' passwordCheck
+        ' 
+        passwordCheck.AutoSize = True
+        passwordCheck.BackColor = SystemColors.ActiveBorder
+        passwordCheck.Location = New Point(553, 270)
+        passwordCheck.Name = "passwordCheck"
+        passwordCheck.Size = New Size(15, 14)
+        passwordCheck.TabIndex = 15
+        passwordCheck.UseVisualStyleBackColor = False
+        ' 
         ' Form2
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ButtonHighlight
         ClientSize = New Size(884, 561)
+        Controls.Add(passwordCheck)
         Controls.Add(PictureBox1)
         Controls.Add(Label2)
         Controls.Add(Label1)
@@ -166,4 +178,5 @@ Partial Class Form2
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents passwordCheck As CheckBox
 End Class

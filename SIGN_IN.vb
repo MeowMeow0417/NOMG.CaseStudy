@@ -145,6 +145,7 @@ Public Class Form2
             ADMIN_.Show()
             Me.Hide()
         ElseIf isPatientLoggedIn Then
+            MsgBox("Login Successful", vbOKOnly, "NOMG Clinic")
             txtUser.Clear()
             txtPass.Clear()
             strCurrentPatient = listPatient(intCount)
@@ -152,7 +153,7 @@ Public Class Form2
             Form5.Show()
             Me.Hide()
         Else
-            MsgBox("Invalid username or password", vbOKOnly, "NOMG Clinic")
+            MsgBox("Incorrect Username or Password", vbOKOnly, "NOMG Clinic")
         End If
     End Sub
 
@@ -162,5 +163,12 @@ Public Class Form2
         Me.Hide()
     End Sub
 
+    Private Sub passwordCheck_CheckedChanged(sender As Object, e As EventArgs) Handles passwordCheck.CheckedChanged
+        If passwordCheck.Checked Then
+            txtPass.PasswordChar = ""
+        Else
+            txtPass.PasswordChar = "*" ' You can use any character you prefer for masking
+        End If
+    End Sub
 
 End Class

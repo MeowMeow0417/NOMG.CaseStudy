@@ -30,6 +30,7 @@ Partial Class GetSched
         lblFollow2 = New Label()
         lblFollow1 = New Label()
         lblAppoint = New Label()
+        Label11 = New Label()
         pnlFollowup.SuspendLayout()
         SuspendLayout()
         ' 
@@ -62,9 +63,9 @@ Partial Class GetSched
         pnlFollowup.Controls.Add(lblFollow2)
         pnlFollowup.Controls.Add(lblFollow1)
         pnlFollowup.Controls.Add(lblAppoint)
-        pnlFollowup.Location = New Point(12, 12)
+        pnlFollowup.Location = New Point(12, 42)
         pnlFollowup.Name = "pnlFollowup"
-        pnlFollowup.Size = New Size(860, 492)
+        pnlFollowup.Size = New Size(860, 462)
         pnlFollowup.TabIndex = 3
         ' 
         ' lblFollow4
@@ -112,21 +113,34 @@ Partial Class GetSched
         lblAppoint.Size = New Size(0, 37)
         lblAppoint.TabIndex = 0
         ' 
-        ' Form9
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label11.ForeColor = Color.HotPink
+        Label11.Location = New Point(12, 9)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(123, 30)
+        Label11.TabIndex = 15
+        Label11.Text = "SCHEDULE "
+        ' 
+        ' GetSched
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.ControlLightLight
         ClientSize = New Size(884, 561)
+        Controls.Add(Label11)
         Controls.Add(pnlFollowup)
         Controls.Add(btnGetSched)
         Controls.Add(btnBack)
-        Name = "Form9"
+        Name = "GetSched"
         StartPosition = FormStartPosition.CenterScreen
         Text = "NOMG CLINIC (Schedule)"
         pnlFollowup.ResumeLayout(False)
         pnlFollowup.PerformLayout()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents btnBack As Button
@@ -137,4 +151,5 @@ Partial Class GetSched
     Friend WithEvents lblFollow2 As Label
     Friend WithEvents lblFollow1 As Label
     Friend WithEvents lblAppoint As Label
+    Friend WithEvents Label11 As Label
 End Class
