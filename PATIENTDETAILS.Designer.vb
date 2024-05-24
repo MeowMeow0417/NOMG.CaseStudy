@@ -238,6 +238,7 @@ Partial Class PATIENTDETAILS
         Controls.Add(btnEnter)
         Controls.Add(ListBox1)
         Name = "PATIENTDETAILS"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "NOMG CLINIC (VIEW PATIENT DETAILS)"
         pnlInfo.ResumeLayout(False)
         pnlInfo.PerformLayout()

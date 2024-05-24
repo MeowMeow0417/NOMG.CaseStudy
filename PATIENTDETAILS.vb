@@ -1,9 +1,22 @@
 ﻿Imports System.IO
 Imports System.Text
-
+Public Class PatientDetails
+    Public Property Name As String
+    Public Property MI As String
+    Public Property LastName As String
+    Public Property Age As String
+    Public Property Baby As String
+    Public Property Address As String
+    Public Property Gender As String
+    Public Property CivilStat As String
+    Public Property LMC As String
+    Public Property Vitamin As String
+    Public Property AssignedOB As String
+End Class
 Public Class PATIENTDETAILS
+
     Private ReadOnly OBs As List(Of String) = New List(Of String) From {
-    "Dr. Gilbert Cura", "Dr. Jacob Panesa", "Dr. Irish Ramizer",
+    "Dr. Gilbert Cura", "Dr. Jacob Panesa", "Dr. Irish Ramirez",
     "Dr. Mary Bondoc", "Dr. Jordan Romero", "Dr. Dominic Salta", "Dr. Alice Guo"
 }
     Private ReadOnly rnd As New Random()
@@ -12,24 +25,10 @@ Public Class PATIENTDETAILS
         Return OBs(rnd.Next(OBs.Count))
     End Function
 
-    Private Class PatientDetails
-        Public Property Name As String
-        Public Property MI As String
-        Public Property LastName As String
-        Public Property Age As String
-        Public Property Baby As String
-        Public Property Address As String
-        Public Property Gender As String
-        Public Property CivilStat As String
-        Public Property LMC As String
-        Public Property Vitamin As String
-        Public Property AssignedOB As String
-    End Class
-
 
     Private Sub LoadPatientNames()
         Try
-            Dim filePath As String = Path.Combine(Application.StartupPath, "PatientDatabase.txt")
+            Dim filePath As String = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "PatientDatabase.txt")
 
             If File.Exists(filePath) Then
                 Dim patientNames As New List(Of String)()
@@ -69,7 +68,7 @@ Public Class PATIENTDETAILS
 
     Private Function GetPatientDetails(patientName As String) As PatientDetails
         Try
-            Dim filePath As String = Path.Combine(Application.StartupPath, "PatientDatabase.txt")
+            Dim filePath As String = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "PatientDatabase.txt")
             Using reader As New StreamReader(filePath)
                 Dim details As PatientDetails = Nothing
                 Dim foundPatient As Boolean = False
@@ -105,7 +104,6 @@ Public Class PATIENTDETAILS
                             ElseIf line IsNot Nothing AndAlso line.StartsWith("Assigned OB:") Then
                                 details.AssignedOB = line.Substring("Assigned OB:".Length).Trim()
                             ElseIf line.Trim() = "" Then
-
                                 Exit Do
                             End If
                         Loop Until reader.EndOfStream
@@ -113,7 +111,6 @@ Public Class PATIENTDETAILS
                         If String.IsNullOrEmpty(details.AssignedOB) Then
                             details.AssignedOB = AssignOB()
                         End If
-
 
                         Exit While
                     End If
@@ -132,34 +129,6 @@ Public Class PATIENTDETAILS
         Return Nothing
     End Function
 
-
-    Private Function GetNextField(reader As StreamReader, fieldName As String) As String
-        Dim fieldValue As String = ""
-
-        Dim line As String = reader.ReadLine()
-        While line IsNot Nothing
-            If line.Trim() = "" Then
-
-                line = reader.ReadLine()
-                Continue While
-            End If
-
-            If line.StartsWith(fieldName) Then
-
-                fieldValue = line.Substring(fieldName.Length).Trim()
-                Exit While
-            End If
-
-
-            line = reader.ReadLine()
-        End While
-
-        Return fieldValue
-    End Function
-
-
-
-
     Private Sub DisplayPatientDetails(patientDetails As PatientDetails)
         If patientDetails IsNot Nothing Then
             lblName.Text = "Name: " & patientDetails.Name
@@ -170,7 +139,6 @@ Public Class PATIENTDETAILS
             lblBaby.Text = "First Baby: " & patientDetails.Baby
             lblLMC.Text = "Last Menstrual Cycle: " & patientDetails.LMC
             lblVitamin.Text = "List of Vitamins Intake: " & patientDetails.Vitamin
-
 
             Dim LMCDate As Date
             If Date.TryParseExact(patientDetails.LMC, "yyyy/MM/dd", Nothing, Globalization.DateTimeStyles.None, LMCDate) Then
@@ -188,9 +156,10 @@ Public Class PATIENTDETAILS
             MessageBox.Show("Patient details not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
+
     Private Sub SavePatientDetails(patientDetails As PatientDetails)
         Try
-            Dim filePath As String = Path.Combine(Application.StartupPath, "PatientDatabase.txt")
+            Dim filePath As String = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "PatientDatabase.txt")
             Dim lines As List(Of String) = File.ReadAllLines(filePath).ToList()
             Dim updatedLines As New List(Of String)()
             Dim patientFound As Boolean = False
@@ -223,7 +192,6 @@ Public Class PATIENTDETAILS
             Next
 
             If Not patientFound Then
-
                 updatedLines.Add("Name: " & patientDetails.Name)
                 updatedLines.Add("Middle Initial: " & patientDetails.MI)
                 updatedLines.Add("Last Name: " & patientDetails.LastName)
@@ -243,8 +211,6 @@ Public Class PATIENTDETAILS
             MessageBox.Show("An error occurred while saving patient details: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
-
-
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Close()

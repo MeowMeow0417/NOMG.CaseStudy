@@ -1,7 +1,4 @@
 ﻿Imports System.IO
-Imports System.Runtime.Serialization.Formatters.Binary
-Imports System.Runtime.Serialization
-Imports System.Security.Cryptography.Xml
 
 Public Class PatientInput
     Private Sub Form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -132,5 +129,11 @@ Public Class PatientInput
 
     Private Sub txtBaby_TextChanged(sender As Object, e As EventArgs) Handles txtBaby.TextChanged
         ' Handle text change event if necessary
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Me.Close()
+        Form3.Show()
+
     End Sub
 End Class
