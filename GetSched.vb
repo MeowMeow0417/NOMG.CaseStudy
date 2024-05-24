@@ -154,7 +154,7 @@ Public Class GetSched
         lblAppointment.Text = "Appointment Date: " & appointmentDate.ToString("ddd, MMM dd yyyy hh:mm tt")
 
         Dim verticalPosition As Integer = 40
-        For i As Integer = 0 To followUpDates.Count - 1
+        For i As Integer = 0 To Math.Min(followUpDates.Count, 2) ' Show only the first three follow-ups
             Dim followUpLabelText As String = "Follow-Up " & (i + 1) & " Date: " & followUpDates(i).ToString("ddd, MMM dd yyyy hh:mm tt")
 
             Dim lblFollowUp As Label = pnlFollowup.Controls.OfType(Of Label)().FirstOrDefault(Function(lbl) lbl.Name = "lblFollowUp" & i)
@@ -171,8 +171,8 @@ Public Class GetSched
             verticalPosition += 30
         Next
 
-        ' Hide any remaining labels beyond the generated follow-up dates
-        For i As Integer = followUpDates.Count To 8
+        ' Hide any remaining labels beyond the first three follow-up dates
+        For i As Integer = 3 To 8
             Dim lblFollowUp As Label = pnlFollowup.Controls.OfType(Of Label)().FirstOrDefault(Function(lbl) lbl.Name = "lblFollowUp" & i)
             If lblFollowUp IsNot Nothing Then
                 lblFollowUp.Visible = False
@@ -185,9 +185,11 @@ Public Class GetSched
 
     Public strCurrentPatient As Form2.Patient
 
+    ' In GetSched
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Form5.Show()
+        Dim form5 As New Form5()
+        form5.strCurrentPatient = strCurrentPatient ' Pass the current patient back
+        form5.Show()
         Me.Close()
-
     End Sub
 End Class
